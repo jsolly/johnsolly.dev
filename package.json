@@ -7,11 +7,19 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "biome lint --no-errors-on-unmatched --files-ignore-unknown=true .",
+    "format": "biome format --no-errors-on-unmatched --files-ignore-unknown=true --write .",
+    "type-check": "tsc --noEmit -p packages/app/tsconfig.json"
   },
   "dependencies": {
-    "astro": "^4.2.6",
     "@astrojs/check": "^0.4.1",
+    "@astrojs/rss": "^4.0.5",
+    "@astrojs/ts-plugin": "^1.4.0",
+    "astro": "^4.3.3",
     "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.5.3"
   }
 }
