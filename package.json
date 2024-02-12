@@ -10,16 +10,23 @@
     "astro": "astro",
     "lint": "biome lint --no-errors-on-unmatched --files-ignore-unknown=true .",
     "format": "biome format --no-errors-on-unmatched --files-ignore-unknown=true --write .",
-    "type-check": "tsc --noEmit -p packages/app/tsconfig.json"
+    "type-check": "tsc --noEmit -p packages/app/tsconfig.json",
+    "prepare": "if [ -z \"$CI\" ]; then husky install; fi"
   },
   "dependencies": {
     "@astrojs/check": "^0.4.1",
-    "@astrojs/rss": "^4.0.5",
     "@astrojs/ts-plugin": "^1.4.0",
     "astro": "^4.3.3",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.5.3"
+    "@biomejs/biome": "1.5.3",
+    "husky": "^9.0.10"
+  },
+  "lint-staged": {
+    "*": [
+      "biome format --write --no-errors-on-unmatched --files-ignore-unknown=true",
+      "biome lint --apply --no-errors-on-unmatched --files-ignore-unknown=true"
+    ]
   }
 }
