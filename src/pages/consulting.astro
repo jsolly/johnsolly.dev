@@ -1,0 +1,150 @@
+---
+import Layout from "../layouts/Layout.astro";
+const consultingServices = [
+    {
+        id: "personalized-consulting",
+        title: "Personalized Consulting Sessions",
+        sessions: [
+            {
+                id: 1,
+                name: "30-Minute Expert Consulting Session",
+                description:
+                    "Dive into a one-on-one, 30-minute consulting session tailored to answer your specific questions and offer expert advice.",
+                features: [
+                    "Pre-session questionnaire to outline your questions or topics of interest",
+                    "One-on-one consultation via video call or phone",
+                    "Follow-up email summary highlighting key points discussed and recommended next steps",
+                    "Option to book additional sessions at a discounted rate",
+                ],
+                price: "[Your Price Here]",
+                bookingProcess: [
+                    "Complete the pre-session questionnaire.",
+                    "Schedule your session based on available slots.",
+                    "Make payment to confirm your booking.",
+                    "Receive a confirmation email with your session details.",
+                ],
+            },
+        ],
+    },
+    {
+        id: "project-discussion",
+        title: "Project Discussion & Service Proposal",
+        sessions: [
+            {
+                id: 2,
+                name: "Project Discovery & Proposal Consultation",
+                description:
+                    "Looking to start a new project or need expert services to bring your ideas to life? Our Project Discovery & Proposal Consultation offers a structured approach to understanding your project requirements, discussing potential strategies, and outlining a customized proposal for our services.",
+                features: [
+                    "Initial questionnaire to gather project details and objectives",
+                    "60-minute in-depth discussion to explore your project needs and how I can help",
+                    "Customized project proposal including scope of work, timeline, and pricing",
+                    "One round of follow-up questions via email or a short call to clarify the proposal",
+                ],
+                price: "[Your Price Here]",
+                bookingProcess: [
+                    "Submit your initial project details through our questionnaire.",
+                    "We'll review your submission and reach out to schedule a comprehensive discussion.",
+                    "Engage in the project discovery session to cover all aspects of your potential project.",
+                    "Receive a detailed proposal tailored to your project's needs.",
+                ],
+            },
+        ],
+    },
+];
+---
+
+<Layout title="Consulting Services">
+    <main>
+        <h1>Consulting Services</h1>
+        {
+            consultingServices.map((service) => (
+                <section>
+                    <h2>{service.title}</h2>
+                    {service.sessions.map((session) => (
+                        <article>
+                            <h3>{session.name}</h3>
+                            <p>{session.description}</p>
+                            <h4>Features:</h4>
+                            <ul>
+                                {session.features.map((feature, index) => (
+                                    <li>{feature}</li>
+                                ))}
+                            </ul>
+                            <p>
+                                <strong>Price:</strong> {session.price}
+                            </p>
+                            <h4>Booking Process:</h4>
+                            <ol>
+                                {session.bookingProcess.map((step, index) => (
+                                    <li>{step}</li>
+                                ))}
+                            </ol>
+                        </article>
+                    ))}
+                </section>
+            ))
+        }
+    </main>
+</Layout>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        color: #333;
+    }
+    main {
+        margin: auto;
+        padding: 2rem;
+        max-width: 800px;
+    }
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+        color: #007bff;
+        margin-bottom: 2rem;
+    }
+    section {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+        padding: 2rem;
+    }
+    h2 {
+        font-size: 2rem;
+        color: #007bff;
+        margin-bottom: 1rem;
+    }
+    article {
+        border-top: 2px solid #eee;
+        padding-top: 1rem;
+        margin-top: 1rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+        color: #0056b3;
+    }
+    ul,
+    ol {
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    li {
+        margin-bottom: 5px;
+    }
+    p,
+    li {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #555;
+    }
+    .text-gradient {
+        background: linear-gradient(45deg, #007bff, #8811aa);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+</style>
