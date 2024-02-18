@@ -16,41 +16,41 @@ const consultingServices = [
                     "Follow-up email summary highlighting key points discussed and recommended next steps",
                     "Option to book additional sessions at a discounted rate",
                 ],
-                price: "[Your Price Here]",
+                price: "$ 75 USD",
                 bookingProcess: [
-                    "Complete the pre-session questionnaire.",
-                    "Schedule your session based on available slots.",
                     "Make payment to confirm your booking.",
+                    "Schedule your session based on available slots.",
+                    "Complete the pre-session questionnaire.",
                     "Receive a confirmation email with your session details.",
                 ],
             },
         ],
     },
-    {
-        id: "project-discussion",
-        title: "Project Discussion & Service Proposal",
-        sessions: [
-            {
-                id: 2,
-                name: "Project Discovery & Proposal Consultation",
-                description:
-                    "Looking to start a new project or need expert services to bring your ideas to life? Our Project Discovery & Proposal Consultation offers a structured approach to understanding your project requirements, discussing potential strategies, and outlining a customized proposal for our services.",
-                features: [
-                    "Initial questionnaire to gather project details and objectives",
-                    "60-minute in-depth discussion to explore your project needs and how I can help",
-                    "Customized project proposal including scope of work, timeline, and pricing",
-                    "One round of follow-up questions via email or a short call to clarify the proposal",
-                ],
-                price: "[Your Price Here]",
-                bookingProcess: [
-                    "Submit your initial project details through our questionnaire.",
-                    "We'll review your submission and reach out to schedule a comprehensive discussion.",
-                    "Engage in the project discovery session to cover all aspects of your potential project.",
-                    "Receive a detailed proposal tailored to your project's needs.",
-                ],
-            },
-        ],
-    },
+    // {
+    //     id: "project-discussion",
+    //     title: "Project Discussion & Service Proposal",
+    //     sessions: [
+    //         {
+    //             id: 2,
+    //             name: "Project Discovery & Proposal Consultation",
+    //             description:
+    //                 "Looking to start a new project or need expert services to bring your ideas to life? Our Project Discovery & Proposal Consultation offers a structured approach to understanding your project requirements, discussing potential strategies, and outlining a customized proposal for our services.",
+    //             features: [
+    //                 "Initial questionnaire to gather project details and objectives",
+    //                 "60-minute in-depth discussion to explore your project needs and how I can help",
+    //                 "Customized project proposal including scope of work, timeline, and pricing",
+    //                 "One round of follow-up questions via email or a short call to clarify the proposal",
+    //             ],
+    //             price: "Free Introductory Session",
+    //             bookingProcess: [
+    //                 "Submit your initial project details through our questionnaire.",
+    //                 "We'll review your submission and reach out to schedule a comprehensive discussion.",
+    //                 "Engage in the project discovery session to cover all aspects of your potential project.",
+    //                 "Receive a detailed proposal tailored to your project's needs.",
+    //             ],
+    //         },
+    //     ],
+    // },
 ];
 ---
 
@@ -80,53 +80,47 @@ const consultingServices = [
                                     <li>{step}</li>
                                 ))}
                             </ol>
+                            <div class="stripe-buy-button-container">
+                                <stripe-buy-button
+                                    buy-button-id="buy_btn_1OlBNRGDKR2aVHG21ryacmnX"
+                                    publishable-key="pk_test_51OVYNtGDKR2aVHG2VnoCnqULwnJGGqaD4jsgfDnguRee6w3PrhzmhBPEIk1OCeTWn2a4VFNo92mxvDsofv10pyQl00XYXf2zRh"
+                                ></stripe-buy-button>
+                            </div>
                         </article>
                     ))}
                 </section>
             ))
         }
+        <div class="return-home">
+            <a href="/" class="home-button">Return to Home</a>
+        </div>
     </main>
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </Layout>
 
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f0f0f0;
-        color: #333;
-    }
-    main {
-        margin: auto;
-        padding: 2rem;
-        max-width: 800px;
-    }
     h1 {
         font-size: 2.5rem;
         text-align: center;
-        color: #007bff;
+        color: rgb(var(--accent));
         margin-bottom: 2rem;
     }
     section {
-        background-color: white;
+        background-color: #1e2025; /* Darker background for sections */
         border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Lighter shadow for dark mode */
         margin-bottom: 2rem;
         padding: 2rem;
     }
-    h2 {
-        font-size: 2rem;
-        color: #007bff;
-        margin-bottom: 1rem;
+    h2,
+    h3,
+    h4 {
+        color: rgb(var(--accent-light)); /* Lighter accent color for headings */
     }
     article {
-        border-top: 2px solid #eee;
+        border-top: 2px solid #333; /* Darker border color */
         padding-top: 1rem;
         margin-top: 1rem;
-    }
-    h3 {
-        font-size: 1.5rem;
-        color: #0056b3;
     }
     ul,
     ol {
@@ -140,11 +134,34 @@ const consultingServices = [
     li {
         font-size: 1rem;
         line-height: 1.6;
-        color: #555;
+        color: #bbb; /* Lighter text color for paragraphs and list items */
     }
-    .text-gradient {
-        background: linear-gradient(45deg, #007bff, #8811aa);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    .return-home {
+        text-align: center; /* Center the button container */
+        margin-top: 2rem; /* Add some space above the button */
+    }
+
+    .home-button {
+        display: inline-block;
+        background-color: rgb(
+            var(--accent)
+        ); /* Use the accent color for the button */
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        text-decoration: none; /* Remove underline from link */
+        font-weight: bold;
+        transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    .home-button:hover {
+        background-color: rgb(var(--accent-hover));
+    }
+
+    .stripe-buy-button-container {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically if needed */
+        margin: 20px 0; /* Optional: Adds some space above and below the button */
     }
 </style>
