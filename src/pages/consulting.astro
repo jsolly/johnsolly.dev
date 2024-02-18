@@ -1,0 +1,167 @@
+---
+import Layout from "../layouts/Layout.astro";
+const consultingServices = [
+    {
+        id: "personalized-consulting",
+        title: "Personalized Consulting Sessions",
+        sessions: [
+            {
+                id: 1,
+                name: "30-Minute Expert Consulting Session",
+                description:
+                    "Dive into a one-on-one, 30-minute consulting session tailored to answer your specific questions and offer expert advice.",
+                features: [
+                    "Pre-session questionnaire to outline your questions or topics of interest",
+                    "One-on-one consultation via video call or phone",
+                    "Follow-up email summary highlighting key points discussed and recommended next steps",
+                    "Option to book additional sessions at a discounted rate",
+                ],
+                price: "$ 75 USD",
+                bookingProcess: [
+                    "Make payment to confirm your booking.",
+                    "Schedule your session based on available slots.",
+                    "Complete the pre-session questionnaire.",
+                    "Receive a confirmation email with your session details.",
+                ],
+            },
+        ],
+    },
+    // {
+    //     id: "project-discussion",
+    //     title: "Project Discussion & Service Proposal",
+    //     sessions: [
+    //         {
+    //             id: 2,
+    //             name: "Project Discovery & Proposal Consultation",
+    //             description:
+    //                 "Looking to start a new project or need expert services to bring your ideas to life? Our Project Discovery & Proposal Consultation offers a structured approach to understanding your project requirements, discussing potential strategies, and outlining a customized proposal for our services.",
+    //             features: [
+    //                 "Initial questionnaire to gather project details and objectives",
+    //                 "60-minute in-depth discussion to explore your project needs and how I can help",
+    //                 "Customized project proposal including scope of work, timeline, and pricing",
+    //                 "One round of follow-up questions via email or a short call to clarify the proposal",
+    //             ],
+    //             price: "Free Introductory Session",
+    //             bookingProcess: [
+    //                 "Submit your initial project details through our questionnaire.",
+    //                 "We'll review your submission and reach out to schedule a comprehensive discussion.",
+    //                 "Engage in the project discovery session to cover all aspects of your potential project.",
+    //                 "Receive a detailed proposal tailored to your project's needs.",
+    //             ],
+    //         },
+    //     ],
+    // },
+];
+---
+
+<Layout title="Consulting Services">
+    <main>
+        <h1>Consulting Services</h1>
+        {
+            consultingServices.map((service) => (
+                <section>
+                    <h2>{service.title}</h2>
+                    {service.sessions.map((session) => (
+                        <article>
+                            <h3>{session.name}</h3>
+                            <p>{session.description}</p>
+                            <h4>Features:</h4>
+                            <ul>
+                                {session.features.map((feature, index) => (
+                                    <li>{feature}</li>
+                                ))}
+                            </ul>
+                            <p>
+                                <strong>Price:</strong> {session.price}
+                            </p>
+                            <h4>Booking Process:</h4>
+                            <ol>
+                                {session.bookingProcess.map((step, index) => (
+                                    <li>{step}</li>
+                                ))}
+                            </ol>
+                            <div class="stripe-buy-button-container">
+                                <stripe-buy-button
+                                    buy-button-id="buy_btn_1OlBNRGDKR2aVHG21ryacmnX"
+                                    publishable-key="pk_test_51OVYNtGDKR2aVHG2VnoCnqULwnJGGqaD4jsgfDnguRee6w3PrhzmhBPEIk1OCeTWn2a4VFNo92mxvDsofv10pyQl00XYXf2zRh"
+                                ></stripe-buy-button>
+                            </div>
+                        </article>
+                    ))}
+                </section>
+            ))
+        }
+        <div class="return-home">
+            <a href="/" class="home-button">Return to Home</a>
+        </div>
+    </main>
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+</Layout>
+
+<style>
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+        color: rgb(var(--accent));
+        margin-bottom: 2rem;
+    }
+    section {
+        background-color: #1e2025; /* Darker background for sections */
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Lighter shadow for dark mode */
+        margin-bottom: 2rem;
+        padding: 2rem;
+    }
+    h2,
+    h3,
+    h4 {
+        color: rgb(var(--accent-light)); /* Lighter accent color for headings */
+    }
+    article {
+        border-top: 2px solid #333; /* Darker border color */
+        padding-top: 1rem;
+        margin-top: 1rem;
+    }
+    ul,
+    ol {
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    li {
+        margin-bottom: 5px;
+    }
+    p,
+    li {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #bbb; /* Lighter text color for paragraphs and list items */
+    }
+    .return-home {
+        text-align: center; /* Center the button container */
+        margin-top: 2rem; /* Add some space above the button */
+    }
+
+    .home-button {
+        display: inline-block;
+        background-color: rgb(
+            var(--accent)
+        ); /* Use the accent color for the button */
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        text-decoration: none; /* Remove underline from link */
+        font-weight: bold;
+        transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    .home-button:hover {
+        background-color: rgb(var(--accent-hover));
+    }
+
+    .stripe-buy-button-container {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically if needed */
+        margin: 20px 0; /* Optional: Adds some space above and below the button */
+    }
+</style>
