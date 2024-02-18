@@ -6,10 +6,11 @@ interface Props {
 }
 
 const { href, title, body } = Astro.props;
+const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
 ---
 
 <li class="link-card">
-    <a href={href}>
+    <a href={href} target={isRelativeLink ? "_self" : "_blank"}>
         <h2>
             {title}
             <span>&rarr;</span>
