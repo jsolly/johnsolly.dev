@@ -55,6 +55,9 @@ const consultingServices = [
 ---
 
 <Layout title="Consulting Services">
+    <head>
+        <script async src="/scripts/stripeBuyButton.js"></script>
+    </head>
     <main>
         <h1>Consulting Services</h1>
         {
@@ -84,7 +87,7 @@ const consultingServices = [
                                 <stripe-buy-button
                                     buy-button-id="buy_btn_1OlBNRGDKR2aVHG21ryacmnX"
                                     publishable-key="pk_test_51OVYNtGDKR2aVHG2VnoCnqULwnJGGqaD4jsgfDnguRee6w3PrhzmhBPEIk1OCeTWn2a4VFNo92mxvDsofv10pyQl00XYXf2zRh"
-                                ></stripe-buy-button>
+                                />
                             </div>
                         </article>
                     ))}
@@ -92,10 +95,9 @@ const consultingServices = [
             ))
         }
         <div class="return-home">
-            <a href="/" class="home-button">Return to Home</a>
+            <a href="/" class="primary-btn">Return to Home</a>
         </div>
     </main>
-    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </Layout>
 
 <style>
@@ -138,26 +140,8 @@ const consultingServices = [
     }
     .return-home {
         text-align: center; /* Center the button container */
-        margin-top: 2rem; /* Add some space above the button */
+        margin-top: 2rem;
     }
-
-    .home-button {
-        display: inline-block;
-        background-color: rgb(
-            var(--accent)
-        ); /* Use the accent color for the button */
-        color: white;
-        padding: 10px 20px;
-        border-radius: 8px;
-        text-decoration: none; /* Remove underline from link */
-        font-weight: bold;
-        transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-    }
-
-    .home-button:hover {
-        background-color: rgb(var(--accent-hover));
-    }
-
     .stripe-buy-button-container {
         display: flex;
         justify-content: center; /* Center horizontally */

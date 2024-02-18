@@ -1,0 +1,265 @@
+---
+// Define your carousel items as before
+const carouselItems = [
+    {
+        avatar_url: "/images/AmyBrazil.webp",
+        name: "Amy Brazil",
+        position: "Direct Manager",
+        company: "YellowfinBI",
+        year: "2022",
+        quote: "I had the pleasure to hire, onboard and manage John...",
+        link: "https://www.linkedin.com/in/jsolly/",
+    },
+    {
+        avatar_url: "/images/CraigUtley.webp",
+        name: "Craig Utley",
+        position: "Direct Manager",
+        company: "YellowfinBI",
+        year: "2022",
+        quote: "There is a right way to come into an organization and John did it the right way...",
+        link: "https://www.linkedin.com/in/jsolly/",
+    },
+    // {
+    //     avatar_url: "/portfolio/MeredithBean.webp",
+    //     name: "Meredith Bean",
+    //     position: "Undergraduate Student",
+    //     company: "GMU",
+    //     year: "2016",
+    //     quote: "John was an extraordinary TA to me as a student in an introductory GIS class...",
+    //     link: "https://www.linkedin.com/in/jsolly/",
+    // },
+    // {
+    //     avatar_url: "/portfolio/KathrynThorpe.webp",
+    //     name: "Kathryn Thorpe",
+    //     position: "Coworker",
+    //     company: "YellowfinBI",
+    //     year: "2022",
+    //     quote: "Not only is John the kind of guy you'd trust with all things IT based on his technical prowess...",
+    //     link: "https://www.linkedin.com/in/jsolly/",
+    // },
+];
+---
+
+<div class="testimonial-carousel">
+    <h2 class="testimonial-title" id="carouselExampleCaptions">Testimonials</h2>
+    <div class="carousel-wrapper">
+        <div class="carousel-container">
+            <button
+                class="carousel-control-prev"
+                type="button"
+                aria-label="Previous">&#10094;</button
+            >
+            <div class="carousel-inner">
+                {
+                    carouselItems.map((item, index) => (
+                        <div
+                            class={`carousel-item ${
+                                index === 0 ? "active" : ""
+                            }`}
+                            data-index={index}
+                        >
+                            <div class="carousel-item-content">
+                                <img
+                                    class="avatar-img"
+                                    src={item.avatar_url}
+                                    alt="avatar"
+                                />
+                                <div class="carousel-content">
+                                    <div class="carousel-text">
+                                        <h3 class="carousel-name">
+                                            {item.name}
+                                        </h3>
+                                        <p class="carousel-position">
+                                            {item.position}
+                                        </p>
+                                        <p class="carousel-info">
+                                            {item.company} - {item.year}
+                                        </p>
+                                    </div>
+                                    <p class="testimonial-quote">
+                                        {item.quote}
+                                    </p>
+                                    <p class="carousel-review-link">
+                                        <a
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            href={item.link}
+                                        >
+                                            Open review on LinkedIn
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+            <button
+                class="carousel-control-next"
+                type="button"
+                aria-label="Next">&#10095;</button
+            >
+        </div>
+    </div>
+</div>
+<!-- Indicators -->
+<ol class="carousel-indicators">
+    {
+        carouselItems.map((_, index) => (
+            <li
+                class={index === 0 ? "active" : ""}
+                data-carousel-index={index}
+            />
+        ))
+    }
+</ol>
+
+<style>
+    /* Carousel */
+
+    .testimonial-quote::before {
+        content: open-quote;
+        display: inline;
+        height: 0;
+        line-height: 0;
+        left: 0;
+        position: relative;
+        top: 15px;
+        color: #c3ceff;
+        font-size: 3rem;
+        font-family: georgia, serif;
+    }
+
+    .testimonial-quote::after {
+        content: close-quote;
+        display: inline;
+        height: 0;
+        line-height: 0;
+        left: 0;
+        position: relative;
+        top: 18px;
+        color: #c3ceff;
+        font-size: 3rem;
+        font-family: georgia, serif;
+    }
+
+    .testimonial-carousel {
+        text-align: center;
+        margin-bottom: 2.5rem;
+        margin-top: 2.5rem;
+    }
+
+    .carousel-controls {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .carousel-indicators {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+        background-color: #ccc;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .carousel-indicators li.active {
+        background-color: #007bff;
+    }
+
+    .avatar-img {
+        border-radius: 50%;
+        box-shadow:
+            0 1px 3px rgba(0, 0, 0, 0.12),
+            0 1px 2px rgba(0, 0, 0, 0.24);
+        margin-bottom: 1rem;
+        max-width: 150px;
+    }
+
+    .carousel-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .carousel-name {
+        margin-bottom: 0.5rem;
+        margin-top: 0;
+        font-weight: 300;
+    }
+
+    .carousel-position {
+        font-weight: 700;
+        margin-bottom: 0;
+        font-size: 1.25rem;
+    }
+
+    .carousel-info {
+        line-height: 1;
+        margin: 0;
+    }
+
+    .carousel-review-link {
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+
+    .carousel-wrapper {
+        position: relative;
+    }
+
+    .carousel-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .carousel-item {
+        display: none;
+    }
+
+    .carousel-item.active {
+        display: block;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        font-size: 2rem;
+        cursor: pointer;
+        color: var(--secondary-color);
+        background-color: transparent;
+        border: none;
+    }
+
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+        background-color: transparent;
+    }
+
+    .carousel-item-content {
+        margin-bottom: 1.5rem;
+    }
+
+    .testimonial-title {
+        font-size: 2rem;
+        font-weight: 300;
+        letter-spacing: 0.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .testimonial-quote {
+        font-size: 1.25rem;
+        font-weight: 300;
+        margin-bottom: 0;
+        max-width: 450px;
+        word-wrap: break-word;
+    }
+</style>
