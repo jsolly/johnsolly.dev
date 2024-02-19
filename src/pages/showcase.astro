@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ContactMe from "../components/ContactMe.astro";
+import PageSpeedInsights from "../components/PageSpeedInsights.astro";
+import LongSollyBio from "../components/LongSollyBio.astro";
+import Testimonials from "../components/Testimonials.astro";
+import ProjectsList from "../components/ProjectsList.astro";
+---
+
+<Layout title="John Solly's Portfolio">
+    <div class="resume-container">
+        <a target="_blank" href="/John-Solly-Resume.pdf" class="resume-btn">
+            View Resume ↗
+        </a>
+    </div>
+    <h1 id="portfolioHello" class="portfolio-hello">
+        Hello World,<br />I'm John!
+    </h1>
+    <LongSollyBio />
+    <Testimonials />
+    <ProjectsList />
+    <br />
+    <hr />
+    <br />
+    <ContactMe />
+    <hr />
+    <br />
+    <div class="return-home">
+        <a href="/" class="secondary-btn">Return to Home</a>
+    </div>
+    <PageSpeedInsights />
+</Layout>
+
+<style>
+    #portfolioHello {
+        font-size: 3.5rem;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+
+    .resume-container {
+        text-align: center;
+    }
+</style>

@@ -16,7 +16,7 @@ const consultingServices = [
                     "Follow-up email summary highlighting key points discussed and recommended next steps",
                     "Option to book additional sessions at a discounted rate",
                 ],
-                price: "$ 75 USD",
+                price: "$75 USD",
                 bookingProcess: [
                     "Make payment to confirm your booking.",
                     "Schedule your session based on available slots.",
@@ -55,47 +55,47 @@ const consultingServices = [
 ---
 
 <Layout title="Consulting Services">
-    <main>
-        <h1>Consulting Services</h1>
-        {
-            consultingServices.map((service) => (
-                <section>
-                    <h2>{service.title}</h2>
-                    {service.sessions.map((session) => (
-                        <article>
-                            <h3>{session.name}</h3>
-                            <p>{session.description}</p>
-                            <h4>Features:</h4>
-                            <ul>
-                                {session.features.map((feature, index) => (
-                                    <li>{feature}</li>
-                                ))}
-                            </ul>
-                            <p>
-                                <strong>Price:</strong> {session.price}
-                            </p>
-                            <h4>Booking Process:</h4>
-                            <ol>
-                                {session.bookingProcess.map((step, index) => (
-                                    <li>{step}</li>
-                                ))}
-                            </ol>
-                            <div class="stripe-buy-button-container">
-                                <stripe-buy-button
-                                    buy-button-id="buy_btn_1OlBNRGDKR2aVHG21ryacmnX"
-                                    publishable-key="pk_test_51OVYNtGDKR2aVHG2VnoCnqULwnJGGqaD4jsgfDnguRee6w3PrhzmhBPEIk1OCeTWn2a4VFNo92mxvDsofv10pyQl00XYXf2zRh"
-                                ></stripe-buy-button>
-                            </div>
-                        </article>
-                    ))}
-                </section>
-            ))
-        }
-        <div class="return-home">
-            <a href="/" class="home-button">Return to Home</a>
-        </div>
-    </main>
-    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+    <head>
+        <script async src="/scripts/stripeBuyButton.js"></script>
+    </head>
+    <h1>Consulting Services</h1>
+    {
+        consultingServices.map((service) => (
+            <section>
+                <h2>{service.title}</h2>
+                {service.sessions.map((session) => (
+                    <article>
+                        <h3>{session.name}</h3>
+                        <p>{session.description}</p>
+                        <h4>Features:</h4>
+                        <ul>
+                            {session.features.map((feature, index) => (
+                                <li>{feature}</li>
+                            ))}
+                        </ul>
+                        <p>
+                            <strong>Price:</strong> {session.price}
+                        </p>
+                        <h4>Booking Process:</h4>
+                        <ol>
+                            {session.bookingProcess.map((step, index) => (
+                                <li>{step}</li>
+                            ))}
+                        </ol>
+                        <div class="stripe-buy-button-container">
+                            <stripe-buy-button
+                                buy-button-id="buy_btn_1OlBNRGDKR2aVHG21ryacmnX"
+                                publishable-key="pk_test_51OVYNtGDKR2aVHG2VnoCnqULwnJGGqaD4jsgfDnguRee6w3PrhzmhBPEIk1OCeTWn2a4VFNo92mxvDsofv10pyQl00XYXf2zRh"
+                            />
+                        </div>
+                    </article>
+                ))}
+            </section>
+        ))
+    }
+    <div class="return-home">
+        <a href="/" class="secondary-btn">Return to Home</a>
+    </div>
 </Layout>
 
 <style>
@@ -137,27 +137,9 @@ const consultingServices = [
         color: #bbb; /* Lighter text color for paragraphs and list items */
     }
     .return-home {
-        text-align: center; /* Center the button container */
-        margin-top: 2rem; /* Add some space above the button */
+        text-align: center;
+        margin-top: 2rem;
     }
-
-    .home-button {
-        display: inline-block;
-        background-color: rgb(
-            var(--accent)
-        ); /* Use the accent color for the button */
-        color: white;
-        padding: 10px 20px;
-        border-radius: 8px;
-        text-decoration: none; /* Remove underline from link */
-        font-weight: bold;
-        transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-    }
-
-    .home-button:hover {
-        background-color: rgb(var(--accent-hover));
-    }
-
     .stripe-buy-button-container {
         display: flex;
         justify-content: center; /* Center horizontally */

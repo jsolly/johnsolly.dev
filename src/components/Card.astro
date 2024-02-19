@@ -1,11 +1,15 @@
 ---
 interface Props {
     title: string;
-    body: string;
+    snippet: string;
     href: string;
+    metaimg?: {
+        url: string;
+        alt_txt: string;
+    };
 }
 
-const { href, title, body } = Astro.props;
+const { title, snippet, href, metaimg } = Astro.props;
 const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
 ---
 
@@ -15,9 +19,21 @@ const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
             {title}
             <span>&rarr;</span>
         </h2>
-        <p>
-            {body}
-        </p>
+        {
+            metaimg ? (
+                <div class="img-container">
+                    <img
+                        src={metaimg.url}
+                        alt={metaimg.alt_txt}
+                        width="200px"
+                        height="200px"
+                    />
+                    <p>{snippet}</p>
+                </div>
+            ) : (
+                <p>{snippet}</p>
+            )
+        }
     </a>
 </li>
 <style>
@@ -39,18 +55,8 @@ const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
         line-height: 1.4;
         padding: calc(1.5rem - 1px);
         border-radius: 8px;
-        color: white;
         background-color: #23262d;
         opacity: 0.8;
-    }
-    h2 {
-        margin: 0;
-        font-size: 1.25rem;
-        transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-    p {
-        margin-top: 0.5rem;
-        margin-bottom: 0;
     }
     .link-card:is(:hover, :focus-within) {
         background-position: 0;
@@ -58,5 +64,15 @@ const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
     }
     .link-card:is(:hover, :focus-within) h2 {
         color: rgb(var(--accent-light));
+    }
+
+    .img-container {
+        display: flex;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+    .img-container img {
+        border-radius: 8px;
+        margin-right: 1rem;
     }
 </style>
