@@ -4,31 +4,29 @@ import Card from "../components/Card.astro";
 ---
 
 <Layout title="JohnSolly.dev">
-	<main>
-		<h1>Welcome to <span class="text-gradient">JohnSolly.dev</span></h1>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="/showcase/"
-				title="Showcase"
-				body="A portfolio of my geospatial and software projects, showcasing innovative solutions and impactful results."
-			/>
-			<Card
-				href="https://blogthedata.com"
-				title="Blog"
-				body="Insights on software engineering, geospatial analysis, and tech trends. My thoughts, tutorials, and more."
-			/>
-			<Card
-				href="/consulting/"
-				title="Consulting"
-				body="Professional consulting in geospatial applications, DevOps, and software optimization. Tailored tech solutions."
-			/>
-			<Card
-				href="/John-Solly-Resume.pdf"
-				title="Resume"
-				body="My professional journey: expertise in software engineering, education, and field accomplishments."
-			/>
-		</ul>
-	</main>
+	<h1>Welcome to <span class="text-gradient">JohnSolly.dev</span></h1>
+	<ul role="list" class="link-card-grid">
+		<Card
+			href="/showcase/"
+			title="Showcase"
+			snippet="A portfolio of my geospatial and software projects, showcasing innovative solutions and impactful results."
+		/>
+		<Card
+			href="https://blogthedata.com"
+			title="Blog"
+			snippet="Insights on software engineering, geospatial analysis, and tech trends. My thoughts, tutorials, and more."
+		/>
+		<Card
+			href="/consulting/"
+			title="Consulting"
+			snippet="Professional consulting in geospatial applications, DevOps, and software optimization. Tailored tech solutions."
+		/>
+		<Card
+			href="/John-Solly-Resume.pdf"
+			title="Resume"
+			snippet="My professional journey: expertise in software engineering, education, and field accomplishments."
+		/>
+	</ul>
 </Layout>
 
 <style>

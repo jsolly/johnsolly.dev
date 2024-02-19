@@ -1,0 +1,17 @@
+---
+import Layout from "./Layout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+    <h1>{frontmatter.title}</h1>
+    <img
+        src={frontmatter.metaimg.url}
+        alt={frontmatter.metaimg.alt}
+        height="300px"
+    />
+    <slot />
+    <div class="return-home">
+        <a href="/" class="secondary-btn">Return to Home</a>
+    </div>
+</Layout>

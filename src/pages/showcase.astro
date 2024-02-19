@@ -4,79 +4,36 @@ import ContactMe from "../components/ContactMe.astro";
 import PageSpeedInsights from "../components/PageSpeedInsights.astro";
 import LongSollyBio from "../components/LongSollyBio.astro";
 import Testimonials from "../components/Testimonials.astro";
-import Card from "../components/Card.astro";
-
-const posts = [
-    {
-        href: "/first-post",
-        title: "First Post",
-        metaimg: {
-            url: "/images/projects/iPhoneblogthedata.webp",
-            alt_txt: "Image description for first post",
-        },
-        content: "This is a short snippet of the first post...",
-    },
-    {
-        href: "/second-post",
-        title: "Second Post",
-        metaimg: {
-            url: "/images/projects/GeoAsteroids_screenshot.webp",
-            alt_txt: "Image description for second post",
-        },
-        content: "This is a short snippet of the second post...",
-    },
-];
+import ProjectsList from "../components/ProjectsList.astro";
 ---
 
 <Layout title="John Solly's Portfolio">
-    <main>
-        <div class="resume-container">
-            <a target="_blank" href="/John-Solly-Resume.pdf" class="resume-btn">
-                <!-- SVG inline as before -->
-                View Resume ↗
-            </a>
-        </div>
-        <h1 id="portfolioHello" class="portfolio-hello">
-            Hello World,<br />I'm John!
-        </h1>
-        <LongSollyBio />
-        <Testimonials />
-        {
-            posts.map((post) => (
-                <Card href={post.href} title={post.title} body={post.content} />
-            ))
-        }
-
-        <br />
-        <hr />
-        <br />
-        <ContactMe />
-        <hr />
-        <br />
-        <PageSpeedInsights />
-    </main>
+    <div class="resume-container">
+        <a target="_blank" href="/John-Solly-Resume.pdf" class="resume-btn">
+            View Resume ↗
+        </a>
+    </div>
+    <h1 id="portfolioHello" class="portfolio-hello">
+        Hello World,<br />I'm John!
+    </h1>
+    <LongSollyBio />
+    <Testimonials />
+    <ProjectsList />
+    <br />
+    <hr />
+    <br />
+    <ContactMe />
+    <hr />
+    <br />
+    <div class="return-home">
+        <a href="/" class="secondary-btn">Return to Home</a>
+    </div>
+    <PageSpeedInsights />
 </Layout>
 
 <style>
-    /* General Layout */
-    .row {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 1.5rem;
-    }
-
-    .column {
-        padding: 0 1.5rem;
-        position: relative;
-        width: 100%;
-        min-height: 1px;
-    }
-
-    /* Hello World + Resume */
     #portfolioHello {
         font-size: 3.5rem;
-        color: var(--secondary-color);
         font-weight: 500;
         line-height: 1.1;
         letter-spacing: 2px;
@@ -85,46 +42,6 @@ const posts = [
     }
 
     .resume-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         text-align: center;
-        margin-bottom: 2.5rem;
-    }
-
-    .resume-btn {
-        display: inline-block;
-        border: 1px solid var(--primary-blue);
-        padding: 0.5rem 1rem;
-        margin-left: 1.5rem;
-        color: var(--primary-blue);
-        text-decoration: none;
-        transition:
-            background-color 0.3s,
-            color 0.3s;
-    }
-
-    .resume-btn:hover {
-        background-color: var(--primary-blue-hover);
-        color: var(--muted-white);
-    }
-
-    .resume-btn svg {
-        width: 18px;
-        height: 18px;
-        fill: var(--primary-blue);
-        transition: fill 0.3s ease;
-    }
-
-    .resume-btn:hover svg {
-        fill: var(--muted-white);
-    }
-
-    @media (min-width: 992px) {
-        .resume-container {
-            display: grid;
-            grid-template-columns: 1fr auto;
-            align-items: center;
-        }
     }
 </style>

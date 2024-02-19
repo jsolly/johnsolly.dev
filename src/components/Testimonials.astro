@@ -83,15 +83,16 @@ const carouselItems = [
                                     <p class="testimonial-quote">
                                         {item.quote}
                                     </p>
-                                    <p class="carousel-review-link">
-                                        <a
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            href={item.link}
-                                        >
-                                            Open review on LinkedIn
-                                        </a>
-                                    </p>
+                                    <ol class="carousel-indicators">
+                                        {carouselItems.map((_, index) => (
+                                            <li
+                                                class={
+                                                    index === 0 ? "active" : ""
+                                                }
+                                                data-carousel-index={index}
+                                            />
+                                        ))}
+                                    </ol>
                                 </div>
                             </div>
                         </div>
@@ -106,17 +107,6 @@ const carouselItems = [
         </div>
     </div>
 </div>
-<!-- Indicators -->
-<ol class="carousel-indicators">
-    {
-        carouselItems.map((_, index) => (
-            <li
-                class={index === 0 ? "active" : ""}
-                data-carousel-index={index}
-            />
-        ))
-    }
-</ol>
 
 <style>
     /* Carousel */
@@ -149,7 +139,6 @@ const carouselItems = [
 
     .testimonial-carousel {
         text-align: center;
-        margin-bottom: 2.5rem;
         margin-top: 2.5rem;
     }
 
@@ -211,11 +200,6 @@ const carouselItems = [
         margin: 0;
     }
 
-    .carousel-review-link {
-        font-weight: 600;
-        margin-bottom: 0;
-    }
-
     .carousel-wrapper {
         position: relative;
     }
@@ -238,7 +222,7 @@ const carouselItems = [
     .carousel-control-next {
         font-size: 2rem;
         cursor: pointer;
-        color: var(--secondary-color);
+        color: var(--main-text-color);
         background-color: transparent;
         border: none;
     }

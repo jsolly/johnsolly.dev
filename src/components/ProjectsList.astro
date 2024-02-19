@@ -1,0 +1,19 @@
+---
+import Card from "./Card.astro";
+
+// Load all project markdown files from the projects directory
+const allProjects = await Astro.glob("../pages/projects/*.md");
+---
+
+<div class="projects-list">
+    {
+        allProjects.map((project) => (
+            <Card
+                title={project.frontmatter.title}
+                href={project.frontmatter.href}
+                metaimg={project.frontmatter.metaimg}
+                snippet={project.frontmatter.snippet}
+            />
+        ))
+    }
+</div>

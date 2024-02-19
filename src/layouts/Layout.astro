@@ -17,7 +17,9 @@ const { title } = Astro.props;
         <title>{title}</title>
     </head>
     <body>
-        <slot />
+        <main>
+            <slot />
+        </main>
     </body>
 </html>
 <style is:global>
@@ -32,6 +34,8 @@ const { title } = Astro.props;
             rgb(var(--accent-light)) 30%,
             white 60%
         );
+        --main-text-color: rgb(161, 161, 170);
+        --btn-text-color: rgb(236, 236, 236);
     }
     html {
         font-family: Arial, sans-serif;
@@ -47,7 +51,7 @@ const { title } = Astro.props;
         padding: 2rem;
         width: 800px;
         max-width: calc(100% - 2rem);
-        color: white;
+        color: var(--main-text-color);
         font-size: 20px;
         line-height: 1.6;
     }
@@ -55,15 +59,41 @@ const { title } = Astro.props;
     .primary-btn {
         display: inline-block;
         background-color: rgb(var(--accent));
-        color: white;
+        color: var(--btn-text-color);
         padding: 10px 20px;
         border-radius: 8px;
-        text-decoration: none; /* Remove underline from link */
+        text-decoration: none;
         font-weight: bold;
-        transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+        transition: background-color 0.3s ease;
     }
 
     .primary-btn:hover {
         background-color: rgb(var(--accent-hover));
+        text-decoration: none;
+    }
+
+    .secondary-btn {
+        display: inline-block;
+        background-color: transparent;
+        color: var(--btn-text-color);
+        padding: 10px 20px;
+        border: 2px solid rgb(var(--accent));
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    .secondary-btn:hover {
+        background-color: rgb(var(--accent));
+        text-decoration: none;
+    }
+
+    a {
+        color: var(--accent);
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
     }
 </style>
