@@ -13,6 +13,7 @@ const allProjects = await Astro.glob("../pages/projects/*.md");
                 href={project.frontmatter.href}
                 metaimg={project.frontmatter.metaimg}
                 snippet={project.frontmatter.snippet}
+                logos={project.frontmatter.logos}
             />
         ))
     }

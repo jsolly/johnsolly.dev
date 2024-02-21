@@ -6,6 +6,16 @@ metaimg:
   url: "/images/projects/GeoAsteroids_screenshot.webp"
   alt_txt: "GeoAsteroids Screenshot"
 snippet: "Asteroids was one of my favorite arcade games growing up. I wanted to recreate that nostalgic experience while leveling up my web development skills. I was excited to build a game because I knew it would be a great way to learn many aspects of programming - state management, collision detection, animations, etc."
+logos:
+  - url: "/logos/typescriptLogo.svg"
+    alt_txt: "TypeScript logo"
+  - url: "/logos/mongoLogo.svg"
+    alt_txt: "MongoDB logo"
+  - url: "/logos/vercelLogo.svg"
+    alt_txt: "Vercel logo"
+  - url: "/logos/viteLogo.svg"
+    alt_txt: "Vite logo"
+
 ---
 
 ## Purpose and Goal

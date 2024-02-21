@@ -6,6 +6,21 @@ metaimg:
   url: "/images/projects/iPhoneblogthedata.webp"
   alt_txt: "Blogthedata.com on an iPhone"
 snippet: "Blogthedata.com is a blogging platform with everything but the kitchen sink. It is a full-stack web application that I built from scratch using the Django web framework and a variety of other technologies."
+logos:
+  - url: "/logos/pythonLogo.svg"
+    alt_txt: "Python logo"
+  - url: "/logos/djangoLogo.svg"
+    alt_txt: "Django logo"
+  - url: "/logos/postgresLogo.svg"
+    alt_txt: "Postgres logo"
+  - url: "/logos/linodeLogo.svg"
+    alt_txt: "Linode logo"
+  - url: "/logos/NGINXlogo.svg"
+    alt_txt: "NGINX logo"
+  - url: "/logos/gunicornLogo.svg"
+    alt_txt: "Gunicorn logo"
+  - url: "/logos/cloudflareLogo.svg"
+    alt_txt: "Cloudflare logo"
 ---
 
 ## Purpose and Goal
