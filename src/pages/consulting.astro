@@ -54,11 +54,10 @@ const consultingServices = [
 ];
 ---
 
+<head>
+    <script async src="/scripts/stripeBuyButton.js"></script>
+</head>
 <Layout title="Consulting Services">
-    <head>
-        <script async src="/scripts/stripeBuyButton.js"></script>
-    </head>
-    <h1>Consulting Services</h1>
     {
         consultingServices.map((service) => (
             <section>
@@ -93,9 +92,6 @@ const consultingServices = [
             </section>
         ))
     }
-    <div class="return-home">
-        <a href="/" class="secondary-btn">Return to Home</a>
-    </div>
 </Layout>
 
 <style>
