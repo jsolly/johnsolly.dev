@@ -63,6 +63,7 @@ const isRootPath = Astro.url.pathname === "/";
         );
         --main-text-color: rgb(161, 161, 170);
         --btn-text-color: rgb(236, 236, 236);
+        --link-color: rgb(108, 159, 242);
     }
     html {
         font-family: Arial, sans-serif;
@@ -117,10 +118,17 @@ const isRootPath = Astro.url.pathname === "/";
     }
 
     a {
-        color: var(--accent);
+        color: var(--link-color);
         text-decoration: none;
     }
     a:hover {
         text-decoration: underline;
+    }
+
+    /*
+    Do not color the link cards
+    */
+    li.link-card a {
+        color: inherit;
     }
 </style>

@@ -25,11 +25,11 @@ logos:
 
 ## Purpose and Goal
 
-They say publishing your work is one of the best ways to increase your luck. I love sharing things I've learned, so a technical blog seemed like a perfect way to combine the two. I want this site to be more than a portfolio. I hope to help others get into geospatial web development by following my tutorials and cloning my repositories to learn.
+They say publishing your work is one of the best ways to increase your luck. I love sharing things I've learned, so a technical blog perfectly combines the two. I want this site to be more than a portfolio. I want to help others get into geospatial web development by following my tutorials and cloning my repositories to learn.
 
 ## Spotlight Mozilla Observatory score of A+ for blogthedata.com
 
-A blog might seem simple, but I've done a considerable amount of work under the hood. Whether that's getting an A+ on Mozilla's observatory tool, achieving a perfect score on Google Lighthouse, having 100% unit test coverage, or even implementing a complete CI/CD pipeline with Github Actions.
+A blog might seem simple, but I've done a considerable amount of work under the hood. Whether that's [getting an A+ on Mozilla's observatory tool](https://blogthedata.com/post/how-to-get-a-perfect-mozilla-observatory-score/), achieving a perfect score on Google Lighthouse, having 100% unit test coverage, or even implementing a complete CI/CD pipeline with Github Actions.
 
 ## Tech Stack Explanation
 
