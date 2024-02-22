@@ -9,6 +9,7 @@ export function externalAnchorPlugin() {
         node.data ??= {};
         node.data.hProperties ??= {};
         node.data.hProperties.target = '_blank';
+        node.data.hProperties.rel = 'noreferrer noopener';
       }
     });
   }
