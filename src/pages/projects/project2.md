@@ -1,19 +1,19 @@
 ---
-layout: ../../layouts/MarkdownProjectLayout.astro
+layout: /src/layouts/MarkdownProjectLayout.astro
 title: "Atari Astroids Clone, with a Geospatial Twist!"
-href: "/projects/project2"
+href: /projects/project2
 metaimg: 
-  url: "/images/projects/GeoAsteroids_screenshot.webp"
+  url: /src/images/projects/GeoAsteroids_screenshot.webp
   alt_txt: "GeoAsteroids Screenshot"
 snippet: "Asteroids was one of my favorite arcade games growing up. I wanted to recreate that nostalgic experience while leveling up my web development skills. I was excited to build a game because I knew it would be a great way to learn many aspects of programming - state management, collision detection, animations, etc."
 logos:
-  - url: "/logos/typescriptLogo.svg"
+  - url: /src/images/logos/typescriptLogo.svg
     alt_txt: "TypeScript logo"
-  - url: "/logos/mongoLogo.svg"
+  - url: /src/images/logos/mongoLogo.svg
     alt_txt: "MongoDB logo"
-  - url: "/logos/vercelLogo.svg"
+  - url: /src/images/logos/vercelLogo.svg
     alt_txt: "Vercel logo"
-  - url: "/logos/viteLogo.svg"
+  - url: /src/images/logos/viteLogo.svg
     alt_txt: "Vite logo"
 
 ---

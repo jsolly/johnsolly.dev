@@ -17,6 +17,9 @@ dependencies:
   typescript:
     specifier: ^5.3.3
     version: 5.3.3
+  unist-util-visit:
+    specifier: ^5.0.0
+    version: 5.0.0
 
 devDependencies:
   '@biomejs/biome':

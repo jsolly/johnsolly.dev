@@ -42,7 +42,7 @@ const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
             logos ? (
                 <div class="logos">
                     {logos.map((logo) => (
-                        <img src={logo.url} alt={logo.alt_txt} key={logo.url} />
+                        <img src={logo.url} alt={logo.alt_txt} />
                     ))}
                 </div>
             ) : null
