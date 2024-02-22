@@ -1,0 +1,153 @@
+---
+import Layout from "./Layout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+    <h1>{frontmatter.name}</h1>
+    <div class="headerInfo">
+        <ul>
+            <li>{frontmatter.location}</li>
+            <li>{frontmatter.phone}</li>
+            <li>
+                <a
+                    href={`https://${frontmatter.website}`}
+                    target="_blank"
+                    rel="noopener noreferrer">{frontmatter.website}</a
+                >
+            </li>
+            <li>
+                <a href={`mailto:${frontmatter.email}`}>{frontmatter.email}</a>
+            </li>
+            <li>
+                <a
+                    href={`https://${frontmatter.linkedin}`}
+                    target="_blank"
+                    rel="noopener noreferrer">{frontmatter.linkedin}</a
+                >
+            </li>
+        </ul>
+    </div>
+    <slot />
+</Layout>
+
+<style>
+    /* =============
+    Global Styles
+    ============= */
+    @page {
+        size: letter;
+        margin: 0.5in;
+    }
+
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap");
+
+    body {
+        font-family:
+            Inter,
+            system-ui,
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            Roboto,
+            "Helvetica Neue",
+            sans-serif;
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .spacer {
+        margin: 0px auto;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 28px;
+        margin: 0;
+    }
+
+    h2 {
+        background-color: #d0cece;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        margin-top: 0;
+        margin-bottom: 6px;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    h3 {
+        margin: 0;
+        display: flex;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #2f5496;
+    }
+
+    p {
+        padding: 0;
+        margin-block-end: 3px;
+        margin-block-start: 3px;
+    }
+
+    ul {
+        margin: 0px;
+    }
+
+    li {
+        margin: 3px;
+    }
+
+    /* =============
+    Header
+    ============= */
+
+    .headerInfo > ul {
+        display: flex;
+        justify-content: center;
+        border-bottom: 5px solid #1f3865;
+        margin-bottom: 3px;
+        font-size: 12px;
+    }
+
+    .headerInfo > ul > li {
+        list-style-type: none;
+        margin-bottom: 1px;
+    }
+
+    .headerInfo > ul > li:not(:last-child) {
+        margin-right: 8px;
+    }
+
+    .headerInfo > ul > li:not(:last-child):after {
+        content: "|";
+        margin-left: 8px;
+    }
+
+    /* =============
+    Content
+    ============= */
+
+    .role-summary {
+        text-align: justify;
+    }
+
+    .skillset-overview {
+        text-align: justify;
+    }
+
+    .career-highlights > ul > li {
+        list-style-type: square;
+    }
+
+    .company-name {
+        margin: 0;
+        border-bottom: 1px solid #d9e2f3;
+    }
+
+    .education-section {
+        text-align: center;
+        font-size: 13px;
+    }
+</style>

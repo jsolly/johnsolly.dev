@@ -1,7 +1,7 @@
 ---
 layout: /src/layouts/MarkdownProjectLayout.astro
 title: "Blogthedata.com: A blogging platform with everything but the kitchen sink."
-href: /projects/project1
+href: /projects/blogthedata
 metaimg: 
   url: /src/images/projects/iPhoneblogthedata.webp
   alt_txt: "Blogthedata.com on an iPhone"

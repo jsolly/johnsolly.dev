@@ -1,7 +1,7 @@
 ---
 layout: /src/layouts/MarkdownProjectLayout.astro
 title: "Atari Astroids Clone, with a Geospatial Twist!"
-href: /projects/project2
+href: /projects/geoasteroids
 metaimg: 
   url: /src/images/projects/GeoAsteroids_screenshot.webp
   alt_txt: "GeoAsteroids Screenshot"
