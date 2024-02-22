@@ -15,6 +15,7 @@ interface Props {
 
 const { title, snippet, href, metaimg, logos } = Astro.props;
 const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
+import { Image } from "astro:assets";
 ---
 
 <li class="link-card">
@@ -26,11 +27,11 @@ const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
         {
             metaimg ? (
                 <div class="img-container">
-                    <img
+                    <Image
                         src={metaimg.url}
                         alt={metaimg.alt_txt}
-                        width="200px"
-                        height="200px"
+                        width="200"
+                        height="200"
                     />
                     <p>{snippet}</p>
                 </div>
@@ -42,7 +43,12 @@ const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
             logos ? (
                 <div class="logos">
                     {logos.map((logo) => (
-                        <img src={logo.url} alt={logo.alt_txt} />
+                        <Image
+                            src={logo.url}
+                            alt={logo.alt_txt}
+                            width="50"
+                            height="50"
+                        />
                     ))}
                 </div>
             ) : null
