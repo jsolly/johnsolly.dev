@@ -68,7 +68,7 @@ const consultingServices = [
                         <p>{session.description}</p>
                         <h4>Features:</h4>
                         <ul>
-                            {session.features.map((feature, index) => (
+                            {session.features.map((feature, _) => (
                                 <li>{feature}</li>
                             ))}
                         </ul>
@@ -77,7 +77,7 @@ const consultingServices = [
                         </p>
                         <h4>Booking Process:</h4>
                         <ol>
-                            {session.bookingProcess.map((step, index) => (
+                            {session.bookingProcess.map((step, _) => (
                                 <li>{step}</li>
                             ))}
                         </ol>

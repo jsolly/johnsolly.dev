@@ -3,7 +3,7 @@ import { visit } from 'unist-util-visit';
 const site = "https://johnsolly.dev";
 
 export function externalAnchorPlugin() {
-  return (tree, file) => {
+  return (tree, _) => {
     visit(tree, 'link', (node) => {
       if (/^(https?):\/\/[^\s/$.?#].[^\s]*$/i.test(node.url) && !node.url.includes(site)) {
         node.data ??= {};
