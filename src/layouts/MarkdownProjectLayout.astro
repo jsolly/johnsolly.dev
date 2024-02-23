@@ -1,14 +1,12 @@
 ---
 import Layout from "./Layout.astro";
 const { frontmatter } = Astro.props;
+// import { Image } from "astro:assets";
 ---
 
 <Layout title={frontmatter.title}>
     <h1>{frontmatter.title}</h1>
-    <img
-        src={frontmatter.metaimg.url}
-        alt={frontmatter.metaimg.alt}
-        height="300px"
-    />
+    <img src={frontmatter.metaimg.url} alt={frontmatter.metaimg.alt} />
+    <!-- <Image src={frontmatter.metaimg.url} alt={frontmatter.metaimg.alt} /> -->
     <slot />
 </Layout>

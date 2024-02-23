@@ -1,26 +1,24 @@
 ---
-layout: /src/layouts/MarkdownProjectLayout.astro
 title: "Blogthedata.com: A blogging platform with everything but the kitchen sink."
-href: /projects/blogthedata
 metaimg: 
   url: /src/images/projects/iPhoneblogthedata.webp
-  alt_txt: "Blogthedata.com on an iPhone"
+  alt: "Blogthedata.com on an iPhone"
 snippet: "Blogthedata.com is a blogging platform with everything but the kitchen sink. It is a full-stack web application that I built from scratch using the Django web framework and a variety of other technologies."
 logos:
   - url: /src/images/logos/pythonLogo.svg
-    alt_txt: "Python logo"
+    alt: "Python logo"
   - url: /src/images/logos/djangoLogo.svg
-    alt_txt: "Django logo"
+    alt: "Django logo"
   - url: /src/images/logos/postgresLogo.svg
-    alt_txt: "Postgres logo"
+    alt: "Postgres logo"
   - url: /src/images/logos/linodeLogo.svg
-    alt_txt: "Linode logo"
+    alt: "Linode logo"
   - url: /src/images/logos/NGINXlogo.svg
-    alt_txt: "NGINX logo"
+    alt: "NGINX logo"
   - url: /src/images/logos/gunicornLogo.svg
-    alt_txt: "Gunicorn logo"
+    alt: "Gunicorn logo"
   - url: /src/images/logos/cloudflareLogo.svg
-    alt_txt: "Cloudflare logo"
+    alt: "Cloudflare logo"
 ---
 
 ## Purpose and Goal

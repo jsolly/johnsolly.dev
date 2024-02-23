@@ -1,3 +1,8 @@
+---
+import { Image } from "astro:assets";
+import lightHouseScores from "/src/images/svg/lighthouseScores.svg";
+---
+
 <section id="PageSpeed-Insights" class="page-speed-insights-section">
     <div class="row">
         <div class="column">
@@ -11,8 +16,8 @@
                         JohnSolly.dev PageSpeed Insights
                     </a>
                 </figcaption>
-                <img
-                    src="/src/images/svg/lighthouseScores.svg"
+                <Image
+                    src={lightHouseScores}
                     alt="Lighthouse scores for JohnSolly.dev: 100 for Performance, Accessibility, Best Practices, and SEO."
                 />
             </figure>

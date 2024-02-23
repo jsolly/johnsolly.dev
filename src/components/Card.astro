@@ -5,11 +5,11 @@ interface Props {
     href: string;
     metaimg?: {
         url: string;
-        alt_txt: string;
+        alt: string;
     };
     logos?: {
         url: string;
-        alt_txt: string;
+        alt: string;
     }[];
 }
 
@@ -29,7 +29,7 @@ import { Image } from "astro:assets";
                 <div class="img-container">
                     <Image
                         src={metaimg.url}
-                        alt={metaimg.alt_txt}
+                        alt={metaimg.alt}
                         width="200"
                         height="200"
                     />
@@ -45,7 +45,7 @@ import { Image } from "astro:assets";
                     {logos.map((logo) => (
                         <Image
                             src={logo.url}
-                            alt={logo.alt_txt}
+                            alt={logo.alt}
                             width="50"
                             height="50"
                         />
