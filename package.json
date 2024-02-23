@@ -18,12 +18,18 @@
     "@astrojs/check": "^0.4.1",
     "@astrojs/ts-plugin": "^1.4.0",
     "astro": "^4.3.3",
-    "typescript": "^5.3.3",
+    "aws-amplify": "^6.0.17",
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
+    "@aws-amplify/backend": "^0.12.1",
+    "@aws-amplify/backend-cli": "^0.11.1",
     "@biomejs/biome": "1.5.3",
-    "husky": "^9.0.10"
+    "aws-cdk": "^2",
+    "aws-cdk-lib": "^2",
+    "constructs": "^10.0.0",
+    "husky": "^9.0.10",
+    "typescript": "^5.3.3"
   },
   "lint-staged": {
     "*": [
