@@ -1,3 +1,9 @@
+---
+import { Image } from "astro:assets";
+import gisLectureImage from "/src/images/gisLecture.webp";
+import accordionIcon from "/src/images/svg/accordion_arrow.svg";
+---
+
 <head>
     <script src="@scripts/accordion.js"></script>
 </head>
@@ -14,9 +20,9 @@
                     >Tap or click to read John Solly's Bio</span
                 >
                 <span class="accordion-icon">
-                    <img
+                    <Image
                         id="accordion-expand-collapse-arrow"
-                        src="/src/images/svg/accordion_arrow.svg"
+                        src={accordionIcon}
                         alt="expand/collapse"
                     />
                 </span>
@@ -24,9 +30,9 @@
         </h2>
         <div id="collapseOne" class="accordion-collapse">
             <div class="accordion-body">
-                <img
+                <Image
                     class="bio-image"
-                    src="/src/images/gisLecture.webp"
+                    src={gisLectureImage}
                     alt="John at 2015 AAG conference with Rebecca Rice and Michael Goodchild"
                 />
                 <p>
@@ -101,8 +107,8 @@
 
 <style>
     .bio-image {
-        width: 100%;
         max-width: 300px;
+        max-height: 200px;
         border-radius: 5px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         margin-bottom: 1rem;
