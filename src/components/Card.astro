@@ -1,21 +1,20 @@
 ---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
 interface Props {
     title: string;
     snippet: string;
     href: string;
-    metaimg?: {
-        url: string;
-        alt: string;
-    };
+    metaimg?: ImageMetadata;
+    metaimgAlt?: string;
     logos?: {
         url: string;
         alt: string;
     }[];
 }
 
-const { title, snippet, href, metaimg, logos } = Astro.props;
+const { title, snippet, href, metaimg, metaimgAlt, logos } = Astro.props;
 const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
-import { Image } from "astro:assets";
 ---
 
 <li class="link-card">
@@ -28,8 +27,8 @@ import { Image } from "astro:assets";
             metaimg ? (
                 <div class="img-container">
                     <Image
-                        src={metaimg.url}
-                        alt={metaimg.alt}
+                        src={metaimg}
+                        alt={metaimgAlt ?? "Meta image"}
                         width="200"
                         height="100"
                     />

@@ -14,6 +14,7 @@ const allProjects = await getCollection("projects");
                     title={project.data.title}
                     href={`/projects/${project.slug}/`}
                     metaimg={project.data.metaimg}
+                    metaimgAlt={project.data.metaimgAlt}
                     snippet={project.data.snippet}
                     logos={project.data.logos}
                 />

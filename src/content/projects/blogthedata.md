@@ -1,8 +1,7 @@
 ---
 title: "Blogthedata.com: A blogging platform with everything but the kitchen sink."
-metaimg: 
-  url: /src/images/projects/iPhoneblogthedata.webp
-  alt: "Blogthedata.com on an iPhone"
+metaimg: "/src/images/projects/iPhoneblogthedata.webp"
+metaimgAlt: "Blogthedata.com on an iPhone"
 snippet: "Blogthedata.com is a blogging platform with everything but the kitchen sink. It is a full-stack web application that I built from scratch using the Django web framework and a variety of other technologies."
 logos:
   - url: /src/images/logos/pythonLogo.svg

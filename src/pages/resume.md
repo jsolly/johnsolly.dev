@@ -2,9 +2,8 @@
 layout: /src/layouts/resumeLayout.astro
 title: "John Solly's Resume"
 href: /resume
-metaimg: 
-  url: /src/images/jsolly.webp
-  alt: ""
+metaimg: "/src/images/jsolly.webp" 
+metaimgAlt: "John Solly"
 location: Columbus, OH
 redacted: false
 name: JOHN SOLLY
