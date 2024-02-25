@@ -4,7 +4,7 @@ const { frontmatter } = Astro.props;
 import { Image } from "astro:assets";
 ---
 
-<Layout title={frontmatter.title}>
+<Layout title={frontmatter.title} description={frontmatter.snippet}>
     <h1>{frontmatter.title}</h1>
     <Image
         src={frontmatter.metaimg}
