@@ -1,4 +1,3 @@
-// Import utilities from `astro:content`
 import { z, defineCollection } from "astro:content";
 const projectsCollection = defineCollection({
 	type: "content",
@@ -11,7 +10,7 @@ const projectsCollection = defineCollection({
 			logos: z
 				.array(
 					z.object({
-						url: z.string(),
+						url: image(),
 						alt: z.string(),
 					}),
 				)

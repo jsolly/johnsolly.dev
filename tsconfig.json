@@ -9,22 +9,5 @@
     "strictNullChecks": true,
     "allowJs": true,
     "baseUrl": ".",
-    "paths": {
-      "@components/*": [
-        "src/components/*"
-      ],
-      "@images/*": [
-        "src/images/*"
-      ],
-      "@scripts/*": [
-        "src/scripts/*"
-      ],
-      "@layouts/*": [
-        "src/layouts/*"
-      ],
-      "@pages/*": [
-        "src/pages/*"
-      ],
-    }
   }
 }

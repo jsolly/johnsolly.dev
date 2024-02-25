@@ -1,16 +1,15 @@
 ---
 import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
+import type { Logo } from "../types";
+
 interface Props {
     title: string;
     snippet: string;
     href: string;
     metaimg?: ImageMetadata;
     metaimgAlt?: string;
-    logos?: {
-        url: string;
-        alt: string;
-    }[];
+    logos?: Logo[];
 }
 
 const { title, snippet, href, metaimg, metaimgAlt, logos } = Astro.props;
@@ -42,12 +41,7 @@ const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
             logos ? (
                 <div class="logos">
                     {logos.map((logo) => (
-                        <Image
-                            src={logo.url}
-                            alt={logo.alt}
-                            width="50"
-                            height="50"
-                        />
+                        <Image src={logo.url} alt={logo.alt} />
                     ))}
                 </div>
             ) : null
