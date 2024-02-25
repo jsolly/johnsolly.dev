@@ -1,18 +1,23 @@
 ---
 interface Props {
     title: string;
+    description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 const isRootPath = Astro.url.pathname === "/";
+const permalink = new URL(Astro.url.pathname, Astro.site).href;
+const ogImage = "/src/images/jsolly.webp";
+const ogImageURL = new URL(ogImage, Astro.site).href;
 ---
 
 <!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="description" content="Astro description" />
+        <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width" />
+        <!-- Favicons -->
         <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -33,6 +38,20 @@ const isRootPath = Astro.url.pathname === "/";
         <link rel="manifest" href="/favicons/site.webmanifest" />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={permalink} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImageURL} />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={permalink} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={ogImageURL} />
     </head>
     <body>
         <main>
