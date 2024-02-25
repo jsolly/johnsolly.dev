@@ -3,6 +3,7 @@ import { externalAnchorPlugin } from './src/remarkplugins/external-anchor-plugin
 
 
 export default defineConfig({
+	site: "https://johnsolly.dev",
 	markdown: {
 	  remarkPlugins: [externalAnchorPlugin],
 	},
