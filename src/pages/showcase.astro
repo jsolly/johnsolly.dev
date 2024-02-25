@@ -7,6 +7,15 @@ import Testimonials from "../components/Testimonials.astro";
 import ProjectsList from "../components/ProjectsList.astro";
 import Card from "../components/Card.astro";
 import * as myResume from "../pages/resume.md";
+import type { ImageMetadata } from "astro";
+
+// import resume metaimg as ImageMetadata
+const resumeMetaimg: ImageMetadata = {
+    src: myResume.frontmatter.metaimg,
+    format: "webp",
+    width: 200,
+    height: 200,
+};
 ---
 
 <Layout title="John Solly's Portfolio">
@@ -20,7 +29,7 @@ import * as myResume from "../pages/resume.md";
     <Card
         title={myResume.frontmatter.title}
         href={myResume.frontmatter.href}
-        metaimg={myResume.frontmatter.metaimg}
+        metaimg={resumeMetaimg}
         metaimgAlt={myResume.frontmatter.metaimgAlt}
         snippet={myResume.frontmatter.snippet}
     />
