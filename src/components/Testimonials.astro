@@ -1,8 +1,13 @@
 ---
-// Define your carousel items as before
+import { Image } from "astro:assets";
+import AmyBrazilAvatar from "/src/images/AmyBrazil.webp";
+import CraigUtleyAvatar from "/src/images/CraigUtley.webp";
+import MeredithBeanAvatar from "/src/images/MeredithBean.webp";
+import KathrynThorpeAvatar from "/src/images/KathrynThorpe.webp";
+
 const carouselItems = [
     {
-        avatar_url: "/src/images/AmyBrazil.webp",
+        avatar: AmyBrazilAvatar,
         name: "Amy Brazil",
         position: "Direct Manager",
         company: "YellowfinBI",
@@ -11,7 +16,7 @@ const carouselItems = [
         link: "https://www.linkedin.com/in/jsolly/",
     },
     {
-        avatar_url: "/src/images/CraigUtley.webp",
+        avatar: CraigUtleyAvatar,
         name: "Craig Utley",
         position: "Direct Manager",
         company: "YellowfinBI",
@@ -20,7 +25,7 @@ const carouselItems = [
         link: "https://www.linkedin.com/in/jsolly/",
     },
     {
-        avatar_url: "/src/images/MeredithBean.webp",
+        avatar: MeredithBeanAvatar,
         name: "Meredith Bean",
         position: "Undergraduate Student",
         company: "GMU",
@@ -29,7 +34,7 @@ const carouselItems = [
         link: "https://www.linkedin.com/in/jsolly/",
     },
     {
-        avatar_url: "/src/images/KathrynThorpe.webp",
+        avatar: KathrynThorpeAvatar,
         name: "Kathryn Thorpe",
         position: "Coworker",
         company: "YellowfinBI",
@@ -63,9 +68,9 @@ const carouselItems = [
                             data-index={index}
                         >
                             <div class="carousel-item-content">
-                                <img
+                                <Image
                                     class="avatar-img"
-                                    src={item.avatar_url}
+                                    src={item.avatar}
                                     alt="avatar"
                                 />
                                 <div class="carousel-content">
@@ -109,8 +114,6 @@ const carouselItems = [
 </div>
 
 <style>
-    /* Carousel */
-
     .testimonial-quote::before {
         content: open-quote;
         display: inline;
@@ -174,6 +177,7 @@ const carouselItems = [
             0 1px 2px rgba(0, 0, 0, 0.24);
         margin-bottom: 1rem;
         max-width: 150px;
+        max-height: 150px;
     }
 
     .carousel-content {
