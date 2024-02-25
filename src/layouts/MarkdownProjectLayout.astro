@@ -6,6 +6,11 @@ import { Image } from "astro:assets";
 
 <Layout title={frontmatter.title}>
     <h1>{frontmatter.title}</h1>
-    <Image src={frontmatter.metaimg} alt={frontmatter.metaimgAlt} />
+    <Image
+        src={frontmatter.metaimg}
+        alt={frontmatter.metaimgAlt}
+        width={frontmatter.metaimgWidth}
+        height={frontmatter.metaimgHeight}
+    />
     <slot />
 </Layout>

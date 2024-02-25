@@ -8,9 +8,8 @@ location: Columbus, OH
 redacted: false
 name: JOHN SOLLY
 role: LEAD SOFTWARE ENGINEER
-website: blogthedata.com
+website: JohnSolly.dev
 email: jsolly@pm.me
-phone: 279.321.2870
 linkedin: linkedin.com/in/jsolly/
 snippet: "A two-page resume for John Solly, a lead software engineer with a focus on cloud computing and geospatial technologies."
 ---

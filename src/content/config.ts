@@ -6,6 +6,8 @@ const projectsCollection = defineCollection({
 			title: z.string(),
 			metaimg: image(),
 			metaimgAlt: z.string(),
+			metaimgWidth: z.number(),
+			metaimgHeight: z.number(),
 			snippet: z.string(),
 			logos: z
 				.array(
