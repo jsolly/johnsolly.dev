@@ -82,6 +82,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             white 60%
         );
         --main-text-color: rgb(171, 171, 180);
+        --link-color: rgb(var(--accent));
         --btn-text-color: white;
         --baseFontSize: 18px;
         --scalingFactor: 0.003;
@@ -148,7 +149,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     /*
     Do not color the link cards
     */
-    li.link-card a {
+    .link-card a {
         color: inherit;
     }
     html,
