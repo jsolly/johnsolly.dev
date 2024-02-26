@@ -39,6 +39,12 @@ Working on this project taught me a lot about managing states across frames and 
 
 Another thing that is now ingrained in me is the importance of testing and typing. Now that my application has over 80% code coverage, I can perform refactorings efficiently, knowing which functions are being broken without ever having to run the server to iterate for bugs. It also has helped lessen the cognitive load when developing new features because the types guide me as I write new code.
 
-<video controls="" autoplay="">
+<video controls="" autoplay="" class="full-width-video">
   <source src="/src/videos/GeoAsteroids-playthrough.mp4" type="video/mp4">
 </video>
+
+<style>
+.full-width-video {
+  width: 100%;
+}
+</style>
