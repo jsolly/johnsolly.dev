@@ -75,6 +75,7 @@ const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
     .link-card:is(:hover, :focus-within) {
         background-position: 0;
         background-image: var(--accent-gradient);
+        scale: 1.005;
     }
     .link-card:is(:hover, :focus-within) h2 {
         color: rgb(var(--accent-light));
