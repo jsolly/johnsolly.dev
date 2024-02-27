@@ -46,3 +46,6 @@ Another significant change was migrating from [ckeditor4 to ckeditor5](https://b
 
 I also implemented some features that I removed because they didn't make sense. For example, I allowed users to log in and comment on posts, but I pulled [this functionality](https://github.com/jsolly/blogthedata/pull/77) because I decided it wasn't worth my extra effort to moderate content. I also [implemented a honeypot page](https://blogthedata.com/post/admin-honeypot-page-to-catch-hackers/) but needed to remove it because it was incompatible with Django 4.0, and it appeared that the package maintainer was no longer updating it. After adding the site to a CDN, I found that the way I was tracking post views was no longer accurate because users were no longer hitting my server but instead got cached copies of my site from the CDN edge servers. 
 
+## Future Plans
+
+While I always respond to open-source contributions, I see my blog as a relatively mature project. I don't have any plans to add new features, but I will continu to add blog posts and patch any security issues that crop up. 
