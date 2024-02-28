@@ -16,7 +16,7 @@ const { title, snippet, href, metaimg, metaimgAlt, logos } = Astro.props;
 const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
 ---
 
-<div class="link-card">
+<div class="link-card text-lg">
     <a href={href} target={isRelativeLink ? "_self" : "_blank"}>
         <h2>
             {title}
@@ -49,6 +49,9 @@ const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
     </a>
 </div>
 <style>
+    .link-card a {
+        color: inherit;
+    }
     p {
         margin: 0;
     }
