@@ -20,13 +20,6 @@
     }
 }
 
-.accent-gradient-bg {
-    background: linear-gradient(45deg,
-            rgb(136, 58, 234),
-            rgb(224, 204, 250) 30%,
-            white 60%);
-}
-
 .primary-btn {
     @apply inline-block bg-accent hover:bg-accent-hover text-white py-2.5 px-5 rounded-lg font-bold no-underline transition-colors duration-300 ease-in-out;
 }

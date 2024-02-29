@@ -17,15 +17,20 @@ const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
 ---
 
 <div class="link-card text-lg">
-    <a href={href} target={isRelativeLink ? "_self" : "_blank"}>
-        <h2>
+    <a
+        href={href}
+        target={isRelativeLink ? "_self" : "_blank"}
+        class="bg-gray-800 opacity-80 rounded-lg py-6 px-5"
+    >
+        <h2 class="hover:text-accent-light focus-within:text-accent-light">
             {title}
             <span>&rarr;</span>
         </h2>
         {
             metaimg ? (
-                <div class="img-container">
+                <div class="metaimg-container flex p-4">
                     <Image
+                        class="rounded-lg mr-4"
                         src={metaimg}
                         alt={metaimgAlt ?? "Meta image"}
                         width="200"
@@ -51,10 +56,9 @@ const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
 <style>
     .link-card a {
         color: inherit;
+        text-decoration: none;
     }
-    p {
-        margin: 0;
-    }
+
     .link-card {
         display: flex;
         padding: 1px;
@@ -67,39 +71,29 @@ const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
         box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
     }
     .link-card > a {
-        width: 100%;
-        text-decoration: none;
-        line-height: 1.4;
-        padding: calc(1.5rem - 1px);
-        border-radius: 8px;
-        background-color: #23262d;
+        /* background-color: #23262d; */
         opacity: 0.8;
     }
     .link-card:is(:hover, :focus-within) {
         background-position: 0;
-        background-image: var(--accent-gradient);
-        scale: 1.005;
-    }
-    .link-card:is(:hover, :focus-within) h2 {
-        color: rgb(var(--accent-light));
+        background-image: linear-gradient(
+            45deg,
+            rgb(136, 58, 234),
+            rgb(224, 204, 250) 30%,
+            white 60%
+        );
     }
 
-    .img-container {
-        display: flex;
-        align-items: flex-start;
-        padding: 1rem;
-    }
-    .img-container img {
-        border-radius: 8px;
-        margin-right: 1rem;
-    }
+    /* .link-card:is(:hover, :focus-within) h2 {
+        color: rgb(var(--accent-light));
+    } */
 
     @media (max-width: 600px) {
-        .img-container {
+        .metaimg-container {
             flex-direction: column;
             align-items: center;
         }
-        .img-container img {
+        .metaimg-container img {
             margin-bottom: 1rem;
             margin-right: 0;
         }
