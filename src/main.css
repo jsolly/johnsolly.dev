@@ -4,7 +4,7 @@
 
 @layer base {
     html {
-        @apply min-h-full text-gray-100 bg-gray-900 antialiased leading-tight;
+        @apply min-h-full text-gray-100 bg-custom-dark antialiased leading-tight;
     }
 
     main {

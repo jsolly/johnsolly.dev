@@ -7,8 +7,13 @@ import Card from "../components/Card.astro";
 	title="John Solly's Personal Website"
 	description="Welcome to JohnSolly.dev, the personal website of John Solly. Explore my portfolio, blog, and consulting services."
 >
-	<h1>Welcome to <span class="text-gradient">JohnSolly.dev</span></h1>
-	<ul role="list" class="link-card-grid">
+	<h1 class="text-5xl font-bold leading-none text-center mb-4">
+		Welcome to <span class="text-gradient">JohnSolly.dev</span>
+	</h1>
+	<ul
+		role="list"
+		class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-0"
+	>
 		<Card
 			href="/showcase/"
 			title="Showcase"
@@ -29,17 +34,20 @@ import Card from "../components/Card.astro";
 			title="About"
 			snippet="Learn more about me, my background, and my professional journey."
 		/>
+		<Card
+			href="https://www.youtube.com/@johnsolly"
+			title="Tutorial Videos"
+			snippet="Watch my video tutorials on geospatial analysis, software development, and tech tools."
+		/>
+		<Card
+			href="https://blogthedata.com/post/my-favorite-youtube-channels-podcasts-newsletters/"
+			title="Tech Resources"
+			snippet="A curated list of my favorite tech resources, newsletters, and podcasts."
+		/>
 	</ul>
 </Layout>
 
 <style>
-	h1 {
-		font-size: 3rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
 	.text-gradient {
 		background-image: linear-gradient(
 			45deg,
@@ -51,11 +59,5 @@ import Card from "../components/Card.astro";
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
 		background-position: 0%;
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
 	}
 </style>

@@ -8,6 +8,8 @@ export default {
 				'accent-light': 'rgb(224, 204, 250)',
 				'accent-dark': 'rgb(49, 10, 101)',
 				'accent-hover': 'rgb(115, 34, 220)',
+				'custom-dark': 'rgb(19, 21, 26)',
+				'custom-dark-accent': 'rgb(35, 38, 45)'
 			}
 		},
 	},
