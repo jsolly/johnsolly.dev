@@ -68,7 +68,7 @@ Software Engineering | Geospatial Technologies & Analytics | Database Management
 ### Software Product Engineer <span class="spacer"></span> May 2017 &mdash; May 2021
 <p class="company-name">Environmental Research Institute (Esri) | Redlands, CA</p>
 
-- Over four years, I successfully managed numerous Dashboard releases as release manager and scrum master for a nine-engineer team. My role involved ensuring consistent, high-quality releases and effectively coordinating with internal QA, localization, internationalization, and release teams.
+- Over four years, I successfully managed numerous Dashboard releases as release manager and scrum master for a nine-engineer team. My role involved ensuring consistent, high-quality releases and coordinating with internal QA, localization, internationalization, and release teams.
 - Implemented a dockerized automated regression testing harness using Python, Selenium, and Jenkins, resulting in a remarkable reduction of manual testing hours from 240 to 100 per quarter, a 58% efficiency gain.
 
 ### Software Product Engineer Intern <span class="spacer"></span> June 2016 &mdash; Aug 2016
