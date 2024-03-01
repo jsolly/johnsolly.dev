@@ -63,10 +63,10 @@ const consultingServices = [
 >
     {
         consultingServices.map((service) => (
-            <section>
-                <h2>{service.title}</h2>
+            <section class="rounded-lg mb-8 p-8">
+                <h2 class="text-2xl">{service.title}</h2>
                 {service.sessions.map((session) => (
-                    <article>
+                    <article class="border-t-2 border-gray-800 pt-4 mt-4">
                         <h3>{session.name}</h3>
                         <p>{session.description}</p>
                         <h4>Features:</h4>
@@ -75,7 +75,7 @@ const consultingServices = [
                                 <li>{feature}</li>
                             ))}
                         </ul>
-                        <p>
+                        <p class="mb-1">
                             <strong>Price:</strong> {session.price}
                         </p>
                         <h4>Booking Process:</h4>
@@ -84,7 +84,7 @@ const consultingServices = [
                                 <li>{step}</li>
                             ))}
                         </ol>
-                        <div class="stripe-buy-button-container">
+                        <div class="stripe-buy-button-container flex justify-center m-5">
                             <stripe-buy-button
                                 buy-button-id="buy_btn_1OmLGgGDKR2aVHG2whxTQRdh"
                                 publishable-key="pk_live_51OVYNtGDKR2aVHG2rkLNhuMQNijVcyxE3V4qsf92piHHYSmeE2SZg9L2HmuCwCMhJyAPZuNAAQhVUXDw5aqa7Edv00nPyo5KFq"
@@ -98,24 +98,11 @@ const consultingServices = [
 </Layout>
 
 <style>
-    h1 {
-        font-size: 2.5rem;
-        text-align: center;
-        color: rgb(var(--accent));
-        margin-bottom: 2rem;
-    }
     section {
-        background-color: #1e2025; /* Darker background for sections */
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Lighter shadow for dark mode */
-        margin-bottom: 2rem;
-        padding: 2rem;
+        background-color: rgb(30, 32, 37);
+        box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
     }
-    article {
-        border-top: 2px solid #333; /* Darker border color */
-        padding-top: 1rem;
-        margin-top: 1rem;
-    }
+
     ul,
     ol {
         margin-left: 20px;
@@ -126,18 +113,6 @@ const consultingServices = [
     }
     p,
     li {
-        font-size: 1rem;
         line-height: 1.6;
-        color: #bbb; /* Lighter text color for paragraphs and list items */
-    }
-    .return-home {
-        text-align: center;
-        margin-top: 2rem;
-    }
-    .stripe-buy-button-container {
-        display: flex;
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically if needed */
-        margin: 20px 0; /* Optional: Adds some space above and below the button */
     }
 </style>
