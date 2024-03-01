@@ -4,7 +4,7 @@
 
 @layer base {
     html {
-        @apply min-h-full text-gray-100 bg-custom-dark antialiased leading-tight;
+        @apply min-h-full text-custom-gray bg-custom-dark antialiased leading-tight;
     }
 
     main {
@@ -12,12 +12,22 @@
     }
 
     a {
-        @apply text-accent;
+        @apply text-muted-accent;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply text-custom-offwhite font-bold;
     }
 
     a:hover {
         @apply underline;
     }
+
 }
 
 .primary-btn {

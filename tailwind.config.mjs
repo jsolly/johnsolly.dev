@@ -1,17 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
 	theme: {
 		extend: {
 			colors: {
-				accent: 'rgb(136, 58, 234)',
-				'accent-light': 'rgb(224, 204, 250)',
-				'accent-dark': 'rgb(49, 10, 101)',
-				'accent-hover': 'rgb(115, 34, 220)',
-				'custom-dark': 'rgb(19, 21, 26)',
-				'custom-dark-accent': 'rgb(35, 38, 45)'
-			}
+				accent: "rgb(136, 58, 234)",
+				"muted-accent": "rgb(176, 128, 234)",
+				"accent-hover": "rgb(115, 34, 220)",
+				"custom-gray": "rgb(161, 161, 170)",
+				"custom-offwhite": "rgb(216, 216, 216)",
+				"custom-dark": "rgb(19, 21, 26)",
+			},
 		},
 	},
-	plugins: [],
-}
+	plugins: [require("@tailwindcss/typography")],
+};
