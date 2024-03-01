@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply min-h-full text-custom-gray bg-custom-dark antialiased leading-tight;
+    }
+
+    main {
+        @apply mx-auto max-w-4xl p-4;
+    }
+
+    a {
+        @apply text-muted-accent;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply text-custom-offwhite font-bold;
+    }
+
+    a:hover {
+        @apply underline;
+    }
+
+}
+
+.primary-btn {
+    @apply inline-block bg-accent hover:bg-accent-hover text-white py-2.5 px-5 rounded-lg font-bold no-underline transition-colors duration-300 ease-in-out;
+}
+
+.secondary-btn {
+    @apply inline-block bg-transparent hover:bg-accent text-white py-2.5 px-5 border-2 border-accent rounded-lg font-bold no-underline transition-colors duration-300 ease-in-out;
+}
+
+
+/* Don't underline */
+.primary-btn:hover,
+.secondary-btn:hover {
+    @apply no-underline;
+}

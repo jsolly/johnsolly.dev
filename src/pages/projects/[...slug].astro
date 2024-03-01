@@ -1,4 +1,5 @@
 ---
+import Prose from "../../components/Prose.astro";
 import { getCollection } from "astro:content";
 import MarkdownProjectLayout from "../../layouts/MarkdownProjectLayout.astro";
 
@@ -15,5 +16,7 @@ const { Content } = await entry.render();
 ---
 
 <MarkdownProjectLayout frontmatter={entry.data}>
-    <Content />
+    <Prose>
+        <Content />
+    </Prose>
 </MarkdownProjectLayout>

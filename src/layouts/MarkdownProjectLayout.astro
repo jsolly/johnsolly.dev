@@ -5,19 +5,15 @@ import { Image } from "astro:assets";
 ---
 
 <Layout title={frontmatter.title} description={frontmatter.snippet}>
-    <h1>{frontmatter.title}</h1>
-    <div class="image-container">
+    <h1 class="text-3xl leading-tight">{frontmatter.title}</h1>
+    <div class="max-w-full">
         <Image
             src={frontmatter.metaimg}
             alt={frontmatter.metaimgAlt}
             width={frontmatter.metaimgWidth}
             height={frontmatter.metaimgHeight}
+            class="rounded-lg"
         />
     </div>
     <slot />
 </Layout>
-<style>
-    .image-container img {
-        max-width: 100%;
-    }
-</style>

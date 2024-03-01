@@ -16,20 +16,25 @@ const { title, snippet, href, metaimg, metaimgAlt, logos } = Astro.props;
 const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
 ---
 
-<div class="link-card">
-    <a href={href} target={isRelativeLink ? "_self" : "_blank"}>
-        <h2>
+<div class="link-card text-lg p-0.5 rounded-lg">
+    <a
+        href={href}
+        target={isRelativeLink ? "_self" : "_blank"}
+        class="bg-gray-800 opacity-80 hover:opacity-100 rounded-lg py-6 px-5"
+    >
+        <h2 class="text-white text-2xl font-bold mb-4 flex justify-between">
             {title}
             <span>&rarr;</span>
         </h2>
         {
             metaimg ? (
-                <div class="img-container">
+                <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
                     <Image
+                        class="meta-img w-full md:w-1/2 lg:w-1/3 xl:w-1/4 rounded-lg h-auto object-cover"
                         src={metaimg}
                         alt={metaimgAlt ?? "Meta image"}
-                        width="200"
-                        height="150"
+                        loading="lazy"
+                        decoding="async"
                     />
                     <p>{snippet}</p>
                 </div>
@@ -39,9 +44,14 @@ const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
         }
         {
             logos ? (
-                <div class="logos">
+                <div class="logos flex flex-wrap">
                     {logos.map((logo) => (
-                        <Image src={logo.url} alt={logo.alt} />
+                        <Image
+                            src={logo.url}
+                            alt={logo.alt}
+                            loading="lazy"
+                            decoding="async"
+                        />
                     ))}
                 </div>
             ) : null
@@ -49,56 +59,28 @@ const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
     </a>
 </div>
 <style>
-    p {
-        margin: 0;
+    .link-card a {
+        color: inherit;
+        text-decoration: none;
+        background-color: hwb(222 14% 82%);
     }
+
     .link-card {
         display: flex;
-        padding: 1px;
-        background-color: #23262d;
+        background-color: rgb(35, 38, 45);
         background-image: none;
         background-size: 400%;
-        border-radius: 7px;
         background-position: 100%;
         transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
         box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
     }
-    .link-card > a {
-        width: 100%;
-        text-decoration: none;
-        line-height: 1.4;
-        padding: calc(1.5rem - 1px);
-        border-radius: 8px;
-        background-color: #23262d;
-        opacity: 0.8;
-    }
     .link-card:is(:hover, :focus-within) {
         background-position: 0;
-        background-image: var(--accent-gradient);
-        scale: 1.005;
-    }
-    .link-card:is(:hover, :focus-within) h2 {
-        color: rgb(var(--accent-light));
-    }
-
-    .img-container {
-        display: flex;
-        align-items: flex-start;
-        padding: 1rem;
-    }
-    .img-container img {
-        border-radius: 8px;
-        margin-right: 1rem;
-    }
-
-    @media (max-width: 600px) {
-        .img-container {
-            flex-direction: column;
-            align-items: center;
-        }
-        .img-container img {
-            margin-bottom: 1rem;
-            margin-right: 0;
-        }
+        background-image: linear-gradient(
+            45deg,
+            rgb(136, 58, 234),
+            rgb(224, 204, 250) 30%,
+            white 60%
+        );
     }
 </style>

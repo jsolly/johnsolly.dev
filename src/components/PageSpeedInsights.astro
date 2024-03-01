@@ -19,6 +19,8 @@ import lightHouseScores from "../images/svg/lighthouseScores.svg";
                 <Image
                     src={lightHouseScores}
                     alt="Lighthouse scores for JohnSolly.dev: 100 for Performance, Accessibility, Best Practices, and SEO."
+                    loading="lazy"
+                    decoding="async"
                 />
             </figure>
         </div>
@@ -26,7 +28,6 @@ import lightHouseScores from "../images/svg/lighthouseScores.svg";
 </section>
 
 <style>
-    /* Pagespeed Insights */
     .page-speed-insights-section {
         margin-bottom: 1.5rem;
         font-size: 0.875rem;
