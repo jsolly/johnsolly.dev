@@ -19,24 +19,23 @@ import resumeMetaimg from "../images/jsolly.webp";
         id="showcaseHello"
         class="text-6xl leading-tight tracking-wider text-center mb-10"
     >
-        Hello World,<br />I'm John!
+        <span>Hello World,</span><span class="block">I'm John!</span>
     </h1>
     <LongSollyBio />
     <Testimonials />
     <ProjectsList />
     <!-- Resume Card After Projects -->
-    <Card
-        title={myResume.frontmatter.title}
-        href={myResume.frontmatter.href}
-        metaimg={resumeMetaimg}
-        metaimgAlt="John Solly"
-        snippet={myResume.frontmatter.snippet}
-    />
-    <br />
-    <hr />
-    <br />
+    <div class="mt-8">
+        <Card
+            title={myResume.frontmatter.title}
+            href={myResume.frontmatter.href}
+            metaimg={resumeMetaimg}
+            metaimgAlt="John Solly"
+            snippet={myResume.frontmatter.snippet}
+        />
+    </div>
+    <hr class="my-8" />
     <ContactMe />
-    <hr />
-    <br />
+    <hr class="my-8" />
     <PageSpeedInsights />
 </Layout>
