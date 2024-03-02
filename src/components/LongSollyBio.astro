@@ -10,30 +10,27 @@ import accordionIcon from "../images/svg/accordion_arrow.svg";
 
 <article class="accordion-container">
     <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-            <button
-                class="accordion-button"
-                type="button"
-                aria-expanded="false"
-            >
-                <span class="accordion-title"
-                    >Tap or click to read John Solly's Bio</span
+        <div class="accordion-header cursor-pointer">
+            <button class="accordion-btn flex w-full" aria-expanded="false">
+                <h2
+                    class="accordion-title flex-grow mb-2 text-2xl font-medium hover:text-muted-accent"
                 >
-                <span class="accordion-icon">
-                    <Image
-                        id="accordion-expand-collapse-arrow"
-                        src={accordionIcon}
-                        alt="expand/collapse"
-                        loading="lazy"
-                        decoding="async"
-                    />
-                </span>
-            </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse">
-            <div class="accordion-body text-lg">
+                    Read More About Me
+                </h2>
                 <Image
-                    class="bio-image"
+                    id="accordion-expand-collapse-arrow"
+                    src={accordionIcon}
+                    alt="expand/collapse"
+                    loading="lazy"
+                    decoding="async"
+                    class="w-5 h-5 accordion-icon mr-4"
+                />
+            </button>
+        </div>
+        <div class="accordion-collapse">
+            <div class="accordion-body text-lg p-1">
+                <Image
+                    class="bio-image rounded-md float-left mr-4 mb-4"
                     src={gisLectureImage}
                     alt="John at 2015 AAG conference with Rebecca Rice and Michael Goodchild"
                     loading="lazy"
@@ -111,57 +108,8 @@ import accordionIcon from "../images/svg/accordion_arrow.svg";
 
 <style>
     .bio-image {
-        max-width: 300px;
-        max-height: 200px;
-        border-radius: 5px;
+        max-width: 400px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        margin-bottom: 1rem;
-        margin-right: 1rem;
-        float: left;
-    }
-
-    .accordion-header {
-        cursor: pointer;
-        user-select: none;
-        display: flex;
-        justify-content: space-between;
-        font-weight: 500;
-    }
-
-    .accordion-button {
-        background-color: transparent;
-        padding: 0;
-        border: 1px solid rgba(var(--secondary-color-rgb), 0.1);
-        font-size: 1.5rem;
-        outline: none;
-        cursor: pointer;
-        color: var(--secondary-color);
-        font-weight: inherit;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        transition:
-            background-color 0.3s,
-            color 0.3s;
-    }
-
-    .accordion-button:hover {
-        background-color: var(--header-background-color);
-        color: var(--link-color);
-    }
-
-    .accordion-icon {
-        font-size: 1rem;
-        transition: transform 0.3s ease;
-        color: var(--secondary-color);
-        flex-shrink: 0;
-        margin-right: 1rem;
-    }
-
-    .accordion-title {
-        flex-grow: 1;
-        margin-right: 10px;
     }
 
     .accordion-collapse {
@@ -170,25 +118,15 @@ import accordionIcon from "../images/svg/accordion_arrow.svg";
         transition: height 0.3s ease-in-out;
     }
 
-    .accordion-body {
-        padding: 1rem;
-    }
-
-    #accordion-expand-collapse-arrow {
-        width: 20px;
-        height: 20px;
-    }
-
-    /* Expanded Accordion Styles */
     .expanded {
         height: auto;
     }
 
-    .accordion-button[aria-expanded="true"] .accordion-icon img {
+    .accordion-btn[aria-expanded="true"] .accordion-icon {
         transform: rotate(180deg);
         transition: transform 0.2s ease;
     }
-    .accordion-button[aria-expanded="false"] .accordion-icon img {
+    .accordion-btn[aria-expanded="false"] .accordion-icon {
         transform: rotate(0deg);
         transition: transform 0.2s ease;
     }

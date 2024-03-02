@@ -3,11 +3,14 @@ import { Image } from "astro:assets";
 import lightHouseScores from "../images/svg/lighthouseScores.svg";
 ---
 
-<section id="PageSpeed-Insights" class="page-speed-insights-section">
-    <div class="row">
-        <div class="column">
+<section
+    id="PageSpeed-Insights"
+    class="page-speed-insights-section text-center mb-6"
+>
+    <div class="flex justify-center">
+        <div class="w-full">
             <figure>
-                <figcaption class="figcaption-text">
+                <figcaption class="figcaption-text pb-4">
                     <a
                         rel="noopener noreferrer"
                         target="_blank"
@@ -19,6 +22,7 @@ import lightHouseScores from "../images/svg/lighthouseScores.svg";
                 <Image
                     src={lightHouseScores}
                     alt="Lighthouse scores for JohnSolly.dev: 100 for Performance, Accessibility, Best Practices, and SEO."
+                    class="max-w-full h-auto"
                     loading="lazy"
                     decoding="async"
                 />
@@ -26,20 +30,3 @@ import lightHouseScores from "../images/svg/lighthouseScores.svg";
         </div>
     </div>
 </section>
-
-<style>
-    .page-speed-insights-section {
-        margin-bottom: 1.5rem;
-        font-size: 0.875rem;
-        text-align: center;
-    }
-
-    .figcaption-text {
-        text-align: center;
-        padding-bottom: 1rem;
-    }
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-</style>
