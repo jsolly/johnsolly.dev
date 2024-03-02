@@ -19,7 +19,8 @@ snippet: "A two-page resume for John Solly, a lead software engineer with a focu
 ## AREAS OF EXPERTISE
 <p class="skillset-overview">
 Software Engineering | Geospatial Technologies & Analytics | Database Management | SQL Performance Tuning | Web Development | Automation | DevOps | Cloud Computing | Serverless Architecture | Agile | Big Data | Data Warehousing and Star Schema | Test-Driven Development (TDD) | Paired Programming | Unit Testing | Technical Writing | Continuous Integration & Continuous Delivery (CI/CD) | Rapid Prototyping | Cross-Functional Leadership Technical Mentorship | ETL Pipeline Architecture | RESTful, SOAP, and JavaScript APIs | Security & Production Issue Resolution Migration & Upgrade Planning | User Authentication & Profile Management | Large Language Models (LLM) | Advanced Algorithm Development | Visualization Tools & Libraries | Quality Assurance | Release Coordination</p>
-<br>
+
+<div class="languages">
 <b>Languages</b>: Python | TypeScript | JavaScript | Golang | SQL/NoSQL | Shell/Bash | SQL | Java
 
 <b>Geospatial</b>: PostGIS | GeoPandas | SQLalchemy | GDAL | Dask | ArcGIS | Mapbox GL | Turf.js | Deck GL | OpenLayers | Leaflet
@@ -29,6 +30,7 @@ Software Engineering | Geospatial Technologies & Analytics | Database Management
 <b>Web Development</b>: Vue | Svelte | Astro | React | Django | Cloudflare | GitHub Actions | Bootstrap | Vite | Tailwind
 
 <b>DevOps & Cloud</b>: Docker | Terraform | GitHub Actions | EC2 | S3 | RDS | IAM | Lambda | CloudWatch | Amplify
+</div>
 
 ## CAREER HIGHLIGHTS
 <div class="career-highlights">
@@ -103,7 +105,7 @@ Software Engineering | Geospatial Technologies & Analytics | Database Management
 main {
     max-width: 800px;
     padding: 0 20px;
-    font-size: 13px;
+    font-size: 15px;
 }
 .spacer {
     margin: 0px auto;
@@ -122,7 +124,7 @@ h2 {
     padding-bottom: 3px;
     margin-top: 0;
     margin-bottom: 6px;
-    font-size: 16px;
+    font-size: 18px;
     text-transform: uppercase;
     text-align: center;
     color: black;
@@ -131,7 +133,7 @@ h2 {
 h3 {
     margin: 0;
     display: flex;
-    font-size: 14px;
+    font-size: 16px;
     text-transform: uppercase;
     color: rgb(216, 216, 216);
 }
@@ -149,8 +151,13 @@ ul {
 li {
     margin: 3px;
     list-style-type: disc; 
+    margin-left: 30px;
 }
 
+.languages {
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
 
 /* =============
 Header
@@ -183,10 +190,12 @@ Content
 
 .role-summary {
     text-align: justify;
+    margin-bottom: 10px;
 }
 
 .skillset-overview {
     text-align: justify;
+    margin-bottom: 10px;
 }
 
 .career-highlights > ul > li {
@@ -200,6 +209,6 @@ Content
 
 .education-section {
     text-align: center;
-    font-size: 13px;
+    margin-bottom: 10px;
 }
 </style>
