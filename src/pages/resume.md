@@ -2,7 +2,7 @@
 layout: /src/layouts/resumeLayout.astro
 title: "John Solly's Resume"
 href: /resume
-location: Columbus, OH
+location: Philadelphia, PA
 redacted: false
 name: JOHN SOLLY
 role: LEAD SOFTWARE ENGINEER
@@ -97,3 +97,109 @@ Software Engineering | Geospatial Technologies & Analytics | Database Management
 
 <b>Bachelor of Science, Computer Science</b> (In Progress) | <b><i>Open Source Society University (OSSU)</i></b> 
 </div>
+
+
+<style>
+main {
+    max-width: 800px;
+    padding: 0 20px;
+    font-size: 13px;
+}
+.spacer {
+    margin: 0px auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin: 0;
+
+}
+
+h2 {
+    background-color: #f2f2f2;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-top: 0;
+    margin-bottom: 6px;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+}
+
+h3 {
+    margin: 0;
+    display: flex;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: rgb(216, 216, 216);
+}
+
+p {
+    padding: 0;
+    margin-block-end: 3px;
+    margin-block-start: 3px;
+}
+
+ul {
+    margin: 0px;
+}
+
+li {
+    margin: 3px;
+    list-style-type: disc; 
+}
+
+
+/* =============
+Header
+============= */
+
+.headerInfo > ul {
+    display: flex;
+    justify-content: center;
+    border-bottom: 5px solid #1f3865;
+    margin-bottom: 3px;
+}
+
+.headerInfo > ul > li {
+    list-style-type: none;
+    margin-bottom: 1px;
+}
+
+.headerInfo > ul > li:not(:last-child) {
+    margin-right: 8px;
+}
+
+.headerInfo > ul > li:not(:last-child):after {
+    content: "|";
+    margin-left: 8px;
+}
+
+/* =============
+Content
+============= */
+
+.role-summary {
+    text-align: justify;
+}
+
+.skillset-overview {
+    text-align: justify;
+}
+
+.career-highlights > ul > li {
+    list-style-type: square;
+}
+
+.company-name {
+    margin: 0;
+    border-bottom: 1px solid rgb(64, 64, 64);
+}
+
+.education-section {
+    text-align: center;
+    font-size: 13px;
+}
+</style>
