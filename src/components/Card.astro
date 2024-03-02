@@ -44,7 +44,7 @@ const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
         }
         {
             logos ? (
-                <div class="logos flex flex-wrap">
+                <div class="logos flex flex-wrap mt-2 gap-1">
                     {logos.map((logo) => (
                         <Image
                             src={logo.url}

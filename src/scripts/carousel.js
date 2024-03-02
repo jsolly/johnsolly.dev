@@ -17,11 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		indicators.forEach((indicator, index) => {
 			if (index === currentCarouselIndex) {
-				indicator.classList.add("bg-blue-600");
+				indicator.classList.add("bg-accent");
 				indicator.classList.remove("bg-gray-300");
 			} else {
 				indicator.classList.add("bg-gray-300");
-				indicator.classList.remove("bg-blue-600");
+				indicator.classList.remove("bg-accent");
 			}
 		});
 	};

@@ -21,7 +21,7 @@ const carouselItems = [
         position: "Direct Manager",
         company: "YellowfinBI",
         year: "2022",
-        quote: "I had the pleasure to hire, onboard and manage John...",
+        quote: "I had the pleasure to hire, onboard and manage John. I have nothing but great things to say about him",
         link: "https://www.linkedin.com/in/jsolly/",
     },
     {
@@ -59,7 +59,7 @@ const carouselItems = [
     <div class="relative">
         <div class="flex items-center justify-center">
             <button
-                class="carousel-control-prev absolute left-14 top-1/2 transform -translate-y-1/2 text-4xl cursor-pointer bg-transparent border-none hover:bg-transparent z-10"
+                class="carousel-control-prev absolute left-14 top-1/2 transform -translate-y-1/2 text-4xl cursor-pointer"
                 type="button"
                 aria-label="Previous">&#10094;</button
             >
@@ -91,15 +91,15 @@ const carouselItems = [
                                             {item.company} - {item.year}
                                         </p>
                                     </div>
-                                    <p class="font-light mb-0 max-w-[450px] break-words text-lg">
+                                    <p class="testimonial-quote font-light mb-0 max-w-[450px] break-words text-lg">
                                         {item.quote}
                                     </p>
                                 </div>
-                                <ol class="flex justify-center gap-2 list-none p-0">
+                                <ol class="flex justify-center gap-2 p-0">
                                     {carouselItems.map((_, index) => (
                                         <li
                                             class={`w-2.5 h-2.5 bg-gray-300 cursor-pointer transition-colors duration-300 ${
-                                                index === 0 ? "bg-blue-600" : ""
+                                                index === 0 ? "bg-accent" : ""
                                             }`}
                                             data-carousel-index={index}
                                         />
@@ -111,7 +111,7 @@ const carouselItems = [
                 }
             </div>
             <button
-                class="carousel-control-next absolute right-14 top-1/2 transform -translate-y-1/2 text-4xl cursor-pointer bg-transparent border-none hover:bg-transparent z-10"
+                class="carousel-control-next absolute right-14 top-1/2 transform -translate-y-1/2 text-4xl cursor-pointer"
                 type="button"
                 aria-label="Next">&#10095;</button
             >
@@ -123,22 +123,20 @@ const carouselItems = [
     .testimonial-quote::before,
     .testimonial-quote::after {
         display: inline-block;
-        height: 0;
         line-height: 0;
         position: relative;
         color: #c3ceff;
-        font-size: 3rem;
+        font-size: 2rem;
         font-family: Georgia, serif;
     }
 
     .testimonial-quote::before {
         content: "“";
-        top: -0.6em;
-        left: -0.4em;
+        top: 0.3em;
     }
 
     .testimonial-quote::after {
         content: "”";
-        top: -0.6em;
+        top: 0.4em;
     }
 </style>
