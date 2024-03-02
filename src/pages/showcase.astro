@@ -8,7 +8,7 @@ import ProjectsList from "../components/ProjectsList.astro";
 import Card from "../components/Card.astro";
 import * as myResume from "../pages/resume.md";
 
-import resumeMetaimg from "../images/jsolly.webp";
+import jsollyLarge from "../images/jsollyLarge.webp";
 ---
 
 <Layout
@@ -29,7 +29,7 @@ import resumeMetaimg from "../images/jsolly.webp";
         <Card
             title={myResume.frontmatter.title}
             href={myResume.frontmatter.href}
-            metaimg={resumeMetaimg}
+            metaimg={jsollyLarge}
             metaimgAlt="John Solly"
             snippet={myResume.frontmatter.snippet}
         />

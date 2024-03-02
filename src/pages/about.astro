@@ -2,65 +2,68 @@
 import ContactMe from "../components/ContactMe.astro";
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
-import jsollyImage from "../images/jsolly.webp";
+import jsollyLargeImage from "../images/jsollyLarge.webp";
+
+const socialLinks = [
+    {
+        href: "https://twitter.com/_jsolly",
+        text: "X",
+        rel: "me noopener noreferrer",
+    },
+    {
+        href: "https://www.linkedin.com/in/jsolly/",
+        text: "Linkedin",
+        rel: "me noopener noreferrer",
+    },
+    {
+        href: "https://github.com/jsolly",
+        text: "Github",
+        rel: "me noopener noreferrer",
+    },
+    {
+        href: "https://www.youtube.com/channel/UCxsK9UorVj2F17DMSXLuSQw",
+        text: "Youtube",
+        rel: "me noopener noreferrer",
+    },
+    {
+        href: "https://blogthedata.com",
+        text: "Blog",
+        rel: "me",
+    },
+];
 ---
 
 <Layout
     title="About John Solly"
     description="Learn more about John Solly and his work in the geospatial industry."
 >
-    <div id="aboutMe" class="post-card">
-        <div class="post-card-row">
-            <figure class="post-card-meta-img-container">
-                <Image
-                    src={jsollyImage}
-                    alt="John Solly Profile Picture"
-                    id="about-me-image"
-                    class="post-card-img about-me-image"
-                    height="300"
-                />
-                <figcaption class="visually-hidden">
-                    John Solly Profile Picture
-                </figcaption>
-            </figure>
-            <div class="post-card-content">
-                <ul class="social-links">
-                    <li>
-                        <a
-                            href="https://twitter.com/_jsolly"
-                            rel="noopener noreferrer"
-                            target="_blank">X</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="https://www.linkedin.com/in/jsolly/"
-                            rel="noopener noreferrer"
-                            target="_blank">Linkedin</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="https://github.com/jsolly"
-                            rel="noopener noreferrer"
-                            target="_blank">Github</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="https://www.youtube.com/channel/UCxsK9UorVj2F17DMSXLuSQw"
-                            rel="noopener noreferrer"
-                            target="_blank">Youtube</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            rel="me noopener noreferrer"
-                            target="_blank"
-                            href="https://mapstodon.space/@jsolly">Mastodon</a
-                        >
-                    </li>
-                </ul>
+    <div class="about-card p-4 rounded-lg">
+        <Image
+            src={jsollyLargeImage}
+            alt="John Solly Profile Picture"
+            class="about-me-img w-full md:w-1/2 lg:w-1/3 rounded-lg h-auto mb-2"
+            height="300"
+        />
+        <div class="about-me-content">
+            <ul class="social-links flex flex-wrap gap-2 mb-2 text-sm">
+                {
+                    socialLinks.map((link) => (
+                        <li class="mr-2">
+                            <a
+                                href={link.href}
+                                rel={
+                                    link.rel ? link.rel : "noopener noreferrer"
+                                }
+                                target="_blank"
+                            >
+                                {link.text}
+                            </a>
+                            <span class="ml-2">|</span>
+                        </li>
+                    ))
+                }
+            </ul>
+            <div class="about-me-text text-lg">
                 <p>
                     With over a decade of experience in the geospatial industry,
                     I specialize in full-stack development of GIS applications.
@@ -79,48 +82,13 @@ import jsollyImage from "../images/jsolly.webp";
             </div>
         </div>
     </div>
-    <br />
-    <hr />
+    <hr class="my-4" />
     <ContactMe />
 </Layout>
 
 <style>
-    .visually-hidden {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        padding: 0;
-        overflow: hidden;
-        clip: rect(0 0 0 0);
-        white-space: nowrap;
-        border: 0;
-    }
-
-    .about-me-image {
-        height: auto;
-        max-height: 100%;
-        max-width: 100%;
-    }
-
-    .social-links {
-        font-size: 0.875rem;
-        list-style-type: none;
-        padding-left: 0;
-        margin-bottom: 1rem;
-    }
-
-    .social-links li {
-        display: inline;
-        margin-right: 0.5rem;
-    }
-
-    .social-links li::after {
-        content: "|";
-        margin-left: 0.5rem;
-    }
-
-    .social-links li:last-child::after {
-        content: "";
+    /* Hide the last pipe in the social links */
+    .social-links li:last-child span {
+        display: none;
     }
 </style>

@@ -1,5 +1,5 @@
 ---
-title: "Blogthedata.com: A blogging platform with everything but the kitchen sink."
+title: "Blogthedata.com: A blogging platform, on steroids"
 metaimg: "/src/images/projects/iPhoneblogthedata.webp"
 metaimgAlt: "Blogthedata.com on an iPhone"
 metaimgWidth: 480

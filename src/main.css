@@ -39,8 +39,13 @@
 }
 
 
-/* Don't underline */
+/* Don't underline links in buttons */
 .primary-btn:hover,
 .secondary-btn:hover {
     @apply no-underline;
+}
+
+a[href^="http"]::after {
+    content: "↗";
+    margin-left: 0.1rem;
 }

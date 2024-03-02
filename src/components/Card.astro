@@ -65,6 +65,11 @@ const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
         background-color: hwb(222 14% 82%);
     }
 
+    /* Hide the "↗" arrow for external links (see main.css) */
+    .link-card > a::after {
+        content: "";
+    }
+
     .link-card {
         display: flex;
         background-color: rgb(35, 38, 45);
