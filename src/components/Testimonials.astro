@@ -7,21 +7,21 @@ import KathrynThorpeAvatar from "/src/images/KathrynThorpe.webp";
 
 const carouselItems = [
     {
-        avatar: AmyBrazilAvatar,
-        name: "Amy Brazil",
-        position: "Direct Manager",
-        company: "YellowfinBI",
-        year: "2022",
-        quote: "I had the pleasure to hire, onboard and manage John...",
-        link: "https://www.linkedin.com/in/jsolly/",
-    },
-    {
         avatar: CraigUtleyAvatar,
         name: "Craig Utley",
         position: "Direct Manager",
         company: "YellowfinBI",
         year: "2022",
         quote: "There is a right way to come into an organization and John did it the right way...",
+        link: "https://www.linkedin.com/in/jsolly/",
+    },
+    {
+        avatar: AmyBrazilAvatar,
+        name: "Amy Brazil",
+        position: "Direct Manager",
+        company: "YellowfinBI",
+        year: "2022",
+        quote: "I had the pleasure to hire, onboard and manage John...",
         link: "https://www.linkedin.com/in/jsolly/",
     },
     {
@@ -49,65 +49,69 @@ const carouselItems = [
     <script src="/src/scripts/carousel.js"></script>
 </head>
 
-<div class="testimonial-carousel">
-    <h2 class="testimonial-title" id="carouselExampleCaptions">Testimonials</h2>
-    <div class="carousel-wrapper">
-        <div class="carousel-container">
+<div class="text-center mt-10">
+    <h2
+        class="text-4xl font-light tracking-wider mb-6"
+        id="carouselExampleCaptions"
+    >
+        Testimonials
+    </h2>
+    <div class="relative">
+        <div class="flex items-center justify-center">
             <button
-                class="carousel-control-prev"
+                class="carousel-control-prev absolute left-14 top-1/2 transform -translate-y-1/2 text-4xl cursor-pointer bg-transparent border-none hover:bg-transparent z-10"
                 type="button"
                 aria-label="Previous">&#10094;</button
             >
-            <div class="carousel-inner">
+            <div class="flex flex-col items-center">
                 {
                     carouselItems.map((item, index) => (
                         <div
                             class={`carousel-item ${
-                                index === 0 ? "active" : ""
-                            }`}
-                            data-index={index}
+                                index === 0 ? "block" : "hidden"
+                            } data-index=${index}`}
                         >
-                            <div class="carousel-item-content flex flex-col items-center">
+                            <div class="mb-6 flex flex-col items-center">
                                 <Image
-                                    class="avatar-img"
+                                    class="rounded-full shadow-lg mb-4 max-w-[150px] max-h-[150px]"
                                     src={item.avatar}
                                     alt="avatar"
                                     loading="lazy"
                                     decoding="async"
                                 />
-                                <div class="carousel-content">
-                                    <div class="carousel-text">
-                                        <h3 class="carousel-name">
+                                <div class="flex flex-col items-center gap-2 min-h-[150px]">
+                                    <div>
+                                        <h3 class="mb-2 mt-0 font-light">
                                             {item.name}
                                         </h3>
-                                        <p class="carousel-position">
+                                        <p class="font-bold mb-0 text-lg">
                                             {item.position}
                                         </p>
-                                        <p class="carousel-info">
+                                        <p class="line-height[1] m-0">
                                             {item.company} - {item.year}
                                         </p>
                                     </div>
-                                    <p class="testimonial-quote">
+                                    <p class="font-light mb-0 max-w-[450px] break-words text-lg">
                                         {item.quote}
                                     </p>
-                                    <ol class="carousel-indicators">
-                                        {carouselItems.map((_, index) => (
-                                            <li
-                                                class={
-                                                    index === 0 ? "active" : ""
-                                                }
-                                                data-carousel-index={index}
-                                            />
-                                        ))}
-                                    </ol>
                                 </div>
+                                <ol class="flex justify-center gap-2 list-none p-0">
+                                    {carouselItems.map((_, index) => (
+                                        <li
+                                            class={`w-2.5 h-2.5 bg-gray-300 cursor-pointer transition-colors duration-300 ${
+                                                index === 0 ? "bg-blue-600" : ""
+                                            }`}
+                                            data-carousel-index={index}
+                                        />
+                                    ))}
+                                </ol>
                             </div>
                         </div>
                     ))
                 }
             </div>
             <button
-                class="carousel-control-next"
+                class="carousel-control-next absolute right-14 top-1/2 transform -translate-y-1/2 text-4xl cursor-pointer bg-transparent border-none hover:bg-transparent z-10"
                 type="button"
                 aria-label="Next">&#10095;</button
             >
@@ -116,144 +120,25 @@ const carouselItems = [
 </div>
 
 <style>
-    .testimonial-quote::before {
-        content: open-quote;
-        display: inline;
+    .testimonial-quote::before,
+    .testimonial-quote::after {
+        display: inline-block;
         height: 0;
         line-height: 0;
-        left: 0;
         position: relative;
-        top: 15px;
         color: #c3ceff;
         font-size: 3rem;
-        font-family: georgia, serif;
+        font-family: Georgia, serif;
+    }
+
+    .testimonial-quote::before {
+        content: "“";
+        top: -0.6em;
+        left: -0.4em;
     }
 
     .testimonial-quote::after {
-        content: close-quote;
-        display: inline;
-        height: 0;
-        line-height: 0;
-        left: 0;
-        position: relative;
-        top: 18px;
-        color: #c3ceff;
-        font-size: 3rem;
-        font-family: georgia, serif;
-    }
-
-    .testimonial-carousel {
-        text-align: center;
-        margin-top: 2.5rem;
-    }
-
-    .carousel-controls {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .carousel-indicators {
-        display: flex;
-        justify-content: center;
-        gap: 0.5rem;
-        list-style-type: none;
-        padding: 0;
-    }
-
-    .carousel-indicators li {
-        width: 10px;
-        height: 10px;
-        background-color: #ccc;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    .carousel-indicators li.active {
-        background-color: #007bff;
-    }
-
-    .avatar-img {
-        border-radius: 50%;
-        box-shadow:
-            0 1px 3px rgba(0, 0, 0, 0.12),
-            0 1px 2px rgba(0, 0, 0, 0.24);
-        margin-bottom: 1rem;
-        max-width: 150px;
-        max-height: 150px;
-    }
-
-    .carousel-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .carousel-name {
-        margin-bottom: 0.5rem;
-        margin-top: 0;
-        font-weight: 300;
-    }
-
-    .carousel-position {
-        font-weight: 700;
-        margin-bottom: 0;
-        font-size: 1.25rem;
-    }
-
-    .carousel-info {
-        line-height: 1;
-        margin: 0;
-    }
-
-    .carousel-wrapper {
-        position: relative;
-    }
-
-    .carousel-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .carousel-item {
-        display: none;
-    }
-
-    .carousel-item.active {
-        display: block;
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-        font-size: 2rem;
-        cursor: pointer;
-        color: var(--main-text-color);
-        background-color: transparent;
-        border: none;
-    }
-
-    .carousel-control-prev:hover,
-    .carousel-control-next:hover {
-        background-color: transparent;
-    }
-
-    .carousel-item-content {
-        margin-bottom: 1.5rem;
-    }
-
-    .testimonial-title {
-        font-size: 2rem;
-        font-weight: 300;
-        letter-spacing: 0.1rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .testimonial-quote {
-        font-size: 1.25rem;
-        font-weight: 300;
-        margin-bottom: 0;
-        max-width: 450px;
-        word-wrap: break-word;
+        content: "”";
+        top: -0.6em;
     }
 </style>
