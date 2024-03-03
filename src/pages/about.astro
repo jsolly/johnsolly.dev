@@ -2,32 +2,44 @@
 import ContactMe from "../components/ContactMe.astro";
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
+
+// Static Images
 import jsollyLargeImage from "../images/jsollyLarge.webp";
+import linkedInLogo from "../images/social/linkedinLogo.svg";
+import xLogo from "../images/social/xLogo.svg";
+import youtubeLogo from "../images/social/youtubeLogo.png";
+import githubLogo from "../images/social/githubLogo.svg";
+import blogthedataLogo from "../images/social/blogthedataLogo.webp";
 
 const socialLinks = [
     {
-        href: "https://twitter.com/_jsolly",
-        text: "X",
+        href: "https://x.com/_jsolly",
+        icon: xLogo,
+        alt: "X",
         rel: "me noopener noreferrer",
     },
     {
         href: "https://www.linkedin.com/in/jsolly/",
-        text: "Linkedin",
+        icon: linkedInLogo,
+        alt: "LinkedIn",
         rel: "me noopener noreferrer",
     },
     {
         href: "https://github.com/jsolly",
-        text: "Github",
+        icon: githubLogo,
+        alt: "Github",
         rel: "me noopener noreferrer",
     },
     {
         href: "https://www.youtube.com/channel/UCxsK9UorVj2F17DMSXLuSQw",
-        text: "Youtube",
+        icon: youtubeLogo,
+        alt: "Youtube",
         rel: "me noopener noreferrer",
     },
     {
-        href: "https://blogthedata.com",
-        text: "Blog",
+        href: "https://blogthedata.com/",
+        icon: blogthedataLogo,
+        alt: "Blogthedata Blog",
         rel: "me",
     },
 ];
@@ -37,58 +49,69 @@ const socialLinks = [
     title="About John Solly"
     description="Learn more about John Solly and his work in the geospatial industry."
 >
-    <div class="about-card p-4 rounded-lg">
-        <Image
-            src={jsollyLargeImage}
-            alt="John Solly Profile Picture"
-            class="about-me-img w-full md:w-1/2 lg:w-1/3 rounded-lg h-auto mb-2"
-            height="300"
-        />
-        <div class="about-me-content">
-            <ul class="social-links flex flex-wrap gap-2 mb-2 text-sm">
-                {
-                    socialLinks.map((link) => (
-                        <li class="mr-2">
+    <div
+        class="about-section bg-custom-dark text-custom-gray rounded-lg shadow-lg p-6 mx-auto"
+    >
+        <div class="profile flex flex-col md:flex-row items-center">
+            <Image
+                src={jsollyLargeImage}
+                alt="John Solly Profile Picture"
+                class="rounded-full mb-4 md:mb-0 md:mr-6 w-48 h-48"
+            />
+            <div>
+                <h1 class="text-2xl font-bold text-custom-offwhite">
+                    John Solly
+                </h1>
+                <p class="text-custom-gray mt-2">
+                    Senior Software Engineer, Geospatial Developer
+                </p>
+                <div class="social-links flex mt-4">
+                    {
+                        socialLinks.map((link) => (
                             <a
                                 href={link.href}
-                                rel={
-                                    link.rel ? link.rel : "noopener noreferrer"
-                                }
+                                rel={link.rel}
                                 target="_blank"
+                                class="mr-4"
                             >
-                                {link.text}
+                                <Image
+                                    src={link.icon}
+                                    alt={link.alt}
+                                    class="w-8 h-8"
+                                />
                             </a>
-                            <span class="ml-2">|</span>
-                        </li>
-                    ))
-                }
-            </ul>
-            <div class="about-me-text text-lg">
-                <p>
-                    With over a decade of experience in the geospatial industry,
-                    I specialize in full-stack development of GIS applications.
-                    I currently serve as a senior software engineer at New Light
-                    Technologies (NLT), contributing to some of their largest
-                    and most influential projects.
-                </p>
-                <p>
-                    Throughout my career, I've built applications on platforms
-                    like Esri and Mapbox while also leveraging open-source GIS
-                    technologies such as OpenLayers, GeoServer, and GDAL. This
-                    site showcases my projects and is where I share useful
-                    articles with the GeoDev community. Check out my
-                    <a href="/showcase">showcase</a> to see my latest work!
-                </p>
+                        ))
+                    }
+                </div>
             </div>
         </div>
+        <div class="about-content mt-6">
+            <p>
+                With over a decade of experience in the geospatial industry, I
+                specialize in full-stack development of GIS applications.
+                Currently, I serve as a senior software engineer at New Light
+                Technologies (NLT), contributing to some of their largest and
+                most influential projects.
+            </p>
+            <p class="mt-4">
+                Throughout my career, I've built applications on platforms like
+                Esri and Mapbox while also leveraging open-source GIS
+                technologies such as OpenLayers, GeoServer, and GDAL. This site
+                showcases my projects and is where I share useful articles with
+                the GeoDev community. Check out my
+                <a href="/showcase" class="text-muted-accent hover:underline"
+                    >showcase</a
+                > to see my latest work!
+            </p>
+        </div>
     </div>
-    <hr class="my-4" />
+    <hr class="my-8 border-custom-gray" />
     <ContactMe />
 </Layout>
 
 <style>
-    /* Hide the last pipe in the social links */
-    .social-links li:last-child span {
-        display: none;
+    /* Hide external link arrow */
+    a[href^="http"]::after {
+        content: none;
     }
 </style>
