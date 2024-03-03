@@ -29,7 +29,7 @@ Software Engineering | Geospatial Technologies & Analytics | Database Management
 
 <b>Web Development</b>: Vue | Svelte | Astro | React | Django | Cloudflare | GitHub Actions | Bootstrap | Vite | Tailwind
 
-<b>DevOps & Cloud</b>: Docker | Terraform | GitHub Actions | EC2 | S3 | RDS | IAM | Lambda | CloudWatch | Amplify
+<b>DevOps & Cloud</b>: Docker | Terraform | GitHub Actions | EC2 | S3 | RDS | IAM | Lambda | CloudWatch
 </div>
 
 ## CAREER HIGHLIGHTS
@@ -209,6 +209,6 @@ Content
 
 .education-section {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 </style>

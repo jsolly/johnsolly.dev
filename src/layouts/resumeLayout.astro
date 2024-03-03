@@ -4,135 +4,170 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout title={frontmatter.title} description={frontmatter.snippet}>
-    <h1>{frontmatter.name}</h1>
-    <div class="headerInfo">
-        <ul>
-            <li>{frontmatter.location}</li>
-            <li>
-                <a
-                    href={`https://${frontmatter.website}`}
-                    target="_blank"
-                    rel="noopener noreferrer">{frontmatter.website}</a
+    <div class="flex flex-col w-full">
+        <!-- Container for the top area with the button aligned to the right -->
+        <div class="w-full flex justify-end">
+            <a
+                href="/John-Solly-Resume.pdf"
+                target="_blank"
+                class="resume-btn mt-3 mr-3 inline-flex items-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 mr-2"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
                 >
-            </li>
-            <li>
-                <a href={`mailto:${frontmatter.email}`}>{frontmatter.email}</a>
-            </li>
-            <li>
-                <a
-                    href={`https://${frontmatter.linkedin}`}
-                    target="_blank"
-                    rel="noopener noreferrer">{frontmatter.linkedin}</a
-                >
-            </li>
-        </ul>
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    ></path>
+                </svg>
+                Open as PDF ↗
+            </a>
+        </div>
+        <h1>{frontmatter.name}</h1>
+        <div class="headerInfo">
+            <ul>
+                <li>{frontmatter.location}</li>
+                <li>
+                    <a
+                        href={`https://${frontmatter.website}`}
+                        target="_blank"
+                        rel="noopener noreferrer">{frontmatter.website}</a
+                    >
+                </li>
+                <li>
+                    <a href={`mailto:${frontmatter.email}`}
+                        >{frontmatter.email}</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href={`https://${frontmatter.linkedin}`}
+                        target="_blank"
+                        rel="noopener noreferrer">{frontmatter.linkedin}</a
+                    >
+                </li>
+            </ul>
+        </div>
+        <slot />
     </div>
-    <slot />
-</Layout>
 
-<style>
-    @page {
-        size: letter;
-        margin: 0.5in;
-    }
+    <style>
+        .resume-btn:hover {
+            text-decoration: none;
+        }
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+        @page {
+            size: letter;
+            margin: 0.5in;
+        }
 
-    body {
-        font-size: 12px;
-        line-height: 1.4;
-    }
+        body {
+            font-size: 15px;
+            line-height: 1.4;
+        }
 
-    .spacer {
-        margin: 0px auto;
-    }
+        .spacer {
+            margin: 0px auto;
+        }
 
-    h1 {
-        text-align: center;
-        font-size: 28px;
-        margin: 0;
-    }
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            margin: 0;
+        }
 
-    h2 {
-        background-color: #d0cece;
-        padding-top: 3px;
-        padding-bottom: 3px;
-        margin-top: 0;
-        margin-bottom: 6px;
-        font-size: 16px;
-        text-transform: uppercase;
-        text-align: center;
-    }
+        h2 {
+            background-color: #d0cece;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            margin-top: 0;
+            margin-bottom: 6px;
+            font-size: 18px;
+            text-transform: uppercase;
+            text-align: center;
+        }
 
-    h3 {
-        margin: 0;
-        display: flex;
-        font-size: 14px;
-        text-transform: uppercase;
-        color: #2f5496;
-    }
+        h3 {
+            margin: 0;
+            display: flex;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: #2f5496;
+        }
 
-    p {
-        padding: 0;
-        margin-block-end: 3px;
-        margin-block-start: 3px;
-    }
+        p {
+            padding: 0;
+            margin-block-end: 3px;
+            margin-block-start: 3px;
+        }
 
-    ul {
-        margin: 0px;
-    }
+        ul {
+            margin: 0px;
+        }
 
-    li {
-        margin: 3px;
-    }
+        li {
+            margin: 3px;
+        }
 
-    /* =============
+        /* =============
 Header
 ============= */
 
-    .headerInfo > ul {
-        display: flex;
-        justify-content: center;
-        border-bottom: 5px solid #1f3865;
-        margin-bottom: 3px;
-        font-size: 12px;
-    }
+        .headerInfo > ul {
+            display: flex;
+            justify-content: center;
+            border-bottom: 5px solid #1f3865;
+            margin-bottom: 3px;
+            font-size: 12px;
+        }
 
-    .headerInfo > ul > li {
-        list-style-type: none;
-        margin-bottom: 1px;
-    }
+        .headerInfo > ul > li {
+            list-style-type: none;
+            margin-bottom: 1px;
+        }
 
-    .headerInfo > ul > li:not(:last-child) {
-        margin-right: 8px;
-    }
+        .headerInfo > ul > li:not(:last-child) {
+            margin-right: 8px;
+        }
 
-    .headerInfo > ul > li:not(:last-child):after {
-        content: "|";
-        margin-left: 8px;
-    }
+        .headerInfo > ul > li:not(:last-child):after {
+            content: "|";
+            margin-left: 8px;
+        }
 
-    /* =============
+        /* =============
 Content
 ============= */
 
-    .role-summary {
-        text-align: justify;
-    }
+        .role-summary {
+            text-align: justify;
+        }
 
-    .skillset-overview {
-        text-align: justify;
-    }
+        .skillset-overview {
+            text-align: justify;
+        }
 
-    .career-highlights > ul > li {
-        list-style-type: square;
-    }
+        .career-highlights > ul > li {
+            list-style-type: square;
+        }
 
-    .company-name {
-        margin: 0;
-        border-bottom: 1px solid #d9e2f3;
-    }
+        .company-name {
+            margin: 0;
+            border-bottom: 1px solid #d9e2f3;
+        }
 
-    .education-section {
-        text-align: center;
-        font-size: 13px;
-    }
-</style>
+        .education-section {
+            text-align: center;
+            font-size: 13px;
+        }
+    </style>
+</Layout>
