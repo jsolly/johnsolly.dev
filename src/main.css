@@ -12,7 +12,7 @@
     }
 
     a {
-        @apply text-muted-accent;
+        @apply text-purple-500;
     }
 
     h1,

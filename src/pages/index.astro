@@ -10,10 +10,7 @@ import Card from "../components/Card.astro";
 	<h1 class="text-5xl font-bold leading-none text-center mb-4">
 		Welcome to <span class="text-gradient">JohnSolly.dev</span>
 	</h1>
-	<ul
-		role="list"
-		class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-0"
-	>
+	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-0">
 		<Card
 			href="/showcase/"
 			title="Showcase"
@@ -44,7 +41,7 @@ import Card from "../components/Card.astro";
 			title="Tech Resources"
 			snippet="A curated list of my favorite tech resources, newsletters, and podcasts."
 		/>
-	</ul>
+	</div>
 </Layout>
 
 <style>
