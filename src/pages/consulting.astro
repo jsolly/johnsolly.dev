@@ -61,58 +61,53 @@ const consultingServices = [
     title="Consulting Services"
     description="Book personalized consulting sessions to get expert advice and guidance on your projects and ideas."
 >
-    {
-        consultingServices.map((service) => (
-            <section class="rounded-lg mb-8 p-8">
-                <h2 class="text-2xl">{service.title}</h2>
-                {service.sessions.map((session) => (
-                    <article class="border-t-2 border-gray-800 pt-4 mt-4">
-                        <h3>{session.name}</h3>
-                        <p>{session.description}</p>
-                        <h4>Features:</h4>
-                        <ul>
-                            {session.features.map((feature, _) => (
-                                <li>{feature}</li>
-                            ))}
-                        </ul>
-                        <p class="mb-1">
-                            <strong>Price:</strong> {session.price}
-                        </p>
-                        <h4>Booking Process:</h4>
-                        <ol>
-                            {session.bookingProcess.map((step, _) => (
-                                <li>{step}</li>
-                            ))}
-                        </ol>
-                        <div class="stripe-buy-button-container flex justify-center m-5">
-                            <stripe-buy-button
-                                buy-button-id="buy_btn_1OmLGgGDKR2aVHG2whxTQRdh"
-                                publishable-key="pk_live_51OVYNtGDKR2aVHG2rkLNhuMQNijVcyxE3V4qsf92piHHYSmeE2SZg9L2HmuCwCMhJyAPZuNAAQhVUXDw5aqa7Edv00nPyo5KFq"
-                            />
-                        </div>
-                    </article>
-                ))}
-            </section>
-        ))
-    }
+    <div class="max-w-4xl mx-auto">
+        {
+            consultingServices.map((service) => (
+                <section class="bg-custom-dark rounded-lg mb-8 p-8 shadow-lg">
+                    <h2 class="text-2xl text-custom-offwhite font-bold">
+                        {service.title}
+                    </h2>
+                    {service.sessions.map((session) => (
+                        <article class="border-t-2 border-gray-800 pt-4 mt-4">
+                            <h3 class="text-xl text-custom-offwhite font-semibold">
+                                {session.name}
+                            </h3>
+                            <p class="text-custom-gray">
+                                {session.description}
+                            </p>
+                            <h4 class="text-lg text-custom-offwhite font-semibold mt-4">
+                                Features:
+                            </h4>
+                            <ul class="list-disc pl-5 text-custom-gray">
+                                {session.features.map((feature) => (
+                                    <li>{feature}</li>
+                                ))}
+                            </ul>
+                            <p class="text-custom-gray mb-1 mt-4">
+                                <strong class="text-custom-offwhite">
+                                    Price:
+                                </strong>{" "}
+                                {session.price}
+                            </p>
+                            <h4 class="text-lg text-custom-offwhite font-semibold mt-4">
+                                Booking Process:
+                            </h4>
+                            <ol class="list-decimal pl-5 text-custom-gray">
+                                {session.bookingProcess.map((step) => (
+                                    <li>{step}</li>
+                                ))}
+                            </ol>
+                            <div class="stripe-buy-button-container flex justify-center mt-5">
+                                <stripe-buy-button
+                                    buy-button-id="buy_btn_1OmLGgGDKR2aVHG2whxTQRdh"
+                                    publishable-key="pk_live_51OVYNtGDKR2aVHG2rkLNhuMQNijVcyxE3V4qsf92piHHYSmeE2SZg9L2HmuCwCMhJyAPZuNAAQhVUXDw5aqa7Edv00nPyo5KFq"
+                                />
+                            </div>
+                        </article>
+                    ))}
+                </section>
+            ))
+        }
+    </div>
 </Layout>
-
-<style>
-    section {
-        background-color: rgb(30, 32, 37);
-        box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
-    }
-
-    ul,
-    ol {
-        margin-left: 20px;
-        margin-top: 10px;
-    }
-    li {
-        margin-bottom: 5px;
-    }
-    p,
-    li {
-        line-height: 1.6;
-    }
-</style>
