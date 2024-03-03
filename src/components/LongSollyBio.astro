@@ -8,100 +8,99 @@ import accordionIcon from "../images/svg/accordion_arrow.svg";
     <script src="/src/scripts/accordion.js"></script>
 </head>
 
-<article class="accordion-container">
-    <div class="accordion-item">
-        <div class="accordion-header cursor-pointer">
-            <button class="accordion-btn flex w-full" aria-expanded="false">
-                <h2
-                    class="accordion-title flex-grow mb-2 text-2xl font-medium hover:text-muted-accent"
+<article class="accordion-container rounded-lg overflow-hidden">
+    <div
+        class="accordion-header cursor-pointer bg-transparent p-4 border border-accent rounded-lg hover:bg-accent hover:bg-opacity-10"
+    >
+        <button
+            class="accordion-btn flex items-center w-full"
+            aria-expanded="false"
+        >
+            <h2 class="accordion-title flex-grow text-xl md:text-2xl font-bold">
+                Read More About Me
+            </h2>
+            <Image
+                id="accordion-expand-collapse-arrow"
+                src={accordionIcon}
+                alt="expand/collapse"
+                loading="lazy"
+                decoding="async"
+                class="accordion-icon w-6 h-6"
+            />
+        </button>
+    </div>
+    <div
+        class="accordion-collapse transition-max-height duration-300 ease-in-out"
+    >
+        <div class="accordion-body p-4 md:p-6">
+            <Image
+                class="bio-image rounded-md float-left mr-4 mb-4"
+                src={gisLectureImage}
+                alt="John at 2015 AAG conference with Rebecca Rice and Michael Goodchild"
+                loading="lazy"
+                decoding="async"
+            />
+            <p>
+                As a highly skilled geospatial software engineer, I have a
+                wealth of experience blending GIS domain knowledge with
+                full-stack development to create stunning and efficient mapping
+                applications. My academic background includes a bachelor's
+                degree in Geography from UCSB, where I had the privilege of
+                studying under renowned thought leaders Michael Goodchild and
+                Waldo Tobler. I further honed my skills with an M.S. in
+                Geoinformatics and Geospatial Intelligence at George Mason
+                University. After graduation, I played a pivotal role in
+                launching one of the world's most viewed geospatial web
+                applications, <a
+                    href="https://www.esri.com/en-us/arcgis/products/arcgis-dashboards/overview"
+                    rel="noopener noreferrer"
+                    target="_blank">ArcGIS Dashboards</a
+                >, as a product engineer at Esri.
+            </p>
+            <p>
+                After Esri, I spent a year as an Integration Consultant at a
+                business intelligence startup called YellowfinBI which was
+                aquired by Idera Inc. in 2022. I left Yellowfin after the
+                aquisition to work on this blog while also rasing my son,
+                Justice Solly, who was born 2/20/22. Six months later, I joined
+                University of Maryland as a senior geospatial developer for the <a
+                    href="https://easierdata.org"
+                    rel="noopener noreferrer"
+                    target="_blank">EASIER Data Initiative</a
+                >, a UMD project in collaboration with the <a
+                    href="https://ffdweb.org/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >Filecoin Foundation For the Decentralied Web</a
+                >. I was responsible for developing infrastructure that enables
+                efficient, accessible, and sustainable onloading, analysis, and
+                extraction of large geospatial datasets into blockchain-managed
+                decentralized storage systems such as Filecoin and IPFS.
+            </p>
+            <p>
+                In Fall 2023, I joined <a
+                    href="https://www.newlighttechnologies.com/"
+                    rel="noopener noreferrer"
+                    target="_blank">NLT</a
+                > as a senior software engineer, contributing to some of NLT's largest
+                and most influential projects. I'm now part of a multi-year effort
+                for the <a
+                    href="https://www.census.gov/"
+                    rel="noopener noreferrer"
+                    target="_blank">US Census</a
                 >
-                    Read More About Me
-                </h2>
-                <Image
-                    id="accordion-expand-collapse-arrow"
-                    src={accordionIcon}
-                    alt="expand/collapse"
-                    loading="lazy"
-                    decoding="async"
-                    class="w-5 h-5 accordion-icon mr-4"
-                />
-            </button>
-        </div>
-        <div class="accordion-collapse">
-            <div class="accordion-body text-lg p-1">
-                <Image
-                    class="bio-image rounded-md float-left mr-4 mb-4"
-                    src={gisLectureImage}
-                    alt="John at 2015 AAG conference with Rebecca Rice and Michael Goodchild"
-                    loading="lazy"
-                    decoding="async"
-                />
-                <p>
-                    As a highly skilled geospatial software engineer, I have a
-                    wealth of experience blending GIS domain knowledge with
-                    full-stack development to create stunning and efficient
-                    mapping applications. My academic background includes a
-                    bachelor's degree in Geography from UCSB, where I had the
-                    privilege of studying under renowned thought leaders Michael
-                    Goodchild and Waldo Tobler. I further honed my skills with
-                    an M.S. in Geoinformatics and Geospatial Intelligence at
-                    George Mason University. After graduation, I played a
-                    pivotal role in launching one of the world's most viewed
-                    geospatial web applications, <a
-                        href="https://www.esri.com/en-us/arcgis/products/arcgis-dashboards/overview"
-                        rel="noopener noreferrer"
-                        target="_blank">ArcGIS Dashboards</a
-                    >, as a product engineer at Esri.
-                </p>
-                <p>
-                    After Esri, I spent a year as an Integration Consultant at a
-                    business intelligence startup called YellowfinBI which was
-                    aquired by Idera Inc. in 2022. I left Yellowfin after the
-                    aquisition to work on this blog while also rasing my son,
-                    Justice Solly, who was born 2/20/22. Six months later, I
-                    joined University of Maryland as a senior geospatial
-                    developer for the <a
-                        href="https://easierdata.org"
-                        rel="noopener noreferrer"
-                        target="_blank">EASIER Data Initiative</a
-                    >, a UMD project in collaboration with the <a
-                        href="https://ffdweb.org/"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        >Filecoin Foundation For the Decentralied Web</a
-                    >. I was responsible for developing infrastructure that
-                    enables efficient, accessible, and sustainable onloading,
-                    analysis, and extraction of large geospatial datasets into
-                    blockchain-managed decentralized storage systems such as
-                    Filecoin and IPFS.
-                </p>
-                <p>
-                    In Fall 2023, I joined <a
-                        href="https://www.newlighttechnologies.com/"
-                        rel="noopener noreferrer"
-                        target="_blank">NLT</a
-                    > as a senior software engineer, contributing to some of NLT's
-                    largest and most influential projects. I'm now part of a multi-year
-                    effort for the <a
-                        href="https://www.census.gov/"
-                        rel="noopener noreferrer"
-                        target="_blank">US Census</a
-                    >
-                    to develop a web-based geospatial application for the Census
-                    Enterprise Dissemination Services and Consumer Innovation (CEDSCI)
-                    division.
-                </p>
-
-                <p>
-                    If you're facing complex geospatial challenges that require
-                    an experienced developer's expertise, feel free to <a
-                        href="https://us14.list-manage.com/contact-form?u=3fb3f4adf8ab2cd1ebd6ff743&form_id=7c78cd242677faaebfc3d4a2bc0d5fda"
-                        rel="noopener noreferrer"
-                        target="_blank">drop me a message</a
-                    >. Let's connect and find the perfect fit for a successful
-                    collaboration!
-                </p>
-            </div>
+                to develop a web-based geospatial application for the Census Enterprise
+                Dissemination Services and Consumer Innovation (CEDSCI) division.
+            </p>
+            <p>
+                If you're facing complex geospatial challenges that require an
+                experienced developer's expertise, feel free to <a
+                    href="https://us14.list-manage.com/contact-form?u=3fb3f4adf8ab2cd1ebd6ff743&form_id=7c78cd242677faaebfc3d4a2bc0d5fda"
+                    rel="noopener noreferrer"
+                    target="_blank">drop me a message</a
+                >. Let's connect and find the perfect fit for a successful
+                collaboration!
+            </p>
         </div>
     </div>
 </article>
@@ -129,5 +128,9 @@ import accordionIcon from "../images/svg/accordion_arrow.svg";
     .accordion-btn[aria-expanded="false"] .accordion-icon {
         transform: rotate(0deg);
         transition: transform 0.2s ease;
+    }
+
+    .accordion-body p + p {
+        margin-top: 16px;
     }
 </style>
