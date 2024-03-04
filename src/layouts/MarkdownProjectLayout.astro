@@ -1,6 +1,6 @@
 ---
 import Layout from "./Layout.astro";
-const { frontmatter } = Astro.props;
+const { frontmatter, readingTime } = Astro.props;
 import { Image } from "astro:assets";
 ---
 
@@ -15,5 +15,8 @@ import { Image } from "astro:assets";
             class="rounded-lg"
         />
     </div>
+    <p class="text-sm text-gray-500 mt-2">
+        {readingTime}
+    </p>
     <slot />
 </Layout>
