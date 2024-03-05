@@ -7,17 +7,19 @@ const allProjects = await getCollection("projects");
 
 <div class="projects-list">
     {
-        allProjects
-            .reverse()
-            .map((project) => (
+        allProjects.reverse().map(async (project) => {
+            const { remarkPluginFrontmatter } = await project.render();
+            return (
                 <Card
                     title={project.data.title}
                     href={`/projects/${project.slug}/`}
+                    readingTime={remarkPluginFrontmatter.minutesRead}
                     metaimg={project.data.metaimg}
                     metaimgAlt={project.data.metaimgAlt}
                     snippet={project.data.snippet}
                     logos={project.data.logos}
                 />
-            ))
+            );
+        })
     }
 </div>

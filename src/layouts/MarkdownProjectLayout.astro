@@ -2,6 +2,7 @@
 import Layout from "./Layout.astro";
 const { frontmatter, readingTime } = Astro.props;
 import { Image } from "astro:assets";
+import clockIcon from "../images/svg/clockIcon.svg";
 ---
 
 <Layout title={frontmatter.title} description={frontmatter.snippet}>
@@ -15,8 +16,11 @@ import { Image } from "astro:assets";
             class="rounded-lg"
         />
     </div>
-    <p class="text-sm text-gray-500 mt-2">
-        {readingTime}
-    </p>
+    <div class="mt-3">
+        <span class="text-sm text-gray-400 flex items-center">
+            <Image src={clockIcon} alt="Clock icon" class="w-4 h-4 mr-1" />
+            {readingTime}
+        </span>
+    </div>
     <slot />
 </Layout>
