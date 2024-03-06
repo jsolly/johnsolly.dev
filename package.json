@@ -11,7 +11,7 @@
     "lint": "biome lint --no-errors-on-unmatched --files-ignore-unknown=true .",
     "lint-fix": "biome lint --apply --no-errors-on-unmatched --files-ignore-unknown=true .",
     "format": "biome format --no-errors-on-unmatched --files-ignore-unknown=true --write .",
-    "type-check": "tsc --noEmit -p packages/app/tsconfig.json",
+    "type-check": "tsc --noEmit -p tsconfig.json",
     "prepare": "if [ -z \"$CI\" ]; then husky install; fi"
   },
   "dependencies": {

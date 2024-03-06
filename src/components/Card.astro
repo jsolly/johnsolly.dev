@@ -8,7 +8,7 @@ interface Props {
     title: string;
     snippet: string;
     href: string;
-    readingTime: string;
+    readingTime?: string;
     metaimg?: ImageMetadata;
     metaimgAlt?: string;
     logos?: Logo[];
@@ -60,12 +60,20 @@ const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
                 </div>
             ) : null
         }
-        <div class="mt-3">
-            <span class="text-sm text-gray-400 flex items-center justify-end">
-                <Image src={clockIcon} alt="Clock icon" class="w-4 h-4 mr-1" />
-                {readingTime}
-            </span>
-        </div>
+        {
+            readingTime ? (
+                <div class="mt-3">
+                    <span class="text-sm text-gray-400 flex items-center justify-end">
+                        <Image
+                            src={clockIcon}
+                            alt="Clock icon"
+                            class="w-4 h-4 mr-1"
+                        />
+                        {readingTime}
+                    </span>
+                </div>
+            ) : null
+        }
     </a>
 </div>
 <style>
