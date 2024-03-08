@@ -3,6 +3,11 @@
 	"organizeImports": {
 		"enabled": true
 	},
+	"files": {
+		"ignore": [
+			"src/scripts/stripeBuyButton.js"
+		]
+	},
 	"linter": {
 		"enabled": true,
 		"rules": {
