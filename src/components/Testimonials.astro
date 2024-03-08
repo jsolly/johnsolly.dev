@@ -76,7 +76,7 @@ const carouselItems = [
                                 index === 0 ? "block" : "hidden"
                             } data-index=${index}`}
                         >
-                            <div class="mb-6 flex flex-col items-center">
+                            <div class="mb-3 flex flex-col items-center">
                                 <Image
                                     class="rounded-full shadow-lg mb-4 max-w-[150px] max-h-[150px]"
                                     src={item.avatar}
@@ -100,20 +100,19 @@ const carouselItems = [
                                         {item.quote}
                                     </p>
                                 </div>
-                                <ol class="flex justify-center gap-2 p-0">
-                                    {carouselItems.map((_, index) => (
-                                        <li
-                                            class={`w-2.5 h-2.5 bg-gray-300 cursor-pointer transition-colors duration-300 ${
-                                                index === 0 ? "bg-accent" : ""
-                                            }`}
-                                            data-carousel-index={index}
-                                        />
-                                    ))}
-                                </ol>
-                            </div>
-                        </div>
-                    ))
-                }
+                                </div>
+                                </div>
+                                ))
+                            }
+                            <!-- The # of indicators matches the # of carousel items -->
+                            <ol class="flex justify-center gap-2 mb-6">
+                                {carouselItems.map((_, index) => (
+                                    <li
+                                        class="w-2.5 h-2.5 bg-gray-300 cursor-pointer transition-colors duration-300"
+                                        data-carousel-index={index}
+                                    />
+                                ))}
+                            </ol>
             </div>
             <button
                 class="carousel-control-next absolute right-14 top-1/2 transform -translate-y-1/2 text-4xl cursor-pointer"
