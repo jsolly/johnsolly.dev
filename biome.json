@@ -5,7 +5,8 @@
 	},
 	"files": {
 		"ignore": [
-			"src/scripts/stripeBuyButton.js"
+			"src/scripts/stripeBuyButton.js",
+			"biome.json"
 		]
 	},
 	"linter": {
