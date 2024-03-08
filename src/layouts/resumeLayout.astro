@@ -29,31 +29,6 @@ const { frontmatter } = Astro.props;
                 Open as PDF ↗
             </a>
         </div>
-        <h1>{frontmatter.name}</h1>
-        <div class="headerInfo">
-            <ul>
-                <li>{frontmatter.location}</li>
-                <li>
-                    <a
-                        href={`https://${frontmatter.website}`}
-                        target="_blank"
-                        rel="noopener noreferrer">{frontmatter.website}</a
-                    >
-                </li>
-                <li>
-                    <a href={`mailto:${frontmatter.email}`}
-                        >{frontmatter.email}</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href={`https://${frontmatter.linkedin}`}
-                        target="_blank"
-                        rel="noopener noreferrer">{frontmatter.linkedin}</a
-                    >
-                </li>
-            </ul>
-        </div>
         <slot />
     </div>
 
@@ -65,109 +40,10 @@ const { frontmatter } = Astro.props;
             width: 20px;
             height: 20px;
         }
-        @page {
-            size: letter;
-            margin: 0.5in;
-        }
 
         body {
             font-size: 15px;
             line-height: 1.4;
-        }
-
-        .spacer {
-            margin: 0px auto;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 28px;
-            margin: 0;
-        }
-
-        h2 {
-            background-color: #d0cece;
-            padding-top: 3px;
-            padding-bottom: 3px;
-            margin-top: 0;
-            margin-bottom: 6px;
-            font-size: 18px;
-            text-transform: uppercase;
-            text-align: center;
-        }
-
-        h3 {
-            margin: 0;
-            display: flex;
-            font-size: 16px;
-            text-transform: uppercase;
-            color: #2f5496;
-        }
-
-        p {
-            padding: 0;
-            margin-block-end: 3px;
-            margin-block-start: 3px;
-        }
-
-        ul {
-            margin: 0px;
-        }
-
-        li {
-            margin: 3px;
-        }
-
-        /* =============
-Header
-============= */
-
-        .headerInfo > ul {
-            display: flex;
-            justify-content: center;
-            border-bottom: 5px solid #1f3865;
-            margin-bottom: 3px;
-            font-size: 12px;
-        }
-
-        .headerInfo > ul > li {
-            list-style-type: none;
-            margin-bottom: 1px;
-        }
-
-        .headerInfo > ul > li:not(:last-child) {
-            margin-right: 8px;
-        }
-
-        .headerInfo > ul > li:not(:last-child):after {
-            content: "|";
-            margin-left: 8px;
-        }
-
-        /* =============
-Content
-============= */
-
-        .role-summary {
-            text-align: justify;
-        }
-
-        .skillset-overview {
-            text-align: justify;
-        }
-
-        .career-highlights > ul > li {
-            list-style-type: square;
-        }
-
-        .company-name {
-            margin: 0;
-            border-bottom: 1px solid #d9e2f3;
-        }
-
-        .education-section {
-            text-align: center;
-            font-size: 13px;
         }
     </style>
 </Layout>

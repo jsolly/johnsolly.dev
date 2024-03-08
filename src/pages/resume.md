@@ -2,15 +2,34 @@
 layout: /src/layouts/resumeLayout.astro
 title: "John Solly's Resume"
 href: /resume
-location: Philadelphia, PA
-redacted: false
-name: JOHN SOLLY
-role: LEAD SOFTWARE ENGINEER
-website: JohnSolly.dev
-email: jsolly@pm.me
-linkedin: linkedin.com/in/jsolly/
 snippet: "A two-page resume for John Solly, a lead software engineer with a focus on cloud computing and geospatial technologies."
 ---
+
+# JOHN SOLLY
+<div class="headerInfo">
+    <ul>
+        <li>Philadelphia, PA</li>
+        <li>
+            <a
+                href="https://JohnSolly.dev"
+                target="_blank"
+                rel="noopener noreferrer">JohnSolly.dev</a
+            >
+        </li>
+        <li>
+            <a href="mailto:jsolly@pm.me"
+                >jsolly@pm.me</a
+            >
+        </li>
+        <li>
+            <a
+                href="https://linkedin.com/in/jsolly/""
+                target="_blank"
+                rel="noopener noreferrer">linkedin.com/in/jsolly</a
+            >
+        </li>
+    </ul>
+</div>
 
 ## LEAD SOFTWARE ENGINEER
 <div class="role-summary"><b>A strategic and dedicated Senior Software Engineer with a demonstrated history of working with geospatial applications and complex data solutions.</b> A proven leader and mentor passionate about maintaining the highest code quality standards. Expertise in developing bespoke geospatial applications, owning product implementations, and driving engineering leadership. Well-regarded for documenting well, showing ownership, and excelling as a tech lead with a comprehensive background in software development, databases, web development, and DevOps.
@@ -20,22 +39,20 @@ snippet: "A two-page resume for John Solly, a lead software engineer with a focu
 <p class="skillset-overview">
 Software Engineering | Geospatial Technologies & Analytics | Database Management | SQL Performance Tuning | Web Development | Automation | DevOps | Cloud Computing | Serverless Architecture | Agile | Big Data | Data Warehousing and Star Schema | Test-Driven Development (TDD) | Paired Programming | Unit Testing | Technical Writing | Continuous Integration & Continuous Delivery (CI/CD) | Rapid Prototyping | Cross-Functional Leadership Technical Mentorship | ETL Pipeline Architecture | RESTful, SOAP, and JavaScript APIs | Security & Production Issue Resolution Migration & Upgrade Planning | User Authentication & Profile Management | Large Language Models (LLM) | Advanced Algorithm Development | Visualization Tools & Libraries | Quality Assurance | Release Coordination</p>
 
-<div class="languages">
-<b>Languages</b>: Python | TypeScript | JavaScript | Golang | SQL/NoSQL | Shell/Bash | SQL | Java
+**Languages** : Python | TypeScript | JavaScript | Golang | SQL/NoSQL | Shell/Bash | SQL | Java
 
-<b>Geospatial</b>: PostGIS | GeoPandas | SQLalchemy | GDAL | Dask | ArcGIS | Mapbox GL | Turf.js | Deck GL | OpenLayers | Leaflet
+**Geospatial**: PostGIS | GeoPandas | SQLalchemy | GDAL | Dask | ArcGIS | Mapbox GL | Turf.js | Deck GL | OpenLayers | Leaflet
 
-<b>Databases</b> RDS | Postgres | MongoDB | DynamoDB | SQLite | MSSQL | MySQL | IPFS
+**Databases** RDS | Postgres | MongoDB | DynamoDB | SQLite | MSSQL | MySQL | IPFS
 
-<b>Web Development</b>: Vue | Svelte | Astro | React | Django | Cloudflare | GitHub Actions | Bootstrap | Vite | Tailwind
+**Web Development**: Vue | Svelte | Astro | React | Django | Cloudflare | GitHub Actions | Bootstrap | Vite | Tailwind
 
-<b>DevOps & Cloud</b>: Docker | Terraform | GitHub Actions | EC2 | S3 | RDS | IAM | Lambda | CloudWatch
-</div>
+**DevOps & Cloud**: Docker | Terraform | GitHub Actions | EC2 | S3 | RDS | IAM | Lambda | CloudWatch
 
 ## CAREER HIGHLIGHTS
 <div class="career-highlights">
 
-- <b>Increased Efficiency:</b> Achieved a 58% reduction in manual testing time through automated testing and rearchitecting manual QA test plans; this efficiency gain saved thousands of dollars and enabled the team to reach feature completion two weeks earlier each quarter, significantly accelerating project timelines.
+- **Increased Efficiency:** Achieved a 58% reduction in manual testing time through automated testing and rearchitecting manual QA test plans; this efficiency gain saved thousands of dollars and enabled the team to reach feature completion two weeks earlier each quarter, significantly accelerating project timelines.
 
 - <b>Innovation:</b> Championed the adoption of serverless technology stacks, reducing costs and complexities in geospatial application development. Additionally, I led the forefront in embracing the latest OGC standards and data formats, including ZARR, COG, STAC, and PMTiles. Pioneered integrating these cutting-edge technologies in critical projects, enhancing data processing speed, scalability, and infrastructure efficiency.
 
@@ -102,11 +119,6 @@ Software Engineering | Geospatial Technologies & Analytics | Database Management
 
 
 <style>
-main {
-    max-width: 800px;
-    padding: 0 20px;
-    font-size: 15px;
-}
 .spacer {
     margin: 0px auto;
 }
@@ -154,34 +166,10 @@ li {
     margin-left: 30px;
 }
 
-.languages {
-    line-height: 1.1;
-    margin-bottom: 10px;
-}
-
-/* =============
-Header
-============= */
-
-.headerInfo > ul {
-    display: flex;
-    justify-content: center;
-    border-bottom: 5px solid #1f3865;
-    margin-bottom: 3px;
-}
-
-.headerInfo > ul > li {
-    list-style-type: none;
-    margin-bottom: 1px;
-}
-
-.headerInfo > ul > li:not(:last-child) {
-    margin-right: 8px;
-}
-
-.headerInfo > ul > li:not(:last-child):after {
-    content: "|";
-    margin-left: 8px;
+.headerInfo li {
+    margin: initial;
+    list-style-type: initial; 
+    margin-left: initial;
 }
 
 /* =============
@@ -210,5 +198,58 @@ Content
 .education-section {
     text-align: center;
     margin-bottom: 20px;
+}
+
+/* ============= 
+    Header
+============= */
+
+.headerInfo > ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid #1f3865;
+    margin-bottom: 3px;
+    white-space: nowrap;
+}
+
+.headerInfo > ul > li {
+    list-style-type: none;
+    margin-bottom: 1px;
+}
+
+.headerInfo > ul > li:not(:last-child) {
+    margin-right: 8px;
+}
+
+.headerInfo > ul > li:not(:last-child):after {
+    content: "|";
+    margin-left: 8px;
+}
+
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .headerInfo > ul {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 960px) {
+    .headerInfo > ul {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .headerInfo > ul {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 576px) {
+    .headerInfo > ul {
+        font-size: 8px;
+    }
 }
 </style>
