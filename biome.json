@@ -5,8 +5,7 @@
 	},
 	"files": {
 		"ignore": [
-			"src/scripts/stripeBuyButton.js",
-			"biome.json"
+			"src/scripts/stripeBuyButton.js"
 		]
 	},
 	"linter": {
@@ -15,10 +14,6 @@
 			"recommended": true,
 			"suspicious": {
 				"noConsoleLog": "error"
-			},
-			"correctness": {
-				"noUnusedVars": "error",
-				"nounusedImports": "error"
 			}
 		}
 	},
