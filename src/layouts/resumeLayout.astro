@@ -5,8 +5,8 @@ const { frontmatter } = Astro.props;
 
 <Layout title={frontmatter.title} description={frontmatter.snippet}>
     <div class="flex flex-col w-full">
-        <!-- Container for the top area with the button aligned to the right -->
-        <div class="w-full flex justify-end">
+        <!-- Container for the top area with the button centered -->
+        <div class="w-full flex flex-col items-center mb-2">
             <a
                 href="/John-Solly-Resume.pdf"
                 target="_blank"
