@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	// When an indicator is clicked, update the carousel to show the corresponding item
 	for (const indicator of indicators) {
 		indicator.addEventListener("click", () => {
-			const index = parseInt(indicator.getAttribute("data-carousel-index"), 10);
+			const index = Number.parseInt(indicator.getAttribute("data-carousel-index"), 10);
 			currentCarouselIndex = index;
 			updateCarousel();
 		});
