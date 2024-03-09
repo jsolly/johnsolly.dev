@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import Card from "./Card.astro";
+import ProjectCard from "./ProjectCard.astro";
 
 const allProjects = await getCollection("projects");
 ---
@@ -10,7 +10,7 @@ const allProjects = await getCollection("projects");
         allProjects.reverse().map(async (project) => {
             const { remarkPluginFrontmatter } = await project.render();
             return (
-                <Card
+                <ProjectCard
                     title={project.data.title}
                     href={`/projects/${project.slug}/`}
                     readingTime={remarkPluginFrontmatter.minutesRead}

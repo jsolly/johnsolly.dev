@@ -5,10 +5,11 @@ import PageSpeedInsights from "../components/PageSpeedInsights.astro";
 import LongSollyBio from "../components/LongSollyBio.astro";
 import Testimonials from "../components/Testimonials.astro";
 import ProjectsList from "../components/ProjectsList.astro";
-import Card from "../components/Card.astro";
+import Card from "../components/LinkCard.astro";
 import * as myResume from "../pages/resume.md";
 
 import jsollyLarge from "../images/jsollyLarge.webp";
+import ProjectCard from "src/components/ProjectCard.astro";
 ---
 
 <Layout
@@ -25,17 +26,22 @@ import jsollyLarge from "../images/jsollyLarge.webp";
     <Testimonials />
     <ProjectsList />
     <!-- Resume Card After Projects -->
-    <div class="mt-8">
-        <Card
-            title={myResume.frontmatter.title}
-            href={myResume.frontmatter.href}
-            metaimg={jsollyLarge}
-            metaimgAlt="John Solly"
-            snippet={myResume.frontmatter.snippet}
-        />
-    </div>
-    <hr class="my-8" />
+    <ProjectCard
+        title={myResume.frontmatter.title}
+        href={myResume.frontmatter.href}
+        metaimg={jsollyLarge}
+        metaimgAlt="John Solly"
+        snippet={myResume.frontmatter.snippet}
+    />
+    <hr />
     <ContactMe />
-    <hr class="my-8" />
+    <hr />
     <PageSpeedInsights />
 </Layout>
+
+<style>
+    hr {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+</style>
