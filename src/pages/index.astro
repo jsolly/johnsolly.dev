@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/LinkCard.astro";
+import LinkCard from "../components/LinkCard.astro";
 ---
 
 <Layout
@@ -11,32 +11,35 @@ import Card from "../components/LinkCard.astro";
 		Welcome to <span class="text-gradient">JohnSolly.dev</span>
 	</h1>
 	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-0">
-		<Card
+		<LinkCard
 			href="/showcase/"
 			title="Showcase"
 			snippet="A portfolio of my geospatial and software projects, showcasing innovative solutions and impactful results."
 		/>
-		<Card
+		<LinkCard
 			href="https://blogthedata.com"
 			title="Blog"
 			snippet="Insights on software engineering, geospatial analysis, and tech trends. My thoughts, tutorials, and more."
+			rel="me"
 		/>
-		<Card
+		<LinkCard
 			href="/consulting/"
 			title="Consulting"
 			snippet="Professional consulting in geospatial applications, DevOps, and software optimization. Tailored tech solutions."
 		/>
-		<Card
+		<LinkCard
 			href="/about/"
 			title="About"
 			snippet="Learn more about me, my background, and my professional journey."
+			rel="author"
 		/>
-		<Card
+		<LinkCard
 			href="https://www.youtube.com/@johnsolly"
 			title="Tutorial Videos"
 			snippet="Watch my video tutorials on geospatial analysis, software development, and tech tools."
+			rel="me noopener noreferrer"
 		/>
-		<Card
+		<LinkCard
 			href="https://blogthedata.com/post/my-favorite-youtube-channels-podcasts-newsletters/"
 			title="Tech Resources"
 			snippet="A curated list of my favorite tech resources, newsletters, and podcasts."
