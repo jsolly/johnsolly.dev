@@ -50,9 +50,7 @@ const carouselItems = [
 ];
 ---
 
-<head>
-    <script src="/src/scripts/carousel.js"></script>
-</head>
+<script src="/src/scripts/carousel.js"></script>
 
 <div class="text-center mt-10">
     <h2
@@ -100,19 +98,21 @@ const carouselItems = [
                                         {item.quote}
                                     </p>
                                 </div>
-                                </div>
-                                </div>
-                                ))
-                            }
-                            <!-- The # of indicators matches the # of carousel items -->
-                            <ol class="flex justify-center gap-2 mb-6">
-                                {carouselItems.map((_, index) => (
-                                    <li
-                                        class="w-2.5 h-2.5 bg-gray-300 cursor-pointer transition-colors duration-300"
-                                        data-carousel-index={index}
-                                    />
-                                ))}
-                            </ol>
+                            </div>
+                        </div>
+                    ))
+                }
+                <!-- The # of indicators matches the # of carousel items -->
+                <ol class="flex justify-center gap-2 mb-6">
+                    {
+                        carouselItems.map((_, index) => (
+                            <li
+                                class="w-2.5 h-2.5 bg-gray-300 cursor-pointer transition-colors duration-300"
+                                data-carousel-index={index}
+                            />
+                        ))
+                    }
+                </ol>
             </div>
             <button
                 class="carousel-control-next absolute right-14 top-1/2 transform -translate-y-1/2 text-4xl cursor-pointer"
