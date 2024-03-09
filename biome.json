@@ -13,7 +13,8 @@
 		"rules": {
 			"recommended": true,
 			"suspicious": {
-				"noConsoleLog": "error"
+				"noConsoleLog": "error",
+				"useAwait": "error"
 			}
 		}
 	},
