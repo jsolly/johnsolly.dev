@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="500 Server Error" description="500 Server Error">
+    <div class="flex flex-col items-center text-center p-4">
+        <header class="mt-10 mb-5">
+            <span class="text-4xl font-bold text-accent">500 SERVER ERROR</span>
+        </header>
+        <section>
+            <h1 class="text-3xl font-bold mt-6 mb-2">
+                Oops! Something went wrong.
+            </h1>
+            <p class="mb-5">
+                We're experiencing some technical issues. Please try again later
+                or <a href="/" class="text-accent hover:underline"
+                    >return to the homepage</a
+                >.
+            </p>
+            <a href="/" class="primary-btn">Go Home</a>
+        </section>
+    </div>
+</Layout>
