@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	};
 
+	// When clicking on the previous or next buttons, we want to navigate to the previous or next slide
 	const navigateCarousel = (step) => {
 		currentCarouselIndex =
 			(currentCarouselIndex + step + carouselItems.length) %
@@ -36,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			currentCarouselIndex = Number(
 				indicator.getAttribute("data-carousel-index"),
 			);
+			// When clicking on an indicator, we want to navigate to the corresponding slide
 			updateCarousel();
 		});
 	}
