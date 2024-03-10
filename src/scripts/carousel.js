@@ -39,6 +39,4 @@ document.addEventListener("DOMContentLoaded", () => {
 			updateCarousel();
 		});
 	}
-
-	updateCarousel(); // Initialize the carousel display
 });

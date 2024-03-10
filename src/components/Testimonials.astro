@@ -106,8 +106,11 @@ const carouselItems = [
                 <ol class="flex justify-center gap-2 mb-6">
                     {
                         carouselItems.map((_, index) => (
+                            // Initialize the first indicator as active on page load
                             <li
-                                class="w-2.5 h-2.5 bg-gray-300 cursor-pointer transition-colors duration-300"
+                                class={`w-2.5 h-2.5 cursor-pointer transition-colors duration-300 ${
+                                    index === 0 ? "bg-accent" : "bg-gray-300"
+                                }`}
                                 data-carousel-index={index}
                             />
                         ))
