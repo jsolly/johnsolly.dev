@@ -206,7 +206,6 @@ Content
 
 .headerInfo > ul {
     display: flex;
-    align-items: center;
     justify-content: center;
     border-bottom: 5px solid #1f3865;
     margin-bottom: 3px;
@@ -252,4 +251,5 @@ Content
         font-size: 8px;
     }
 }
+
 </style>
