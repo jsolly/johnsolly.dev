@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("astro:page-load", () => {
 	let currentCarouselIndex = 0;
 	const carouselItems = document.querySelectorAll(".carousel-item");
 	const indicators = document.querySelectorAll("[data-carousel-index]");
