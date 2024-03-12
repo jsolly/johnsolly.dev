@@ -1,44 +1,45 @@
 {
-  "name": "geodev-portfolio",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build && node process-html.mjs",
-    "preview": "astro preview",
-    "astro": "astro",
-    "lint": "biome lint --no-errors-on-unmatched --files-ignore-unknown=true .",
-    "lint-fix": "biome lint --apply --no-errors-on-unmatched --files-ignore-unknown=true .",
-    "format": "biome format --no-errors-on-unmatched --files-ignore-unknown=true --write .",
-    "type-check": "tsc --noEmit -p tsconfig.json",
-    "prepare": "if [ -z \"$CI\" ]; then husky install; fi"
-  },
-  "dependencies": {
-    "@astrojs/check": "^0.5.6",
-    "@astrojs/tailwind": "^5.1.0",
-    "@astrojs/ts-plugin": "^1.5.3",
-    "astro": "^4.4.15",
-    "globby": "^14.0.1",
-    "html-minifier": "^4.0.0",
-    "jsdom": "^24.0.0",
-    "mdast-util-to-string": "^4.0.0",
-    "reading-time": "^1.5.0",
-    "sharp": "^0.33.2",
-    "tailwindcss": "^3.4.1",
-    "unist-util-visit": "^5.0.0"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.6.0",
-    "@tailwindcss/typography": "^0.5.10",
-    "constructs": "^10.0.0",
-    "husky": "^9.0.11",
-    "typescript": "^5.3.3"
-  },
-  "lint-staged": {
-    "*": [
-      "biome format --write --no-errors-on-unmatched --files-ignore-unknown=true",
-      "biome lint --apply --no-errors-on-unmatched --files-ignore-unknown=true"
-    ]
-  }
+	"name": "geodev-portfolio",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro check && astro build && node process-html.mjs",
+		"preview": "astro preview",
+		"astro": "astro",
+		"lint": "biome lint --no-errors-on-unmatched --files-ignore-unknown=true .",
+		"lint-fix": "biome lint --apply --no-errors-on-unmatched --files-ignore-unknown=true .",
+		"format": "biome format --no-errors-on-unmatched --files-ignore-unknown=true --write .",
+		"type-check": "tsc --noEmit -p tsconfig.json",
+		"prepare": "if [ -z \"$CI\" ]; then husky install; fi"
+	},
+	"dependencies": {
+		"@astrojs/check": "^0.5.6",
+		"@astrojs/tailwind": "^5.1.0",
+		"@astrojs/ts-plugin": "^1.5.3",
+		"astro": "^4.4.15",
+		"globby": "^14.0.1",
+		"html-minifier": "^4.0.0",
+		"jsdom": "^24.0.0",
+		"mdast-util-to-string": "^4.0.0",
+		"reading-time": "^1.5.0",
+		"sharp": "^0.33.2",
+		"tailwindcss": "^3.4.1",
+		"unist-util-visit": "^5.0.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.6.0",
+		"@tailwindcss/typography": "^0.5.10",
+		"constructs": "^10.0.0",
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.2",
+		"typescript": "^5.3.3"
+	},
+	"lint-staged": {
+		"*": [
+			"biome format --write --no-errors-on-unmatched --files-ignore-unknown=true",
+			"biome lint --apply --no-errors-on-unmatched --files-ignore-unknown=true"
+		]
+	}
 }
