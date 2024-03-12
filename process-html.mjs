@@ -9,7 +9,7 @@ const files = await globby(`${path}/**/*.html`);
 
 await Promise.all(
 	files.map(async (file) => {
-		console.log("Processing file:", file);
+		console.info("Processing fil:", file);
 		let html = await fs.readFile(file, "utf-8");
 
 		// Add IDs to h2, h3, and h4 tags
