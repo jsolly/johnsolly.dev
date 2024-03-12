@@ -1,56 +1,56 @@
 ---
 import Layout from "../layouts/Layout.astro";
 const consultingServices = [
-    {
-        id: "personalized-consulting",
-        title: "Personalized Consulting Sessions",
-        sessions: [
-            {
-                id: 1,
-                name: "30-Minute Expert Consulting Session",
-                description:
-                    "Dive into a one-on-one, 30-minute consulting session tailored to answer your specific questions and offer expert advice.",
-                features: [
-                    "Pre-session questionnaire to outline your questions or topics of interest",
-                    "One-on-one consultation via video call or phone",
-                    "Follow-up email summary highlighting key points discussed and recommended next steps",
-                    "Option to book additional sessions at a discounted rate",
-                ],
-                price: "$75 USD",
-                bookingProcess: [
-                    "Make payment to confirm your booking.",
-                    "Schedule your session based on available slots.",
-                    "Complete the pre-session questionnaire.",
-                    "Receive a confirmation email with your session details.",
-                ],
-            },
-        ],
-    },
-    // {
-    //     id: "project-discussion",
-    //     title: "Project Discussion & Service Proposal",
-    //     sessions: [
-    //         {
-    //             id: 2,
-    //             name: "Project Discovery & Proposal Consultation",
-    //             description:
-    //                 "Looking to start a new project or need expert services to bring your ideas to life? Our Project Discovery & Proposal Consultation offers a structured approach to understanding your project requirements, discussing potential strategies, and outlining a customized proposal for our services.",
-    //             features: [
-    //                 "Initial questionnaire to gather project details and objectives",
-    //                 "60-minute in-depth discussion to explore your project needs and how I can help",
-    //                 "Customized project proposal including scope of work, timeline, and pricing",
-    //                 "One round of follow-up questions via email or a short call to clarify the proposal",
-    //             ],
-    //             price: "Free Introductory Session",
-    //             bookingProcess: [
-    //                 "Submit your initial project details through our questionnaire.",
-    //                 "We'll review your submission and reach out to schedule a comprehensive discussion.",
-    //                 "Engage in the project discovery session to cover all aspects of your potential project.",
-    //                 "Receive a detailed proposal tailored to your project's needs.",
-    //             ],
-    //         },
-    //     ],
-    // },
+	{
+		id: "personalized-consulting",
+		title: "Personalized Consulting Sessions",
+		sessions: [
+			{
+				id: 1,
+				name: "30-Minute Expert Consulting Session",
+				description:
+					"Dive into a one-on-one, 30-minute consulting session tailored to answer your specific questions and offer expert advice.",
+				features: [
+					"Pre-session questionnaire to outline your questions or topics of interest",
+					"One-on-one consultation via video call or phone",
+					"Follow-up email summary highlighting key points discussed and recommended next steps",
+					"Option to book additional sessions at a discounted rate",
+				],
+				price: "$75 USD",
+				bookingProcess: [
+					"Make payment to confirm your booking.",
+					"Schedule your session based on available slots.",
+					"Complete the pre-session questionnaire.",
+					"Receive a confirmation email with your session details.",
+				],
+			},
+		],
+	},
+	// {
+	//     id: "project-discussion",
+	//     title: "Project Discussion & Service Proposal",
+	//     sessions: [
+	//         {
+	//             id: 2,
+	//             name: "Project Discovery & Proposal Consultation",
+	//             description:
+	//                 "Looking to start a new project or need expert services to bring your ideas to life? Our Project Discovery & Proposal Consultation offers a structured approach to understanding your project requirements, discussing potential strategies, and outlining a customized proposal for our services.",
+	//             features: [
+	//                 "Initial questionnaire to gather project details and objectives",
+	//                 "60-minute in-depth discussion to explore your project needs and how I can help",
+	//                 "Customized project proposal including scope of work, timeline, and pricing",
+	//                 "One round of follow-up questions via email or a short call to clarify the proposal",
+	//             ],
+	//             price: "Free Introductory Session",
+	//             bookingProcess: [
+	//                 "Submit your initial project details through our questionnaire.",
+	//                 "We'll review your submission and reach out to schedule a comprehensive discussion.",
+	//                 "Engage in the project discovery session to cover all aspects of your potential project.",
+	//                 "Receive a detailed proposal tailored to your project's needs.",
+	//             ],
+	//         },
+	//     ],
+	// },
 ];
 ---
 
@@ -58,15 +58,16 @@ const consultingServices = [
 
 <Layout
     title="Consulting Services"
-    description="Book personalized consulting sessions to get expert advice and guidance on your projects and ideas."
+    description="Book personalized consulting sessions to get expert advice and guidance on your projects, business, or career."
 >
     <div class="max-w-4xl mx-auto">
+        <!-- If another service is added, make sure to change the H1 heading to an H2 and add a new H1 for the page. -->
         {
             consultingServices.map((service) => (
                 <section class="bg-custom-dark rounded-lg mb-8 p-8 shadow-lg">
-                    <h2 class="text-2xl text-custom-offwhite font-bold">
+                    <h1 class="text-2xl text-custom-offwhite font-bold">
                         {service.title}
-                    </h2>
+                    </h1>
                     {service.sessions.map((session) => (
                         <article class="border-t-2 border-gray-800 pt-4 mt-4">
                             <h3 class="text-xl text-custom-offwhite font-semibold">

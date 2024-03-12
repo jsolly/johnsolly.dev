@@ -4,7 +4,7 @@ metaimg: "/src/images/projects/GeoAsteroids_screenshot.webp"
 metaimgAlt: "GeoAsteroids Screenshot"
 metaimgWidth: 400
 metaimgHeight: 311
-snippet: "Asteroids was one of my favorite arcade games growing up. I wanted to recreate that nostalgic experience while leveling up my web development skills. I was excited to build a game because I knew it would be a great way to learn many aspects of programming - state management, collision detection, animations, etc."
+snippet: "Asteroids was one of my favorite arcade games growing up. I wanted to recreate that nostalgic experience while leveling up my web development skills."
 logos:
   - url: /src/images/logos/vercelLogo.svg
     alt: "Vercel logo"

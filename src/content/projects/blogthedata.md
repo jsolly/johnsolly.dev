@@ -4,7 +4,7 @@ metaimg: "/src/images/projects/iPhoneblogthedata.webp"
 metaimgAlt: "Blogthedata.com on an iPhone"
 metaimgWidth: 480
 metaimgHeight: 320
-snippet: "Blogthedata.com is a blogging platform with everything but the kitchen sink. It is a full-stack web application that I built from scratch using the Django web framework and a variety of other technologies."
+snippet: "Blogthedata.com is a blogging platform with everything but the kitchen sink."
 logos:
   - url: /src/images/logos/linodeLogo.svg
     alt: "Linode logo"
