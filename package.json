@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro check && astro build && node process-html.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "biome lint --no-errors-on-unmatched --files-ignore-unknown=true .",
@@ -19,6 +19,9 @@
     "@astrojs/tailwind": "^5.1.0",
     "@astrojs/ts-plugin": "^1.5.3",
     "astro": "^4.4.15",
+    "globby": "^14.0.1",
+    "html-minifier": "^4.0.0",
+    "jsdom": "^24.0.0",
     "mdast-util-to-string": "^4.0.0",
     "reading-time": "^1.5.0",
     "sharp": "^0.33.2",
