@@ -7,46 +7,49 @@ import KathrynThorpeAvatar from "/src/images/KathrynThorpe.webp";
 import TaylorOshanAvatar from "/src/images/TaylorOshan.svg";
 
 const carouselItems = [
-    {
-        avatar: TaylorOshanAvatar,
-        name: "Taylor Oshan",
-        position: "Direct Manager",
-        company: "University of Maryland",
-        year: "2023",
-        quote: "John is a talented geospatial developer and a capable leader",
-    },
-    {
-        avatar: AmyBrazilAvatar,
-        name: "Amy Brazil",
-        position: "Direct Manager",
-        company: "YellowfinBI",
-        year: "2022",
-        quote: "I'd hire him back in a heartbeat and hopefully will when he's looking again.",
-    },
-    {
-        avatar: CraigUtleyAvatar,
-        name: "Craig Utley",
-        position: "Direct Manager",
-        company: "YellowfinBI",
-        year: "2022",
-        quote: "There is a right way to come into an organization and John did it the right way.",
-    },
-    {
-        avatar: MeredithBeanAvatar,
-        name: "Meredith Bean",
-        position: "Undergraduate Student",
-        company: "GMU",
-        year: "2016",
-        quote: "John was an extraordinary TA to me as a student in an introductory GIS class.",
-    },
-    {
-        avatar: KathrynThorpeAvatar,
-        name: "Kathryn Thorpe",
-        position: "Coworker",
-        company: "YellowfinBI",
-        year: "2022",
-        quote: "John is amazingly bright, levelheaded, and goal-oriented.",
-    },
+	{
+		avatar: TaylorOshanAvatar,
+		name: "Taylor Oshan",
+		position: "Direct Manager",
+		company: "University of Maryland",
+		year: "2023",
+		quote: "John is a talented geospatial developer and a capable leader",
+	},
+	{
+		avatar: AmyBrazilAvatar,
+		name: "Amy Brazil",
+		position: "Direct Manager",
+		company: "YellowfinBI",
+		year: "2022",
+		quote:
+			"I'd hire him back in a heartbeat and hopefully will when he's looking again.",
+	},
+	{
+		avatar: CraigUtleyAvatar,
+		name: "Craig Utley",
+		position: "Direct Manager",
+		company: "YellowfinBI",
+		year: "2022",
+		quote:
+			"There is a right way to come into an organization and John did it the right way.",
+	},
+	{
+		avatar: MeredithBeanAvatar,
+		name: "Meredith Bean",
+		position: "Undergraduate Student",
+		company: "GMU",
+		year: "2016",
+		quote:
+			"John was an extraordinary TA to me as a student in an introductory GIS class.",
+	},
+	{
+		avatar: KathrynThorpeAvatar,
+		name: "Kathryn Thorpe",
+		position: "Coworker",
+		company: "YellowfinBI",
+		year: "2022",
+		quote: "John is amazingly bright, levelheaded, and goal-oriented.",
+	},
 ];
 ---
 
@@ -79,8 +82,7 @@ const carouselItems = [
                                     class="rounded-full shadow-lg mb-4 max-w-[150px] max-h-[150px]"
                                     src={item.avatar}
                                     alt="avatar"
-                                    loading="lazy"
-                                    decoding="async"
+                                    loading="eager"
                                 />
                                 <div class="flex flex-col items-center gap-2 min-h-[150px]">
                                     <div>

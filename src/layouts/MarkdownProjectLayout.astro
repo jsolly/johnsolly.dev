@@ -14,11 +14,17 @@ import clockIcon from "../images/svg/clockIcon.svg";
             width={frontmatter.metaimgWidth}
             height={frontmatter.metaimgHeight}
             class="rounded-lg"
+            loading="eager"
         />
     </div>
     <div class="mt-3">
         <span class="text-sm text-gray-400 flex items-center">
-            <Image src={clockIcon} alt="Clock icon" class="w-4 h-4 mr-1" />
+            <Image
+                src={clockIcon}
+                alt="Clock icon"
+                class="w-4 h-4 mr-1"
+                loading="eager"
+            />
             {readingTime}
         </span>
     </div>
