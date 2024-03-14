@@ -8,11 +8,11 @@
     }
 
     main {
-        @apply mx-auto max-w-4xl p-4;
+        @apply mx-auto max-w-4xl p-4 bg-custom-dark-overlay;
     }
 
     a {
-        @apply text-purple-500;
+        @apply text-accent-light underline;
     }
 
     h1,
@@ -25,7 +25,7 @@
     }
 
     a:hover {
-        @apply underline;
+        @apply no-underline;
     }
 
 }
@@ -40,12 +40,7 @@
 
 
 /* Don't underline links in buttons */
-.primary-btn:hover,
-.secondary-btn:hover {
+/* .primary-btn a,
+.secondary-btn a {
     @apply no-underline;
-}
-
-a[href^="http"]::after {
-    content: "↗";
-    margin-left: 0.1rem;
-}
+} */

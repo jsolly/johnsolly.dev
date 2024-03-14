@@ -10,7 +10,7 @@ const { frontmatter } = Astro.props;
             <a
                 href="/John-Solly-Resume.pdf"
                 target="_blank"
-                class="resume-btn mt-3 mr-3 inline-flex items-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                class="resume-btn mt-3 mr-3 inline-flex items-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded no-underline"
                 rel="alternate"
             >
                 <svg
@@ -34,9 +34,6 @@ const { frontmatter } = Astro.props;
     </div>
 
     <style>
-        .resume-btn:hover {
-            text-decoration: none;
-        }
         svg {
             width: 20px;
             height: 20px;
