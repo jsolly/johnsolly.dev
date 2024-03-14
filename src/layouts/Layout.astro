@@ -64,11 +64,14 @@ import { ViewTransitions } from "astro:transitions";
             <slot />
             {
                 !isRootPath && (
-                    <div class="return-home">
-                        <a href="/" class="secondary-btn mb-4 mt-4">
-                            Return Home
-                        </a>
-                    </div>
+                    <a
+                        href="javascript:history.back()"
+                        id="back-btn"
+                        class="secondary-btn mb-4 mt-4"
+                        transition:persist="back-btn"
+                    >
+                        Back
+                    </a>
                 )
             }
         </main>
