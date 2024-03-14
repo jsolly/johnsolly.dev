@@ -6,7 +6,6 @@ import LongSollyBio from "../components/LongSollyBio.astro";
 import Testimonials from "../components/Testimonials.astro";
 import ProjectsList from "../components/ProjectsList.astro";
 import * as myResume from "../pages/resume.md";
-
 import jsollyLarge from "../images/jsollyLarge.webp";
 import ProjectCard from "src/components/ProjectCard.astro";
 ---
@@ -28,6 +27,7 @@ import ProjectCard from "src/components/ProjectCard.astro";
     <ProjectCard
         title={myResume.frontmatter.title}
         href={myResume.frontmatter.href}
+        readingTime={myResume.frontmatter.minutesRead}
         metaimg={jsollyLarge}
         metaimgAlt="John Solly"
         snippet={myResume.frontmatter.snippet}
