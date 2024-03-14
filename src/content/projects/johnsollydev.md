@@ -27,15 +27,15 @@ Initially, my professional portfolio was nested within [blogthedata.com](https:/
 The inception of JohnSolly.dev was driven by my desire to create a dedicated space for my professional portfolio, resume, and consulting services. I also sought an excuse to experiment with Astro.js, a technology that blends static site generation with client-side 'interactive islands.'
 
 ## Highlights
-JohnSolly.dev has some exciting features. I connected it to Stripe and Cal.com so anyone can pay for and book me for consulting services. You'll also notice that my [resume page](/resume) is just a single markdown file with some added CSS. This is an excellent example of how Astro.js can create a dynamic, interactive page with minimal effort.
-
-## Overcoming Obstacles
-Migrating the portfolio content from my blog to this site was relatively straightforward, yet the project was not without its hurdles. Adapting Django's server-side templates to Astro.js's methodology required intelligent thought to preserve functionality while also doing things the 'Astro way.' I came across an interesting quirk where the testimonial carousel indicators went out of sync with the currently selected option. This was because .astro files contain NO client-side state. This limitation prompted me to leverage my Vue.js expertise, creating a dynamic Vue component encapsulated within an Astro island.
+JohnSolly.dev has some exciting features. I connected it to Stripe and Cal.com so anyone can pay for and book me for consulting services. You'll also notice that my [resume page](/resume/) is just a single markdown file with some added CSS.
 
 ## Tech Stack
 I had heard good things about Astro.js for crafting static sites with dynamic, interactive 'islands.' Its unique approach to blending static site generation with client-side interactivity quickly won me over. It feels like Astro is a backend framework without all the overhead.
 
-I also used this site to learn more about Amazon's offerings, mainly as I work towards my AWS Solutions Architect certification. Initially deploying via AWS Amplify, I am transitioning to a more robust setup using AWS S3 and CloudFront.
+I also used this site to learn more about Amazon's offerings, mainly as I work towards my AWS Solutions Architect certification. I initially deployed to AWS Amplify but have since migrated to S3, Cloudfront, and Route 53. I also used AWS Certificate Manager to manage my SSL certificate.
+
+## Overcoming Obstacles
+Migrating the portfolio content from my blog to this site was relatively straightforward, yet the project was not without its hurdles. Adapting Django's server-side templates to Astro.js's methodology required intelligent thought to preserve functionality while doing things the 'Astro way.' I came across an interesting quirk where the testimonial carousel indicators went out of sync with the currently selected option. .astro files contain NO client-side state, so I needed to move some of the logic that was in the template to the client-side JavaScript.
 
 ## Looking Ahead
-I am eager to address several [pending tasks](https://github.com/jsolly/johnsolly.dev/issues) in this project's repo in the coming weeks. I want to use more Amazon services, such as S3, Lambda, CloudFront, and Route 53, to host the website.
+Now that I've deployed to S3 and Cloudfront with Route 53 routing and DNS, I'd like to make the deployment more repeatable with Cloudformation and/or Terraform.
