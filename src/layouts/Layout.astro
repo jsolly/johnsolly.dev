@@ -61,6 +61,18 @@ import { ViewTransitions } from "astro:transitions";
     </head>
     <body>
         <main>
+            {
+                !isRootPath && (
+                    <a
+                        href="/"
+                        id="home-btn"
+                        class="secondary-btn mb-4 mt-4"
+                        transition:persist="home-btn"
+                    >
+                        Home
+                    </a>
+                )
+            }
             <slot />
             {
                 !isRootPath && (
