@@ -1,11 +1,6 @@
 import { visit } from "unist-util-visit";
 
-// Locally, I put localhost:4321 in the allowed hosts list
-// inside a .env.local file
-const relativeDomains = import.meta.env.VITE_ALLOWED_HOSTS.split(",") || [
-	"johnsolly.dev",
-	"www.johnsolly.dev",
-];
+const allowedHosts = ["johnsolly.dev", "www.johnsolly.dev"];
 
 export function remarkExternalAnchor() {
 	return (tree, _) => {
@@ -18,8 +13,8 @@ export function remarkExternalAnchor() {
 				host = null;
 			}
 
-			// In development, localhost is allowed; otherwise, check against allowedHosts
-			if (host && !relativeDomains.includes(host)) {
+			// Check against allowedHosts
+			if (host && !allowedHosts.includes(host)) {
 				node.data ??= {};
 				node.data.hProperties ??= {};
 				node.data.hProperties.target = "_blank";
