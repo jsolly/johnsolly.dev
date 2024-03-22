@@ -109,7 +109,7 @@ const carouselItems = [
                         carouselItems.map((_, index) => (
                             // Initialize the first indicator as active on page load
                             <li
-                                class={`w-2.5 h-2.5 cursor-pointer transition-colors duration-300 ${
+                                class={`w-2.5 h-2.5 cursor-pointer transition-colors duration-300 ease-in-out ${
                                     index === 0 ? "bg-accent" : "bg-gray-300"
                                 }`}
                                 data-carousel-index={index}

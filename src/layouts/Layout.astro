@@ -88,23 +88,23 @@ import { ViewTransitions } from "astro:transitions";
                     </a>
                 )
             }
-            <div class="flex justify-center my-4">
-                <a
-                    href="https://github.com/jsolly/johnsolly.dev"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    id="github-btn"
-                    transition:persist="github-btn"
-                    class="flex items-center justify-center content-center text-xs"
-                >
-                    <Image
-                        src={githubLogo}
-                        alt="GitHub Logo"
-                        class="w-6 h-6 mr-2"
-                    />
-                    View Source
-                </a>
-            </div>
         </main>
+        <div class="group flex justify-center mt-8">
+            <a
+                href="https://github.com/jsolly/johnsolly.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                id="github-btn"
+                transition:persist="github-btn"
+                class="flex items-center justify-center content-center text-xs"
+            >
+                <Image
+                    src={githubLogo}
+                    alt="GitHub Logo"
+                    class="w-5 h-5 mr-2 opacity-80 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+                />
+                View Source
+            </a>
+        </div>
     </body>
 </html>
