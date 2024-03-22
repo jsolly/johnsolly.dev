@@ -63,17 +63,17 @@ const socialLinks = [
                 <h1 class="text-2xl font-bold text-custom-offwhite">
                     John Solly
                 </h1>
-                <p class="text-custom-gray mt-2">
+                <p class="text-custom-gray">
                     Senior Software Engineer, Geospatial Developer
                 </p>
-                <div class="social-links flex mt-4">
+                <div class="social-links flex mt-3">
                     {
                         socialLinks.map((link) => (
                             <a
                                 href={link.href}
                                 rel={link.rel}
                                 target="_blank"
-                                class="mr-4 hover:scale-110 transition-transform duration-300"
+                                class="mr-4  opacity-80 hover:scale-110 hover:opacity-100 transition-all duration-300"
                             >
                                 <Image
                                     src={link.icon}
@@ -87,7 +87,7 @@ const socialLinks = [
                 </div>
             </div>
         </div>
-        <div class="about-content mt-6">
+        <div class="about-content mt-4 text-xl">
             <p>
                 With over a decade of experience in the geospatial industry, I
                 specialize in full-stack development of GIS applications.
