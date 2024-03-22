@@ -5,7 +5,7 @@ import ProjectCard from "./ProjectCard.astro";
 const allProjects = await getCollection("projects");
 ---
 
-<div class="projects-list">
+<div class="projects-list flex flex-col gap-8">
     {
         allProjects.reverse().map(async (project, index) => {
             const { remarkPluginFrontmatter } = await project.render();

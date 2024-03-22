@@ -21,8 +21,7 @@ const carouselItems = [
 		position: "Direct Manager",
 		company: "YellowfinBI",
 		year: "2022",
-		quote:
-			"I'd hire him back in a heartbeat and hopefully will when he's looking again.",
+		quote: "I'd hire him back in a heartbeat.",
 	},
 	{
 		avatar: CraigUtleyAvatar,
@@ -31,7 +30,7 @@ const carouselItems = [
 		company: "YellowfinBI",
 		year: "2022",
 		quote:
-			"There is a right way to come into an organization and John did it the right way.",
+			"John delivered for customers, documented his findings, and earned the respect of his peers",
 	},
 	{
 		avatar: MeredithBeanAvatar,
@@ -55,7 +54,7 @@ const carouselItems = [
 
 <script src="/src/scripts/carousel.js"></script>
 
-<div class="text-center mt-10">
+<div class="text-center">
     <h2
         class="text-3xl font-light tracking-wider mb-6"
         id="carouselExampleCaptions"
@@ -79,24 +78,24 @@ const carouselItems = [
                         >
                             <div class="mb-3 flex flex-col items-center">
                                 <Image
-                                    class="rounded-full shadow-lg mb-4 max-w-[150px] max-h-[150px]"
+                                    class="rounded-full shadow-lg mb-3 max-w-[150px] max-h-[150px]"
                                     src={item.avatar}
                                     alt="avatar"
                                     loading="eager"
                                 />
-                                <div class="flex flex-col items-center gap-2 min-h-[150px]">
+                                <div class="flex flex-col items-center gap-2 min-h-[160px]">
                                     <div>
-                                        <h3 class="mb-2 mt-0 font-light">
+                                        <h3 class="font-extralight font-xs">
                                             {item.name}
                                         </h3>
-                                        <p class="font-bold mb-0 text-lg">
+                                        <p class="font-bold text-lg">
                                             {item.position}
                                         </p>
-                                        <p class="line-height[1] m-0">
+                                        <p class="text-xs font-light">
                                             {item.company} - {item.year}
                                         </p>
                                     </div>
-                                    <p class="testimonial-quote font-light mb-0 max-w-[450px] break-words text-lg">
+                                    <p class="testimonial-quote max-w-[450px] break-words text-xl">
                                         {item.quote}
                                     </p>
                                 </div>
@@ -105,7 +104,7 @@ const carouselItems = [
                     ))
                 }
                 <!-- The # of indicators matches the # of carousel items -->
-                <ol class="flex justify-center gap-2 mb-6">
+                <ol class="flex justify-center gap-2">
                     {
                         carouselItems.map((_, index) => (
                             // Initialize the first indicator as active on page load
@@ -141,11 +140,12 @@ const carouselItems = [
 
     .testimonial-quote::before {
         content: "“";
-        top: 0.3em;
+        top: 0.2em;
+        left: 0.1em;
     }
 
     .testimonial-quote::after {
         content: "”";
-        top: 0.4em;
+        top: 0.3em;
     }
 </style>

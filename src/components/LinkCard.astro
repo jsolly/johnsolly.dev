@@ -18,7 +18,7 @@ const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
         rel={rel}
     >
         <h2 class="text-white text-2xl font-bold mb-4 flex justify-between">
-            {title}
+            <span class="link-card-title">{title}</span>
             <span>&rarr;</span>
         </h2>
         <p>{snippet}</p>
@@ -52,5 +52,13 @@ const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
             rgb(224, 204, 250) 30%,
             white 60%
         );
+    }
+
+    .link-card-title {
+        text-decoration: underline;
+        text-underline-offset: 0.2em;
+    }
+    .link-card:is(:hover, :focus-within) .project-card-title {
+        text-decoration: none;
     }
 </style>

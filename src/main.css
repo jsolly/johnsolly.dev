@@ -12,7 +12,7 @@
     }
 
     a {
-        @apply text-accent-light underline;
+        @apply text-accent-light underline underline-offset-4;
     }
 
     h1,
