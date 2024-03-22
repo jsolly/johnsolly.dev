@@ -9,6 +9,8 @@ const { title, description } = Astro.props;
 const isRootPath = Astro.url.pathname === "/";
 const socialImageURL = new URL("/images/jsolly.webp", Astro.url);
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+import githubLogo from "../images/social/githubLogo.svg";
+import { Image } from "astro:assets";
 import { ViewTransitions } from "astro:transitions";
 ---
 
@@ -66,7 +68,7 @@ import { ViewTransitions } from "astro:transitions";
                     <a
                         href="/"
                         id="home-btn"
-                        class="secondary-btn mb-4 mt-4"
+                        class="secondary-btn my-4"
                         transition:persist="home-btn"
                     >
                         Home
@@ -79,13 +81,30 @@ import { ViewTransitions } from "astro:transitions";
                     <a
                         href="javascript:history.back()"
                         id="back-btn"
-                        class="secondary-btn mb-4 mt-4"
+                        class="secondary-btn my-4"
                         transition:persist="back-btn"
                     >
                         Back
                     </a>
                 )
             }
+            <div class="flex justify-center my-4">
+                <a
+                    href="https://github.com/jsolly/johnsolly.dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    id="github-btn"
+                    transition:persist="github-btn"
+                    class="flex items-center justify-center content-center"
+                >
+                    <Image
+                        src={githubLogo}
+                        alt="GitHub Logo"
+                        class="w-8 h-8 mr-2"
+                    />
+                    View Source
+                </a>
+            </div>
         </main>
     </body>
 </html>
