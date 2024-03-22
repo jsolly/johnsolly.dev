@@ -15,7 +15,7 @@
 		"prepare": "if [ -z \"$CI\" ]; then husky install; fi"
 	},
 	"dependencies": {
-		"@astrojs/check": "^0.5.9",
+		"@astrojs/check": "^0.5.10",
 		"@astrojs/sitemap": "^3.1.1",
 		"@astrojs/tailwind": "^5.1.0",
 		"@astrojs/ts-plugin": "^1.6.0",
