@@ -37,10 +37,3 @@
 .secondary-btn {
     @apply inline-block bg-transparent hover:bg-accent text-white py-2.5 px-5 border-2 border-accent rounded-lg font-bold no-underline transition-colors duration-300 ease-in-out;
 }
-
-
-/* Don't underline links in buttons */
-/* .primary-btn a,
-.secondary-btn a {
-    @apply no-underline;
-} */

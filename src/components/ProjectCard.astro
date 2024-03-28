@@ -28,13 +28,13 @@ const {
 } = Astro.props;
 ---
 
-<div class="project-card text-lg p-0.5 rounded-lg">
+<div class="project-card flex text-lg rounded-lg">
     <a
         href={href}
-        class="opacity-80 hover:opacity-100 rounded-lg py-6 px-5 bg-custom-dark-overlay-lvl-2 transition duration-300 ease-in-out"
+        class="rounded-lg py-6 px-5 bg-accent-dark-overlay-lvl-2 no-underline text-inherit"
     >
         <h2 class="text-white text-2xl font-bold mb-4 flex justify-between">
-            <span class="project-card-title">{title}</span>
+            <span class="project-card-title hover:">{title}</span>
             <span>&rarr;</span>
         </h2>
         {
@@ -83,39 +83,21 @@ const {
     </a>
 </div>
 <style>
-    .project-card a {
-        color: inherit;
-        text-decoration: none;
-    }
-
-    /* Hide the "↗" arrow for external projects (see main.css) */
-    .project-card > a::after {
-        content: "";
-    }
-
-    .project-card {
-        display: flex;
-        background-image: none;
-        background-size: 400%;
-        background-position: 100%;
-        transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-    }
-    .project-card:is(:hover, :focus-within) {
-        background-position: 0;
-        background-image: linear-gradient(
-            45deg,
-            rgb(136, 58, 234),
-            rgb(224, 204, 250) 30%,
-            white 60%
-        );
-    }
-
-    .project-card-title {
+    .project-card:is(:hover, :focus-within) .project-card-title {
         text-decoration: underline;
         text-underline-offset: 0.2em;
     }
-    .project-card:is(:hover, :focus-within) .project-card-title {
-        text-decoration: none;
+
+    .project-card {
+        opacity: 0.8;
+        border: 1px solid transparent;
+        transition:
+            border-color 300ms ease-in-out,
+            opacity 300ms ease-in-out;
+    }
+
+    .project-card:is(:hover, :focus-within) {
+        border-color: rgb(232, 196, 249);
+        opacity: 1;
     }
 </style>
