@@ -25,11 +25,6 @@ const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
     </a>
 </div>
 <style>
-    .link-card:is(:hover, :focus-within) .link-card-title {
-        text-decoration: underline;
-        text-underline-offset: 0.2em;
-    }
-
     .link-card {
         opacity: 0.8;
         border: 1px solid transparent;
@@ -41,5 +36,9 @@ const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
     .link-card:is(:hover, :focus-within) {
         border-color: rgb(232, 196, 249);
         opacity: 1;
+    }
+    .link-card:is(:hover, :focus-within) .link-card-title {
+        text-decoration: underline;
+        text-underline-offset: 0.2em;
     }
 </style>

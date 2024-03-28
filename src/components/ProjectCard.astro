@@ -83,11 +83,6 @@ const {
     </a>
 </div>
 <style>
-    .project-card:is(:hover, :focus-within) .project-card-title {
-        text-decoration: underline;
-        text-underline-offset: 0.2em;
-    }
-
     .project-card {
         opacity: 0.8;
         border: 1px solid transparent;
@@ -99,5 +94,9 @@ const {
     .project-card:is(:hover, :focus-within) {
         border-color: rgb(232, 196, 249);
         opacity: 1;
+    }
+    .project-card:is(:hover, :focus-within) .project-card-title {
+        text-decoration: underline;
+        text-underline-offset: 0.2em;
     }
 </style>
