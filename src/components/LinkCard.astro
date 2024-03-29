@@ -27,7 +27,8 @@ const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
 <style>
     .link-card {
         opacity: 0.8;
-        border: 1px solid transparent;
+        /* Darker than "rgb(39, 40, 51)" but lighter than "rgb(6, 9, 19)", */
+        border: 1px solid rgb(30, 30, 30);
         transition:
             border-color 300ms ease-in-out,
             opacity 300ms ease-in-out;
