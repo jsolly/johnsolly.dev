@@ -114,7 +114,7 @@ Software Engineering | Geospatial Technologies & Analytics | Database Management
 
 <b>Bachelor of Arts, Geoinformation Science</b> | <b><i>University of California, Santa Barbara</i></b> | GPA: 3.85
 
-<b>Bachelor of Science, Computer Science</b> (In Progress) | <b><i>Open Source Society University (OSSU)</i></b> 
+<b>Bachelor of Science, Computer Science (In Progress)</b> | <b><i>Open Source Society University (OSSU)</i></b> 
 </div>
 
 
@@ -126,6 +126,7 @@ Software Engineering | Geospatial Technologies & Analytics | Database Management
 h1 {
     text-align: center;
     font-size: 28px;
+    font-weight: bold;
     margin: 0;
 
 }
@@ -137,6 +138,7 @@ h2 {
     margin-top: 0;
     margin-bottom: 6px;
     font-size: 18px;
+    font-weight: bold;
     text-transform: uppercase;
     text-align: center;
     color: black;
@@ -146,6 +148,7 @@ h3 {
     margin: 0;
     display: flex;
     font-size: 16px;
+    font-weight: bold;
     text-transform: uppercase;
     color: rgb(216, 216, 216);
 }
@@ -177,12 +180,10 @@ Content
 ============= */
 
 .role-summary {
-    text-align: justify;
     margin-bottom: 10px;
 }
 
 .skillset-overview {
-    text-align: justify;
     margin-bottom: 10px;
 }
 
