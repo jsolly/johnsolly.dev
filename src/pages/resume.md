@@ -56,7 +56,7 @@ Software Engineering | Geospatial Technologies & Analytics | Database Management
 
 - <b>Innovation:</b> Championed the adoption of serverless technology stacks, reducing costs and complexities in geospatial application development. Additionally, I led the forefront in embracing the latest OGC standards and data formats, including ZARR, COG, STAC, and PMTiles. Pioneered integrating these cutting-edge technologies in critical projects, enhancing data processing speed, scalability, and infrastructure efficiency.
 
-- <b>Leadership:</b> Successfully sourced, hired, and mentored entire development teams, fostering a culture of excellence and growth. Took charge of delayed projects, implementing effective strategies to steer them back on course and ensuring their successful delivery to satisfied clients. Standardized a UI component library and front-end framework across NLT, harmonizing development processes and enhancing product consistency.
+- <b>Ownership:</b> Successfully sourced, hired, and mentored entire development teams, fostering a culture of excellence and growth. Took charge of delayed projects, implementing effective strategies to steer them back on course and ensuring their successful delivery to satisfied clients. Standardized a UI component library and front-end framework across NLT, harmonizing development processes and enhancing product consistency.
 
 - <b>Open-Source Contributions:</b> Developed and maintained open-source projects such as [web3-geo-dashboard](https://github.com/easierdata/web3-geo-dashboard), [ipfs-stac](https://pypi.org/project/ipfs-stac/), and [awesome-django-blog](https://github.com/jsolly/awesome-django-blog). Organized a HOTOSM marathon, attracting 200 participants, including students, faculty, and community members. Successfully secured $500 funding for the event, enhancing engagement and participation.
 </div>
@@ -87,7 +87,7 @@ Software Engineering | Geospatial Technologies & Analytics | Database Management
 ### Software Product Engineer <span class="spacer"></span> May 2017 &mdash; May 2021
 <p class="company-name">Environmental Research Institute (Esri) | Redlands, CA</p>
 
-- Over four years, I successfully managed numerous Dashboard releases as release manager and scrum master for a nine-engineer team. My role involved ensuring consistent, high-quality releases and coordinating with internal QA, localization, internationalization, and release teams.
+- Over four years, I successfully managed numerous [ArcGIS Dashboard](https://www.esri.com/en-us/arcgis/products/arcgis-dashboards/overview) releases as release manager and scrum master for a nine-engineer team. My role involved ensuring consistent, high-quality releases and coordinating with internal QA, localization, internationalization, and release teams.
 - Implemented a dockerized automated regression testing harness using Python, Selenium, and Jenkins, resulting in a remarkable reduction of manual testing hours from 240 to 100 per quarter, a 58% efficiency gain.
 
 ### Software Product Engineer Intern <span class="spacer"></span> June 2016 &mdash; Aug 2016
