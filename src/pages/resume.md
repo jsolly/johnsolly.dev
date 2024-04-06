@@ -37,15 +37,15 @@ snippet: "A two-page resume for John Solly, a lead software engineer with a focu
 
 ## SKILL HIGHLIGHTS
 
-**Languages** : Python | TypeScript | JavaScript | Golang | SQL/NoSQL | Shell/Bash | SQL | Java
+**Languages** : Python | TypeScript | JavaScript | Golang | SQL/NoSQL | Shell/Bash | Java
 
-**Geospatial**: PostGIS | GeoPandas | SQLalchemy | GDAL | Dask | ArcGIS | Mapbox GL | Turf.js | Deck GL | OpenLayers | Leaflet
+**Web Development**: Vue | Svelte | Astro | React | Django | Node.js | Tailwind | IPFS | SQLalchemy
 
-**Databases** RDS | Postgres | MongoDB | DynamoDB | SQLite | MSSQL | MySQL | IPFS
+**DevOps & Cloud**: CloudFormation | Terraform | GitHub Actions | Docker | MongoDB | Postgres
 
-**Web Development**: Vue | Svelte | Astro | React | Django | Cloudflare | GitHub Actions | Bootstrap | Vite | Tailwind
+**AI & Machine Learning**: TensorFlow | PyTorch | Scikit-learn | OpenAI | AWS Bedrock
 
-**DevOps & Cloud**: Docker | Terraform | GitHub Actions | EC2 | S3 | RDS | IAM | Lambda | CloudWatch
+**Geospatial**: Esri | ArcGIS | Mapbox | GDAL | Geopandas | PostGIS | Dask | Turf.js | Deck.gl | OpenLayers | Leaflet
 
 ## CAREER HIGHLIGHTS
 <div class="career-highlights">
