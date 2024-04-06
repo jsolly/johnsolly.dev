@@ -31,13 +31,11 @@ snippet: "A two-page resume for John Solly, a lead software engineer with a focu
     </ul>
 </div>
 
-## LEAD SOFTWARE ENGINEER
-<div class="role-summary"><b>A strategic and dedicated Senior Software Engineer with a demonstrated history of working with geospatial applications and complex data solutions.</b> A proven leader and mentor passionate about maintaining the highest code quality standards. Expertise in developing bespoke geospatial applications, owning product implementations, and driving engineering leadership. Well-regarded for documenting well, showing ownership, and excelling as a tech lead with a comprehensive background in software development, databases, web development, and DevOps.
+## SENIOR SOFTWARE ENGINEER
+<div class="role-summary"><b>A Curious and Innovative Senior Software Engineer</b> with over ten years experience building, deploying, and maintaining cloud-native geospatial solutions. My top three strengths include AWS cloud architecture, geospatial data engineering, and full-stack web development.
 </div>
 
-## AREAS OF EXPERTISE
-<p class="skillset-overview">
-Software Engineering | Geospatial Technologies & Analytics | Database Management | SQL Performance Tuning | Web Development | Automation | DevOps | Cloud Computing | Serverless Architecture | Agile | Big Data | Data Warehousing and Star Schema | Test-Driven Development (TDD) | Paired Programming | Unit Testing | Technical Writing | Continuous Integration & Continuous Delivery (CI/CD) | Rapid Prototyping | Cross-Functional Leadership Technical Mentorship | ETL Pipeline Architecture | RESTful, SOAP, and JavaScript APIs | Security & Production Issue Resolution Migration & Upgrade Planning | User Authentication & Profile Management | Large Language Models (LLM) | Advanced Algorithm Development | Visualization Tools & Libraries | Quality Assurance | Release Coordination</p>
+## SKILL HIGHLIGHTS
 
 **Languages** : Python | TypeScript | JavaScript | Golang | SQL/NoSQL | Shell/Bash | SQL | Java
 
@@ -52,7 +50,7 @@ Software Engineering | Geospatial Technologies & Analytics | Database Management
 ## CAREER HIGHLIGHTS
 <div class="career-highlights">
 
-- **Increased Efficiency:** Achieved a 58% reduction in manual testing time through automated testing and rearchitecting manual QA test plans; this efficiency gain saved thousands of dollars and enabled the team to reach feature completion two weeks earlier each quarter, significantly accelerating project timelines.
+- <b>Increased Efficiency:</b> Achieved a 58% reduction in manual testing time through automated testing and rearchitecting manual QA test plans; this efficiency gain saved thousands of dollars and enabled the team to reach feature completion two weeks earlier each quarter, significantly accelerating project timelines.
 
 - <b>Innovation:</b> Championed the adoption of serverless technology stacks, reducing costs and complexities in geospatial application development. Additionally, I led the forefront in embracing the latest OGC standards and data formats, including ZARR, COG, STAC, and PMTiles. Pioneered integrating these cutting-edge technologies in critical projects, enhancing data processing speed, scalability, and infrastructure efficiency.
 
@@ -87,7 +85,7 @@ Software Engineering | Geospatial Technologies & Analytics | Database Management
 ### Software Product Engineer <span class="spacer"></span> May 2017 &mdash; May 2021
 <p class="company-name">Environmental Research Institute (Esri) | Redlands, CA</p>
 
-- Over four years, I successfully managed numerous [ArcGIS Dashboard](https://www.esri.com/en-us/arcgis/products/arcgis-dashboards/overview) releases as release manager and scrum master for a nine-engineer team. My role involved ensuring consistent, high-quality releases and coordinating with internal QA, localization, internationalization, and release teams.
+- Over four years, I successfully managed numerous [ArcGIS Dashboard](https://www.esri.com/en-us/arcgis/products/arcgis-dashboards/overview) releases as release manager and scrum master for a nine-engineer team. My role involved ensuring consistent, high-quality releases and effectively coordinating with internal QA, localization, internationalization, and release teams.
 - Implemented a dockerized automated regression testing harness using Python, Selenium, and Jenkins, resulting in a remarkable reduction of manual testing hours from 240 to 100 per quarter, a 58% efficiency gain.
 
 ### Software Product Engineer Intern <span class="spacer"></span> June 2016 &mdash; Aug 2016
@@ -107,6 +105,10 @@ Software Engineering | Geospatial Technologies & Analytics | Database Management
 
 ### IPFS-stac
 - Wrote 45% of the code for [ipfs-stac](https://pypi.org/project/ipfs-stac/), a Python package that seamlessly integrates STAC (SpatioTemporal Asset Catalog) with IPFS (InterPlanetary File System). This integration facilitates interaction with IPFS assets stored on STAC servers through native Python objects, enhancing accessibility and usability of geospatial data within the web3 ecosystem.
+
+## Additional Areas of Expertise
+<p class="skillset-overview">
+Software Engineering | Geospatial Technologies & Analytics | Database Management | SQL Performance Tuning | Web Development | Automation | DevOps | Cloud Computing | Serverless Architecture | Agile | Big Data | Data Warehousing and Star Schema | Test-Driven Development (TDD) | Paired Programming | Unit Testing | Technical Writing | Continuous Integration & Continuous Delivery (CI/CD) | Rapid Prototyping | Cross-Functional Leadership Technical Mentorship | ETL Pipeline Architecture | RESTful, SOAP, and JavaScript APIs | Security & Production Issue Resolution Migration & Upgrade Planning | User Authentication & Profile Management | Large Language Models (LLM) | Advanced Algorithm Development | Visualization Tools & Libraries | Quality Assurance | Release Coordination</p>
 
 ## Education
 <div class="education-section">
