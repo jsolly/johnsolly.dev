@@ -32,7 +32,7 @@ snippet: "A two-page resume for John Solly, a lead software engineer with a focu
 </div>
 
 ## SENIOR SOFTWARE ENGINEER
-<div class="role-summary"><b>A Curious and Innovative Senior Software Engineer</b> with over ten years experience building, deploying, and maintaining cloud-native geospatial solutions. My top three strengths include AWS cloud architecture, geospatial data engineering, and full-stack web development.
+<div class="role-summary">A curious and innovative Senior Software Engineer with over ten years experience building, deploying, and maintaining cloud-native geospatial solutions. My top three strengths include AWS cloud architecture, geospatial data engineering, and full-stack web development.
 </div>
 
 ## SKILL HIGHLIGHTS
