@@ -8,7 +8,7 @@ export default {
 				"accent-light": "rgb(232, 196, 249)",
 				"accent-hover": "rgb(115, 34, 220)",
 				"custom-gray": "rgb(191, 193, 201)",
-				"custom-offwhite": "rgb(225, 225, 225)",
+				"custom-offwhite": "rgb(196, 196, 196)",
 				"custom-dark": "rgb(6, 9, 19)",
 				"custom-dark-overlay": "rgb(13, 15, 20)",
 				"accent-dark-overlay-lvl-2": "rgb(39, 40, 51)",
