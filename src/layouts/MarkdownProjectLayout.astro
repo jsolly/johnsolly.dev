@@ -1,32 +1,42 @@
 ---
+const { frontmatter, headings, readingTime } = Astro.props;
 import Layout from "./Layout.astro";
-const { frontmatter, readingTime } = Astro.props;
 import { Image } from "astro:assets";
 import clockIcon from "../images/svg/clockIcon.svg";
+import TableOfContents from "../components/projects/TableOfContents.astro";
 ---
 
 <Layout title={frontmatter.title} description={frontmatter.snippet}>
-    <h1 class="text-4xl font-bold leading-tight mb-2">{frontmatter.title}</h1>
-    <div class="max-w-full">
-        <Image
-            src={frontmatter.metaimg}
-            alt={frontmatter.metaimgAlt}
-            width={frontmatter.metaimgWidth}
-            height={frontmatter.metaimgHeight}
-            class="rounded-lg"
-            loading="eager"
-        />
+    <h1 class="text-4xl font-bold leading-tight mb-4">{frontmatter.title}</h1>
+
+    <div class="flex flex-col md:flex-row">
+        <div class="flex-grow">
+            <div class="max-w-full">
+                <Image
+                    src={frontmatter.metaimg}
+                    alt={frontmatter.metaimgAlt}
+                    width={frontmatter.metaimgWidth}
+                    height={frontmatter.metaimgHeight}
+                    class="rounded-lg"
+                    loading="eager"
+                />
+            </div>
+            <div class="mt-3">
+                <span class="text-sm text-gray-400 flex items-center">
+                    <Image
+                        src={clockIcon}
+                        alt="Clock icon"
+                        class="w-4 h-4 mr-1"
+                        loading="eager"
+                    />
+                    {readingTime}
+                </span>
+            </div>
+            <slot />
+        </div>
+
+        <aside class="hidden lg:block lg:w-1/4 sticky top-5 h-screen">
+            <TableOfContents headings={headings} />
+        </aside>
     </div>
-    <div class="mt-3">
-        <span class="text-sm text-gray-400 flex items-center">
-            <Image
-                src={clockIcon}
-                alt="Clock icon"
-                class="w-4 h-4 mr-1"
-                loading="eager"
-            />
-            {readingTime}
-        </span>
-    </div>
-    <slot />
 </Layout>

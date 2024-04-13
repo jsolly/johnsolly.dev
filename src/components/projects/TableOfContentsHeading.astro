@@ -1,0 +1,22 @@
+---
+const { heading } = Astro.props;
+type SubheadingType = {
+	text: string;
+	slug: string;
+};
+---
+
+<li class="mb-2">
+    <a class="text-gray-50 text-sm" href={"#" + heading.slug}>
+        {heading.text}
+    </a>
+    {
+        heading.subheadings.length > 0 && (
+            <ul>
+                {heading.subheadings.map((subheading: SubheadingType) => (
+                    <Astro.self heading={subheading} />
+                ))}
+            </ul>
+        )
+    }
+</li>

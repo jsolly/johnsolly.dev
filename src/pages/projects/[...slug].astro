@@ -4,19 +4,20 @@ import { getCollection } from "astro:content";
 import MarkdownProjectLayout from "../../layouts/MarkdownProjectLayout.astro";
 
 export async function getStaticPaths() {
-    const myEntries = await getCollection("projects");
-    return myEntries.map((entry) => ({
-        params: { slug: entry.slug },
-        props: { entry },
-    }));
+	const myEntries = await getCollection("projects");
+	return myEntries.map((entry) => ({
+		params: { slug: entry.slug },
+		props: { entry },
+	}));
 }
 
 const { entry } = Astro.props;
-const { Content, remarkPluginFrontmatter } = await entry.render();
+const { Content, headings, remarkPluginFrontmatter } = await entry.render();
 ---
 
 <MarkdownProjectLayout
     frontmatter={entry.data}
+    headings={headings}
     readingTime={remarkPluginFrontmatter.minutesRead}
 >
     <Prose>
