@@ -1,4 +1,8 @@
-export function addHeaderLinks() {
+document.addEventListener("DOMContentLoaded", () => {
+	addHeaderLinks();
+});
+
+function addHeaderLinks() {
 	const headers = document.querySelectorAll("h2, h3, h4");
 	for (const header of headers) {
 		if (header.querySelector(".header-link")) {
@@ -86,3 +90,6 @@ export function addHeaderLinks() {
 		});
 	}
 }
+
+// Run the function on initial load as well
+addHeaderLinks();
