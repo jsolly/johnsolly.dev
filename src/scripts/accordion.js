@@ -1,4 +1,4 @@
-document.addEventListener("astro:page-load", initAccordion);
+document.addEventListener("DOMContentLoaded", initAccordion);
 
 function initAccordion() {
 	const accordionHeaders = document.querySelectorAll(".accordion-header");
@@ -21,3 +21,6 @@ function toggleAccordion(accordionHeader) {
 		? `${accordionCollapse.firstElementChild.scrollHeight}px`
 		: "0";
 }
+
+// Run the function on initial load as well
+initAccordion();

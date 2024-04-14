@@ -1,4 +1,8 @@
-document.addEventListener("astro:page-load", () => {
+document.addEventListener("DOMContentLoaded", () => {
+	carouselInit();
+});
+
+function carouselInit() {
 	let currentCarouselIndex = 0;
 	const carouselItems = document.querySelectorAll(".carousel-item");
 	const indicators = document.querySelectorAll("[data-carousel-index]");
@@ -41,4 +45,7 @@ document.addEventListener("astro:page-load", () => {
 			updateCarousel();
 		});
 	}
-});
+}
+
+// Run the function on initial load as well
+carouselInit();
