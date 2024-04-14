@@ -1,4 +1,10 @@
-document.addEventListener("DOMContentLoaded", initAccordion);
+document.addEventListener(
+	"astro:page-load",
+	() => {
+		initAccordion();
+	},
+	{ once: true },
+);
 
 function initAccordion() {
 	const accordionHeaders = document.querySelectorAll(".accordion-header");

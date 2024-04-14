@@ -1,6 +1,10 @@
-document.addEventListener("DOMContentLoaded", () => {
-	carouselInit();
-});
+document.addEventListener(
+	"astro:page-load",
+	() => {
+		carouselInit();
+	},
+	{ once: true },
+);
 
 function carouselInit() {
 	let currentCarouselIndex = 0;
@@ -46,6 +50,3 @@ function carouselInit() {
 		});
 	}
 }
-
-// Run the function on initial load as well
-carouselInit();
