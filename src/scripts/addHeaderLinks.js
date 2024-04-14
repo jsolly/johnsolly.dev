@@ -1,6 +1,4 @@
-document.addEventListener("astro:page-load", addHeaderLinks);
-
-function addHeaderLinks() {
+export function addHeaderLinks() {
 	const headers = document.querySelectorAll("h2, h3, h4");
 	for (const header of headers) {
 		if (header.querySelector(".header-link")) {
@@ -88,6 +86,3 @@ function addHeaderLinks() {
 		});
 	}
 }
-
-// Run the function on initial load as well
-addHeaderLinks();

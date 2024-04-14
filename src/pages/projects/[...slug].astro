@@ -15,6 +15,19 @@ const { entry } = Astro.props;
 const { Content, headings, remarkPluginFrontmatter } = await entry.render();
 ---
 
+<script>
+    import { addHeaderLinks } from "src/scripts/addHeaderLinks.js";
+    document.addEventListener("astro:page-load", () => {
+        {
+            if (window.location.pathname.startsWith("/projects")) {
+                {
+                    addHeaderLinks();
+                }
+            }
+        }
+    });
+</script>
+
 <MarkdownProjectLayout
     frontmatter={entry.data}
     headings={headings}
