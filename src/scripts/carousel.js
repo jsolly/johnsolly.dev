@@ -1,14 +1,14 @@
-document.addEventListener(
-	"astro:page-load",
-	() => {
-		carouselInit();
-	},
-	{ once: true },
-);
+document.addEventListener("astro:page-load", () => {
+	carouselInit();
+});
 
 function carouselInit() {
-	let currentCarouselIndex = 0;
 	const carouselItems = document.querySelectorAll(".carousel-item");
+	if (carouselItems.length === 0) {
+		// No carousel on this page
+		return;
+	}
+	let currentCarouselIndex = 0;
 	const indicators = document.querySelectorAll("[data-carousel-index]");
 
 	const updateCarousel = () => {

@@ -1,75 +1,51 @@
-document.addEventListener(
-	"astro:page-load",
-	() => {
+document.addEventListener("astro:page-load", () => {
+	if (window.location.pathname.startsWith("/projects/")) {
 		addHeaderLinks();
-	},
-	{ once: true },
-);
-
+	}
+});
 function addHeaderLinks() {
 	const headers = document.querySelectorAll("h2, h3, h4");
+	if (headers.length === 0) {
+		// No headers on this page
+		return;
+	}
 	for (const header of headers) {
 		if (header.querySelector(".header-link")) {
 			// Skip if the link already exists
 			continue;
 		}
-		// Add the class 'group' to each header to enable group-hover
-		// for the permalink icon
-		header.classList.add("group");
 
 		const headerId = header.getAttribute("id");
 		const link = document.createElement("a");
 		link.href = `#${headerId}`;
-		link.classList.add(
-			"header-link",
-			"no-underline",
-			"ml-1",
-			"opacity-0",
-			"group-hover:opacity-100",
-			"transition-opacity",
-			"duration-300",
-			"ease-in-out",
-			"relative",
-		);
+		link.innerHTML = "¶";
+		link.classList.add("header-link", "opacity-0");
 
 		// Create a span for the tooltip
 		const tooltip = document.createElement("span");
 		tooltip.textContent = "Copy link";
-		tooltip.classList.add(
-			"tooltip",
-			"absolute",
-			"invisible",
-			"bg-black",
-			"text-white",
-			"text-xs",
-			"py-1",
-			"px-2",
-			"rounded",
-			"whitespace-nowrap",
-			"left-1/2",
-			"transform",
-			"-translate-x-1/2",
-			"translate-y-[-25px]",
-			"opacity-0",
-			"transition-opacity",
-			"duration-300",
-			"ease-in-out",
-		);
+		tooltip.classList.add("header-link-tooltip", "opacity-0");
 
-		link.innerHTML = "¶";
-		link.appendChild(tooltip); // Append the tooltip to the link
+		link.appendChild(tooltip);
 		header.appendChild(link);
+
+		header.addEventListener("mouseover", () => {
+			link.classList.remove("opacity-0");
+			link.classList.add("no-underline");
+		});
+
+		header.addEventListener("mouseout", () => {
+			link.classList.add("opacity-0");
+		});
 
 		// Show the tooltip on hover
 		link.addEventListener("mouseover", () => {
-			tooltip.classList.remove("invisible", "opacity-0");
-			tooltip.classList.add("opacity-100");
+			tooltip.classList.remove("opacity-0");
 		});
 
 		// Hide the tooltip when not hovering
 		link.addEventListener("mouseout", () => {
-			tooltip.classList.add("invisible", "opacity-0");
-			tooltip.classList.remove("opacity-100");
+			tooltip.classList.add("opacity-0");
 		});
 
 		link.addEventListener("click", (event) => {
@@ -81,14 +57,14 @@ function addHeaderLinks() {
 					tooltip.textContent = "Copied!"; // Update tooltip text
 					setTimeout(() => {
 						tooltip.textContent = "Copy link"; // Reset tooltip text after 2 seconds
-					}, 2000);
+					}, 1500);
 				},
 				(err) => {
 					console.error("Unable to copy link URL: ", err);
 					tooltip.textContent = "Failed to copy"; // Indicate failure on tooltip
 					setTimeout(() => {
 						tooltip.textContent = "Copy link"; // Reset tooltip text after 2 seconds
-					}, 2000);
+					}, 1500);
 				},
 			);
 		});

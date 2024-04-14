@@ -1,13 +1,13 @@
-document.addEventListener(
-	"astro:page-load",
-	() => {
-		initAccordion();
-	},
-	{ once: true },
-);
+document.addEventListener("astro:page-load", () => {
+	initAccordion();
+});
 
 function initAccordion() {
 	const accordionHeaders = document.querySelectorAll(".accordion-header");
+	if (accordionHeaders.length === 0) {
+		// No accordions on this page
+		return;
+	}
 	for (const header of accordionHeaders) {
 		header.addEventListener("click", () => toggleAccordion(header));
 	}
