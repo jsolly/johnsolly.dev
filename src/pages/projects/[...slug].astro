@@ -15,6 +15,8 @@ const { entry } = Astro.props;
 const { Content, headings, remarkPluginFrontmatter } = await entry.render();
 ---
 
+<script is:inline src="/src/scripts/addHeaderLinks"></script>
+
 <MarkdownProjectLayout
     frontmatter={entry.data}
     headings={headings}
