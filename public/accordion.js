@@ -27,6 +27,3 @@ function toggleAccordion(accordionHeader) {
 		? `${accordionCollapse.firstElementChild.scrollHeight}px`
 		: "0";
 }
-
-// Run the function on initial load as well
-initAccordion();
