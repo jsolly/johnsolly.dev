@@ -101,7 +101,7 @@ snippet: "A two-page resume for John Solly, a lead software engineer with a focu
 - Users can easily access, analyze, and download diverse datasets, with the added capability to securely conduct imagery transactions using integrated crypto wallet features.
 
 ### Vietnam Low Carbon Emissions Planner
-- A serverless application deployed on Amazon services using Terraform, I was crucial in developing dynamic model output functionality and building the Energy Efficient Retrofits page. Working alongside three developers, I focused on transforming complex Excel data into an engaging, interactive web platform. This significantly enhanced user interaction and understanding, effectively visualizing Vietnam's strategies for carbon emission reduction.
+- A serverless application deployed on Amazon services using Terraform, I was crucial in developing dynamic model output functionality and adding Admin CRUD operations via AWS Cognito. Working alongside one other developer, I focused on transforming complex Excel data into an engaging, interactive web platform. This significantly enhanced user interaction and understanding, effectively visualizing Vietnam's strategies for carbon emission reduction.
 
 ### IPFS-stac
 - Wrote 45% of the code for [ipfs-stac](https://pypi.org/project/ipfs-stac/), a Python package that seamlessly integrates STAC (SpatioTemporal Asset Catalog) with IPFS (InterPlanetary File System). This integration facilitates interaction with IPFS assets stored on STAC servers through native Python objects, enhancing accessibility and usability of geospatial data within the web3 ecosystem.
@@ -111,16 +111,52 @@ snippet: "A two-page resume for John Solly, a lead software engineer with a focu
 Software Engineering | Geospatial Technologies & Analytics | Database Management | SQL Performance Tuning | Web Development | Automation | DevOps | Cloud Computing | Serverless Architecture | Agile | Big Data | Data Warehousing and Star Schema | Test-Driven Development (TDD) | Paired Programming | Unit Testing | Technical Writing | Continuous Integration & Continuous Delivery (CI/CD) | Rapid Prototyping | Cross-Functional Leadership Technical Mentorship | ETL Pipeline Architecture | RESTful, SOAP, and JavaScript APIs | Security & Production Issue Resolution Migration & Upgrade Planning | User Authentication & Profile Management | Large Language Models (LLM) | Advanced Algorithm Development | Visualization Tools & Libraries | Quality Assurance | Release Coordination</p>
 
 ## Education
-<div class="education-section">
-<b>Master of Science, Geospatial Intelligence</b> | <b><i>George Mason University</b></i> | GPA: 3.93
-
-<b>Bachelor of Arts, Geoinformation Science</b> | <b><i>University of California, Santa Barbara</i></b> | GPA: 3.85
-
-<b>Bachelor of Science, Computer Science (In Progress)</b> | <b><i>Open Source Society University (OSSU)</i></b> 
-</div>
+<ul>
+  <li>
+    <strong>Master of Science in Geospatial Intelligence</strong><br/>
+    <em>George Mason University</em> — 2015-2017 — GPA: 3.93
+  </li>
+  <li>
+    <strong>Bachelor of Arts in Geoinformation Science</strong><br/>
+    <em>University of California, Santa Barbara</em> — 2013-2015 — GPA: 3.85
+  </li>
+  <li>
+    <strong>Bachelor of Science in Computer Science</strong> (In Progress)<br/>
+    <em>Open Source Society University (OSSU)</em>
+  </li>
+</ul>
 
 
 <style>
+
+/* ============= 
+    Header
+============= */
+
+.headerInfo {
+    margin-bottom: 6px;
+}
+
+.headerInfo > ul {
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.headerInfo > ul > li {
+    list-style-type: none;
+    margin-bottom: 1px;
+}
+
+.headerInfo > ul > li:not(:last-child) {
+    margin-right: 8px;
+}
+
+.headerInfo > ul > li:not(:last-child):after {
+    content: "|";
+    margin-left: 8px;
+}
+
 .spacer {
     margin: 0px auto;
 }
@@ -130,14 +166,13 @@ h1 {
     font-size: 28px;
     font-weight: bold;
     margin: 0;
-
 }
 
 h2 {
     background-color: #f2f2f2;
     padding-top: 3px;
     padding-bottom: 3px;
-    margin-top: 0;
+    margin-top: 6px;
     margin-bottom: 6px;
     font-size: 18px;
     font-weight: bold;
@@ -181,14 +216,6 @@ li {
 Content
 ============= */
 
-.role-summary {
-    margin-bottom: 10px;
-}
-
-.skillset-overview {
-    margin-bottom: 10px;
-}
-
 .career-highlights > ul > li {
     list-style-type: square;
 }
@@ -196,37 +223,6 @@ Content
 .company-name {
     margin: 0;
     border-bottom: 1px solid rgb(64, 64, 64);
-}
-
-.education-section {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* ============= 
-    Header
-============= */
-
-.headerInfo > ul {
-    display: flex;
-    justify-content: center;
-    border-bottom: 5px solid #1f3865;
-    margin-bottom: 3px;
-    white-space: nowrap;
-}
-
-.headerInfo > ul > li {
-    list-style-type: none;
-    margin-bottom: 1px;
-}
-
-.headerInfo > ul > li:not(:last-child) {
-    margin-right: 8px;
-}
-
-.headerInfo > ul > li:not(:last-child):after {
-    content: "|";
-    margin-left: 8px;
 }
 
 
