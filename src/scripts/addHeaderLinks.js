@@ -15,9 +15,9 @@ function addHeaderLinks() {
 			continue;
 		}
 
-		const headerId = header.getAttribute("id");
+		const headerIdLink = `#${header.getAttribute("id")}`;
 		const link = document.createElement("a");
-		link.href = `#${headerId}`;
+		link.href = headerIdLink;
 		link.innerHTML = "¶";
 		link.classList.add("header-link", "opacity-0");
 
@@ -50,7 +50,7 @@ function addHeaderLinks() {
 
 		link.addEventListener("click", (event) => {
 			event.preventDefault(); // Prevent the default anchor behavior
-			const linkUrl = window.location.href.split("#")[0] + link.href;
+			const linkUrl = window.location.href + headerIdLink;
 			navigator.clipboard.writeText(linkUrl).then(
 				() => {
 					console.info(`Link URL copied to clipboard: ${linkUrl}`);
