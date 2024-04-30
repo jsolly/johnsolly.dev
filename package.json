@@ -1,5 +1,5 @@
 {
-	"name": "geodev-portfolio",
+	"name": "john-solly-dev",
 	"type": "module",
 	"version": "0.0.1",
 	"scripts": {
@@ -12,14 +12,14 @@
 		"lint-fix": "biome lint --apply --no-errors-on-unmatched --files-ignore-unknown=true .",
 		"format": "biome format --no-errors-on-unmatched --files-ignore-unknown=true --write .",
 		"type-check": "tsc --noEmit -p tsconfig.json",
-		"prepare": "if [ -z \"$CI\" ]; then husky install; fi"
+		"prepare": "if [ -z \"$CI\" ]; then husky; fi"
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.5.10",
 		"@astrojs/sitemap": "^3.1.4",
 		"@astrojs/tailwind": "^5.1.0",
 		"@astrojs/ts-plugin": "^1.6.1",
-		"astro": "^4.5.14",
+		"astro": "^4.7.0",
 		"globby": "^14.0.1",
 		"html-minifier": "^4.0.0",
 		"jsdom": "^24.0.0",
@@ -32,6 +32,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "1.6.3",
 		"@tailwindcss/typography": "^0.5.13",
+		"@types/node": "^18.0.0",
 		"constructs": "^10.3.0",
 		"husky": "^9.0.11",
 		"lint-staged": "^15.2.2",
