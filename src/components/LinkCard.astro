@@ -14,7 +14,7 @@ const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
     <a
         href={href}
         target={isRelativeLink ? "_self" : "_blank"}
-        class="rounded-lg py-6 px-5 no-underline text-inherit"
+        class="rounded-lg py-6 px-5 no-underline text-custom-gray hover:text-custom-gray"
         rel={rel}
     >
         <h2 class="text-white text-2xl font-bold mb-4 flex justify-between">
@@ -35,7 +35,7 @@ const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
     }
 
     .link-card:is(:hover, :focus-within) {
-        border-color: rgb(232, 196, 249);
+        border-color: rgb(100, 80, 120);
         opacity: 1;
     }
     .link-card:is(:hover, :focus-within) .link-card-title {

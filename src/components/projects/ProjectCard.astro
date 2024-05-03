@@ -29,7 +29,10 @@ const {
 ---
 
 <div class="project-card flex text-lg rounded-lg bg-accent-dark-overlay-lvl-2">
-    <a href={href} class="rounded-lg py-6 px-5 no-underline text-inherit">
+    <a
+        href={href}
+        class="rounded-lg py-6 px-5 no-underline text-custom-gray hover:text-custom-gray"
+    >
         <h2
             class="text-3xl font-bold mb-4 flex justify-between tracking-tight leading-none text-balance"
         >
@@ -88,7 +91,7 @@ const {
     }
 
     .project-card:is(:hover, :focus-within) {
-        border-color: rgb(232, 196, 249);
+        border-color: rgb(100, 80, 120);
         opacity: 1;
     }
     .project-card:is(:hover, :focus-within) .project-card-title {

@@ -27,10 +27,10 @@ function buildToc(headings: Heading[]) {
 ---
 
 <nav class="toc bg-accent-dark-overlay-lvl-2 shadow-md p-4 rounded-lg">
-    <h2 class="text-lg font-bold tracking-tight leading-tight mb-2 text-center">
-        Table of Contents
-    </h2>
-    <ul class="list-none m-0 p-0">
-        {toc.map((heading) => <TableOfContentsHeading heading={heading} />)}
-    </ul>
+	<h2 class="text-lg font-bold tracking-tight leading-tight mb-2 text-center">
+		Table of Contents
+	</h2>
+	<ul class="list-none m-0 p-0">
+		{toc.map((heading) => <TableOfContentsHeading heading={heading} />)}
+	</ul>
 </nav>
