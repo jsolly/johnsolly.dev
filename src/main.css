@@ -53,11 +53,11 @@ a:not(.primary-btn, .secondary-btn, .project-card-link, .link-card-link, .resume
     }
 
     .primary-btn {
-        @apply inline-block bg-accent hover:bg-accent-hover text-white py-2.5 px-5 rounded-lg font-bold no-underline transition-colors duration-500 ease-in-out hover:text-white;
+        @apply bg-accent hover:bg-accent-hover text-white py-2.5 px-5 rounded-lg font-bold no-underline transition-colors duration-500 ease-in-out hover:text-white;
     }
 
     .secondary-btn {
-        @apply bg-transparent hover:bg-accent text-white py-2.5 px-5 border-2 border-accent rounded-lg font-bold no-underline transition-colors duration-300 ease-in-out hover:text-white;
+        @apply my-3 bg-transparent hover:bg-accent text-white py-2.5 px-5 border-2 border-accent rounded-lg font-bold no-underline transition-colors duration-300 ease-in-out hover:text-white;
     }
 
     .text-gradient {
