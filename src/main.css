@@ -9,7 +9,7 @@ a {
 }
 
 /* Link underline effect, hidden by default because of scaleX(0) */
-a:not(.primary-btn, .secondary-btn, .project-card-link, .toc-link, .link-card-link, .view-source-link, .social-link, .header-link, .resume-btn)::before {
+a:not(.primary-btn, .secondary-btn, .project-card-link, .toc-link, .link-card-link, .view-source-link, .social-link, .header-link)::before {
     content: "";
     position: absolute;
     display: block;
@@ -24,13 +24,13 @@ a:not(.primary-btn, .secondary-btn, .project-card-link, .toc-link, .link-card-li
 }
 
 /* Link underline transition */
-a:not(.primary-btn, .secondary-btn, .project-card-link, .toc-link, .link-card-link, .view-source-link, .social-link, .header-link, .resume-btn):hover::before {
+a:not(.primary-btn, .secondary-btn, .project-card-link, .toc-link, .link-card-link, .view-source-link, .social-link, .header-link):hover::before {
     background-color: rgb(136, 58, 234);
     transform: scaleX(1);
 }
 
 /* Link text color transition */
-a:not(.primary-btn, .secondary-btn, .project-card-link, .link-card-link, .resume-btn):hover {
+a:not(.primary-btn, .secondary-btn, .project-card-link, .link-card-link):hover {
     color: rgb(136, 58, 234);
 }
 
