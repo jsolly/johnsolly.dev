@@ -7,7 +7,7 @@ type SubheadingType = {
 ---
 
 <li class="mb-2">
-    <a class="text-gray-50 text-sm" href={"#" + heading.slug}>
+    <a class="toc-link text-gray-50 text-sm" href={"#" + heading.slug}>
         {heading.text}
     </a>
     {
@@ -20,10 +20,3 @@ type SubheadingType = {
         )
     }
 </li>
-
-<style>
-    /* Hide Underline effect in ToC */
-    a::after {
-        content: none;
-    }
-</style>

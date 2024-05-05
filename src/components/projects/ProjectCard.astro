@@ -31,7 +31,7 @@ const {
 <div class="project-card flex text-lg rounded-lg bg-accent-dark-overlay-lvl-2">
     <a
         href={href}
-        class="rounded-lg py-6 px-5 no-underline text-custom-gray hover:text-custom-gray"
+        class="project-card-link rounded-lg py-6 px-5 no-underline text-custom-gray hover:text-custom-gray"
     >
         <h2
             class="text-3xl font-bold mb-4 flex justify-between tracking-tight leading-none text-balance"
@@ -94,6 +94,8 @@ const {
         border-color: rgb(100, 80, 120);
         opacity: 1;
     }
+
+    /* The title underline effect */
     .project-card:is(:hover, :focus-within) .project-card-title {
         text-decoration: underline;
         text-underline-offset: 0.2em;
