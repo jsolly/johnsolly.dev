@@ -7,6 +7,7 @@ interface Props {
 
 const { title, description } = Astro.props;
 const isRootPath = Astro.url.pathname === "/";
+const isResumePath = Astro.url.pathname === "/resume/";
 const socialImageURL = new URL("/images/jsolly.webp", Astro.url);
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 import githubLogo from "../images/social/githubLogo.svg";
@@ -63,18 +64,46 @@ import { ViewTransitions } from "astro:transitions";
     </head>
     <body>
         <main>
-            {
-                !isRootPath && (
-                    <a
-                        href="/"
-                        id="home-btn"
-                        class="inline-block secondary-btn"
-                        transition:persist="home-btn"
-                    >
-                        Home
-                    </a>
-                )
-            }
+            <div class="flex justify-between">
+                {
+                    !isRootPath && (
+                        <a
+                            href="/"
+                            id="home-btn"
+                            class="secondary-btn"
+                            transition:persist="home-btn"
+                        >
+                            Home
+                        </a>
+                    )
+                }
+                {
+                    isResumePath && (
+                        <a
+                            href="/John-Solly-Resume.pdf"
+                            target="_blank"
+                            class="secondary-btn inline-flex items-center"
+                            rel="alternate"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                />
+                            </svg>
+                            Open as PDF ↗
+                        </a>
+                    )
+                }
+            </div>
             <slot />
             {
                 !isRootPath && (
