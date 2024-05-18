@@ -36,12 +36,11 @@ Another thing that is now ingrained in me is the importance of testing and typin
 ## Looking Ahead
 I have a few ideas for the future of GeoAsteroids. I would like to add a feature where you can play against your friends in real-time. I think this would be a fun way to compete with friends and family. I also want to add a feature where you can play on a map of your local area. I think this would be a fun way to explore your neighborhood and play a game at the same time.
 
-<video controls="" autoplay="" class="full-width-video">
-  <source src="/src/videos/GeoAsteroids-playthrough.mp4" type="video/mp4">
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4hlsIC8Pb2w?si=SsDs0mYmz1WsJR9s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <style>
-.full-width-video {
-  width: 100%;
+iframe {
+  max-width: 100%;
+  border-radius: 0.25rem;
 }
 </style>
