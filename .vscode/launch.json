@@ -6,9 +6,7 @@
 			"name": "Development server",
 			"request": "launch",
 			"type": "node-terminal",
-			"skipFiles": [
-				"**/node_modules/**"
-			  ]
+			"skipFiles": ["**/node_modules/**"]
 		},
 		{
 			"type": "chrome",
@@ -20,6 +18,15 @@
 				"vite:///src/*": "${webRoot}/*"
 			},
 			"skipFiles": ["**/node_modules/**"]
+		}
+	],
+	"compounds": [
+		{
+			"name": "Launch Dev Server and Chrome",
+			"configurations": [
+				"Development server",
+				"Launch Chrome against localhost"
+			]
 		}
 	]
 }
