@@ -39,7 +39,7 @@ a:not(.primary-btn, .secondary-btn, .project-card-link, .link-card-link):hover {
         @apply min-h-full text-custom-gray bg-custom-dark antialiased scroll-smooth;
     }
 
-    main {
+    body {
         @apply mx-auto max-w-4xl p-4 bg-custom-dark-overlay;
     }
 

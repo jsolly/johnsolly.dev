@@ -10,7 +10,7 @@ const { title, snippet, href, rel } = Astro.props;
 const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
 ---
 
-<div class="link-card text-lg rounded-lg flex bg-accent-dark-overlay-lvl-2">
+<li class="link-card text-lg rounded-lg flex bg-accent-dark-overlay-lvl-2">
     <a
         href={href}
         target={isRelativeLink ? "_self" : "_blank"}
@@ -23,7 +23,7 @@ const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
         </h2>
         <p>{snippet}</p>
     </a>
-</div>
+</li>
 <style>
     .link-card {
         opacity: 0.8;

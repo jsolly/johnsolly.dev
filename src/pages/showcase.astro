@@ -4,10 +4,8 @@ import ContactMe from "../components/ContactMe.astro";
 import PageSpeedInsights from "../components/showcase/PageSpeedInsights.astro";
 import LongSollyBio from "../components/showcase/LongSollyBio.astro";
 import Testimonials from "../components/showcase/Testimonials.astro";
-import ProjectsList from "../components/projects/ProjectsList.astro";
-import * as myResume from "../pages/resume.md";
-import jsollyLarge from "../images/jsollyLarge.webp";
-import ProjectCard from "src/components/projects/ProjectCard.astro";
+import ShowcaseCards from "../components/showcase/ShowcaseCards.astro";
+
 import { fade } from "astro:transitions";
 ---
 
@@ -27,15 +25,7 @@ import { fade } from "astro:transitions";
         </h1>
         <LongSollyBio />
         <Testimonials />
-        <ProjectsList />
-        <ProjectCard
-            title={myResume.frontmatter.title}
-            href={myResume.frontmatter.href}
-            readingTime={myResume.frontmatter.minutesRead}
-            metaimg={jsollyLarge}
-            metaimgAlt="John Solly"
-            snippet={myResume.frontmatter.snippet}
-        />
+        <ShowcaseCards />
         <ContactMe />
         <PageSpeedInsights />
     </div>
