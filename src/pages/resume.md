@@ -1,6 +1,6 @@
 ---
-layout: /src/layouts/Layout.astro
 title: "John Solly's Resume"
+layout: /src/layouts/ResumeLayout.astro
 href: /resume/
 snippet: "A two-page resume for John Solly, a lead software engineer with a focus on cloud computing and geospatial technologies."
 ---
