@@ -63,8 +63,8 @@ import { ViewTransitions } from "astro:transitions";
         <ViewTransitions />
     </head>
     <body>
-        <header class="flex justify-between mt-6 mb-6">
-            <nav>
+        <header class="flex justify-between items-center mt-6 mb-6">
+            <nav class="flex-1">
                 {
                     !isRootPath && (
                         <a
@@ -77,6 +77,8 @@ import { ViewTransitions } from "astro:transitions";
                         </a>
                     )
                 }
+            </nav>
+            <div class="flex-1 flex justify-center">
                 {
                     isResumePath && (
                         <a
@@ -103,7 +105,8 @@ import { ViewTransitions } from "astro:transitions";
                         </a>
                     )
                 }
-            </nav>
+            </div>
+            <div class="flex-1"></div>
         </header>
 
         <main>
@@ -113,7 +116,7 @@ import { ViewTransitions } from "astro:transitions";
                     <a
                         href="javascript:history.back()"
                         id="back-btn"
-                        class="secondary-btn inline-block"
+                        class="secondary-btn inline-block mt-6"
                         transition:persist="back-btn"
                     >
                         Back
