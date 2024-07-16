@@ -70,15 +70,15 @@ const consultingServices = [
                     </h1>
                     {service.sessions.map((session) => (
                         <article class="border-t-2 border-gray-800 pt-4 mt-4">
-                            <h3 class="text-xl text-custom-offwhite font-semibold">
+                            <h2 class="text-xl text-custom-offwhite font-semibold">
                                 {session.name}
-                            </h3>
+                            </h2>
                             <p class="text-custom-gray">
                                 {session.description}
                             </p>
-                            <h4 class="text-lg text-custom-offwhite font-semibold mt-4">
+                            <h3 class="text-lg text-custom-offwhite font-semibold mt-4">
                                 Features:
-                            </h4>
+                            </h3>
                             <ul class="list-disc pl-5 text-custom-gray">
                                 {session.features.map((feature) => (
                                     <li>{feature}</li>
@@ -90,9 +90,9 @@ const consultingServices = [
                                 </strong>{" "}
                                 {session.price}
                             </p>
-                            <h4 class="text-lg text-custom-offwhite font-semibold mt-4">
+                            <h3 class="text-lg text-custom-offwhite font-semibold mt-4">
                                 Booking Process:
-                            </h4>
+                            </h3>
                             <ol class="list-decimal pl-5 text-custom-gray">
                                 {session.bookingProcess.map((step) => (
                                     <li>{step}</li>
