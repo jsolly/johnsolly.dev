@@ -5,7 +5,7 @@
 a {
     text-decoration: none;
     position: relative;
-    color: rgb(148, 100, 191);
+    color: rgb(148, 105, 179);
 }
 
 /* Link underline effect, hidden by default because of scaleX(0) */
@@ -17,7 +17,7 @@ a:not(.primary-btn, .secondary-btn, .project-card-link, .toc-link, .link-card-li
     height: 1px;
     bottom: -0.05rem;
     left: 0;
-    background-color: rgb(148, 100, 191);
+    background-color: rgb(148, 105, 179);
     transform: scaleX(0);
     /* Transform + color transition */
     transition: all 0.3s ease;

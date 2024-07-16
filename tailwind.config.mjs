@@ -5,7 +5,7 @@ export default {
 		extend: {
 			colors: {
 				accent: "rgb(136, 58, 234)",
-				"accent-dark": "rgb(148, 100, 191)",
+				"accent-dark": "rgb(148, 105, 179)",
 				"accemt-darker": "rgb(136, 58, 234)",
 				"accent-light": "rgb(232, 196, 249)",
 				"accent-hover": "rgb(115, 34, 220)",
