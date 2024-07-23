@@ -16,13 +16,13 @@ importers:
         version: 3.1.4
       '@astrojs/tailwind':
         specifier: ^5.1.0
-        version: 5.1.0(astro@4.7.0(@types/node@18.19.31)(typescript@5.4.5))(tailwindcss@3.4.3)
+        version: 5.1.0(astro@4.7.0(@types/node@20.14.12)(typescript@5.4.5))(tailwindcss@3.4.3)
       '@astrojs/ts-plugin':
         specifier: ^1.6.1
         version: 1.6.1
       astro:
         specifier: ^4.7.0
-        version: 4.7.0(@types/node@18.19.31)(typescript@5.4.5)
+        version: 4.7.0(@types/node@20.14.12)(typescript@5.4.5)
       globby:
         specifier: ^14.0.1
         version: 14.0.1
@@ -55,8 +55,8 @@ importers:
         specifier: ^0.5.13
         version: 0.5.13(tailwindcss@3.4.3)
       '@types/node':
-        specifier: ^18.0.0
-        version: 18.19.31
+        specifier: ^20.14.12
+        version: 20.14.12
       constructs:
         specifier: ^10.3.0
         version: 10.3.0
@@ -729,6 +729,9 @@ packages:
 
   '@types/node@18.19.31':
     resolution: {integrity: sha512-ArgCD39YpyyrtFKIqMDvjz79jto5fcI/SVUs2HwB+f0dAzq68yqOdyaSivLiLugSziTpNXLQrVb7RZFmdZzbhA==}
+
+  '@types/node@20.14.12':
+    resolution: {integrity: sha512-r7wNXakLeSsGT0H1AU863vS2wa5wBOK4bWMjZz2wj+8nBx+m5PeIn0k8AloSLpRuiwdRQZwarZqHE4FNArPuJQ==}
 
   '@types/sax@1.2.7':
     resolution: {integrity: sha512-rO73L89PJxeYM3s3pPPjiPgVVcymqU490g0YO5n5By0k2Erzj6tay/4lr1CHAAU4JyOWd1rpQ8bCf6cZfHU96A==}
@@ -2633,9 +2636,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.22.4
 
-  '@astrojs/tailwind@5.1.0(astro@4.7.0(@types/node@18.19.31)(typescript@5.4.5))(tailwindcss@3.4.3)':
+  '@astrojs/tailwind@5.1.0(astro@4.7.0(@types/node@20.14.12)(typescript@5.4.5))(tailwindcss@3.4.3)':
     dependencies:
-      astro: 4.7.0(@types/node@18.19.31)(typescript@5.4.5)
+      astro: 4.7.0(@types/node@20.14.12)(typescript@5.4.5)
       autoprefixer: 10.4.19(postcss@8.4.38)
       postcss: 8.4.38
       postcss-load-config: 4.0.2(postcss@8.4.38)
@@ -3178,6 +3181,10 @@ snapshots:
     dependencies:
       undici-types: 5.26.5
 
+  '@types/node@20.14.12':
+    dependencies:
+      undici-types: 5.26.5
+
   '@types/sax@1.2.7':
     dependencies:
       '@types/node': 18.19.31
@@ -3297,7 +3304,7 @@ snapshots:
 
   array-iterate@2.0.1: {}
 
-  astro@4.7.0(@types/node@18.19.31)(typescript@5.4.5):
+  astro@4.7.0(@types/node@20.14.12)(typescript@5.4.5):
     dependencies:
       '@astrojs/compiler': 2.7.1
       '@astrojs/internal-helpers': 0.4.0
@@ -3356,8 +3363,8 @@ snapshots:
       tsconfck: 3.0.3(typescript@5.4.5)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.2.10(@types/node@18.19.31)
-      vitefu: 0.2.5(vite@5.2.10(@types/node@18.19.31))
+      vite: 5.2.10(@types/node@20.14.12)
+      vitefu: 0.2.5(vite@5.2.10(@types/node@20.14.12))
       which-pm: 2.1.1
       yargs-parser: 21.1.1
       zod: 3.23.5
@@ -5152,18 +5159,18 @@ snapshots:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  vite@5.2.10(@types/node@18.19.31):
+  vite@5.2.10(@types/node@20.14.12):
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.13.2
     optionalDependencies:
-      '@types/node': 18.19.31
+      '@types/node': 20.14.12
       fsevents: 2.3.3
 
-  vitefu@0.2.5(vite@5.2.10(@types/node@18.19.31)):
+  vitefu@0.2.5(vite@5.2.10(@types/node@20.14.12)):
     optionalDependencies:
-      vite: 5.2.10(@types/node@18.19.31)
+      vite: 5.2.10(@types/node@20.14.12)
 
   volar-service-css@0.0.34(@volar/language-service@2.1.6):
     dependencies:
