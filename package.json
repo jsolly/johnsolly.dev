@@ -15,7 +15,7 @@
 		"prepare": "if [ -z \"$CI\" ]; then husky; fi"
 	},
 	"dependencies": {
-		"@astrojs/check": "^0.5.10",
+		"@astrojs/check": "^0.8.3",
 		"@astrojs/sitemap": "^3.1.4",
 		"@astrojs/tailwind": "^5.1.0",
 		"@astrojs/ts-plugin": "^1.6.1",
