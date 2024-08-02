@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 import ProjectCard from "../projects/ProjectCard.astro";
-import * as myResume from "../../pages/resume.md";
 import jsollyLarge from "../../images/jsollyLarge.webp";
 
 const allProjects = await getCollection("projects");
@@ -29,12 +28,12 @@ const allProjects = await getCollection("projects");
             })
         }
         <ProjectCard
-            title={myResume.frontmatter.title}
-            href={myResume.frontmatter.href}
-            readingTime={myResume.frontmatter.minutesRead}
+            title="John Solly's Resume"
+            href="/John-Solly-Resume.pdf"
+            readingTime="7 min read"
             metaimg={jsollyLarge}
             metaimgAlt="John Solly"
-            snippet={myResume.frontmatter.snippet}
+            snippet="A two-page resume for John Solly, a lead software engineer with a focus on cloud computing and geospatial technologies."
         />
     </ul>
 </nav>

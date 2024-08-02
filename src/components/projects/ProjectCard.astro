@@ -12,7 +12,6 @@ interface Props {
 	readingTime: string;
 	metaimgAlt: string;
 	logos?: Logo[];
-	// The default value is "lazy" but it can be set to "eager" if needed
 	imgLoading?: "eager" | undefined;
 }
 
@@ -26,11 +25,14 @@ const {
 	logos,
 	imgLoading,
 } = Astro.props;
+
+const isRelativeLink = href.startsWith("/") && !href.endsWith(".pdf");
 ---
 
 <li class="project-card flex text-lg rounded-lg bg-accent-dark-overlay-lvl-2">
     <a
         href={href}
+        target={isRelativeLink ? "_self" : "_blank"}
         class="project-card-link rounded-lg py-6 px-5 no-underline text-custom-gray hover:text-custom-gray"
     >
         <h2

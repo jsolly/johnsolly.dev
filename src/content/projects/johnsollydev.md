@@ -27,7 +27,7 @@ Initially, my professional portfolio was nested within [blogthedata.com](https:/
 The inception of JohnSolly.dev was driven by my desire to create a dedicated space for my professional portfolio, resume, and consulting services. I also sought an excuse to experiment with Astro.js, a technology that blends static site generation with client-side 'interactive islands.'
 
 ## Highlights
-JohnSolly.dev has some exciting features. I connected it to Stripe and Cal.com so anyone can pay for and book me for consulting services. You'll also notice that my [resume page](/resume/) is just a single markdown file with some added CSS.
+JohnSolly.dev has some exciting features. I connected it to Stripe and Cal.com so anyone can pay for and book me for consulting services.
 
 ## Tech Stack
 I had heard good things about Astro.js for crafting static sites with dynamic, interactive 'islands.' Its unique approach to blending static site generation with client-side interactivity quickly won me over. It feels like Astro is a backend framework without all the overhead.
