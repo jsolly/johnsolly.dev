@@ -1,4 +1,25 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+# Call the separate pushups script
+scripts/pushups.sh
+pushups_status=$?
+
+# If the pushups script fails for any reason, exit with the same status
+if [ $pushups_status -ne 0 ]; then
+  echo "Pushups not completed! Commit aborted."
+  exit $pushups_status
+fi
+
+# Proceed with linting and staging
 pnpm lint-staged
+lint_status=$?
+
+# If lint-staged fails, print an error and exit with that status
+if [ $lint_status -ne 0 ]; then
+  echo "Lint-staged failed! Please fix the errors and try committing again."
+  exit $lint_status
+fi
+
+# Ensure the script exits with success if everything passed
+exit 0
