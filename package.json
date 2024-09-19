@@ -20,7 +20,7 @@
 		"@astrojs/tailwind": "^5.1.0",
 		"@astrojs/ts-plugin": "^1.9.1",
 		"astro": "^4.13.1",
-		"globby": "^14.0.1",
+		"globby": "^14.0.2",
 		"html-minifier": "^4.0.0",
 		"jsdom": "^24.1.1",
 		"mdast-util-to-string": "^4.0.0",
