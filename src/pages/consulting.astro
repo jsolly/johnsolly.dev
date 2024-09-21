@@ -2,66 +2,42 @@
 import Layout from "../layouts/Layout.astro";
 const consultingServices = [
 	{
-		id: "personalized-consulting",
-		title: "Personalized Consulting Sessions",
+		id: "resume-linkedin-review",
+		title: "Resume and LinkedIn Profile Review",
 		sessions: [
 			{
 				id: 1,
-				name: "30-Minute Expert Consulting Session",
+				name: "30-Minute Screencast Review",
 				description:
-					"Dive into a one-on-one, 30-minute consulting session tailored to answer your specific questions and offer expert advice.",
+					"Get a comprehensive 30-minute screencast review of your resume and LinkedIn profile, offering personalized feedback and actionable insights to enhance your professional branding.",
 				features: [
-					"Pre-session questionnaire to outline your questions or topics of interest",
-					"One-on-one consultation via video call or phone",
-					"Follow-up email summary highlighting key points discussed and recommended next steps",
-					"Option to book additional sessions at a discounted rate",
+					"Detailed analysis of your resume and LinkedIn profile",
+					"Personalized recommendations aligned with your career goals",
+					"Industry-specific advice and best practices",
+					"ATS (Applicant Tracking System) optimization tips",
+					"Strategies to increase profile visibility and engagement",
+					"Two follow-up messages for additional questions and guidance",
 				],
 				price: "$75 USD",
 				bookingProcess: [
 					"Make payment to confirm your booking.",
-					"Schedule your session based on available slots.",
-					"Complete the pre-session questionnaire.",
-					"Receive a confirmation email with your session details.",
+					"Submit your current resume and LinkedIn profile URL.",
+					"Receive your personalized screencast review within 3 business days.",
+					"Engage in two follow-up messages for further assistance.",
 				],
 			},
 		],
 	},
-	// {
-	//     id: "project-discussion",
-	//     title: "Project Discussion & Service Proposal",
-	//     sessions: [
-	//         {
-	//             id: 2,
-	//             name: "Project Discovery & Proposal Consultation",
-	//             description:
-	//                 "Looking to start a new project or need expert services to bring your ideas to life? Our Project Discovery & Proposal Consultation offers a structured approach to understanding your project requirements, discussing potential strategies, and outlining a customized proposal for our services.",
-	//             features: [
-	//                 "Initial questionnaire to gather project details and objectives",
-	//                 "60-minute in-depth discussion to explore your project needs and how I can help",
-	//                 "Customized project proposal including scope of work, timeline, and pricing",
-	//                 "One round of follow-up questions via email or a short call to clarify the proposal",
-	//             ],
-	//             price: "Free Introductory Session",
-	//             bookingProcess: [
-	//                 "Submit your initial project details through our questionnaire.",
-	//                 "We'll review your submission and reach out to schedule a comprehensive discussion.",
-	//                 "Engage in the project discovery session to cover all aspects of your potential project.",
-	//                 "Receive a detailed proposal tailored to your project's needs.",
-	//             ],
-	//         },
-	//     ],
-	// },
 ];
 ---
 
 <script src="/src/scripts/stripeBuyButton"></script>
 
 <Layout
-    title="Consulting Services"
-    description="Book personalized consulting sessions to get expert advice and guidance on your projects, business, or career."
+    title="Resume and LinkedIn Review Services"
+    description="Enhance your professional profile with a personalized resume and LinkedIn review."
 >
     <div class="max-w-4xl mx-auto">
-        <!-- If another service is added, make sure to change the H1 heading to an H2 and add a new H1 for the page. -->
         {
             consultingServices.map((service) => (
                 <section class="bg-subtle-dark-overlay-lvl-2 rounded-lg mb-8 p-8 shadow-lg">
