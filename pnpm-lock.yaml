@@ -18,8 +18,8 @@ importers:
         specifier: ^5.1.1
         version: 5.1.1(astro@4.16.1(@types/node@22.9.0)(rollup@4.24.4)(typescript@5.6.3))(tailwindcss@3.4.14)
       '@astrojs/ts-plugin':
-        specifier: ^1.10.2
-        version: 1.10.2
+        specifier: ^1.10.4
+        version: 1.10.4
       astro:
         specifier: ^4.16.1
         version: 4.16.1(@types/node@22.9.0)(rollup@4.24.4)(typescript@5.6.3)
@@ -124,11 +124,14 @@ packages:
     resolution: {integrity: sha512-/ca/+D8MIKEC8/A9cSaPUqQNZm+Es/ZinRv0ZAzvu2ios7POQSsVD+VOj7/hypWNsNM3T7RpfgNq7H2TU1KEHA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
 
-  '@astrojs/ts-plugin@1.10.2':
-    resolution: {integrity: sha512-Q7EvUh9dU9Ufi6Jfe5JRcisBuremlLZ7jJImUY2/eMe6OVwCXSmETDir/tVwT0K+lnfNiUwju9qHZYX2/5ch0Q==}
+  '@astrojs/ts-plugin@1.10.4':
+    resolution: {integrity: sha512-rapryQINgv5VLZF884R/wmgX3mM9eH1PC/I3kkPV9rP6lEWrRN1YClF3bGcDHFrf8EtTLc0Wqxne1Uetpevozg==}
 
   '@astrojs/yaml2ts@0.2.1':
     resolution: {integrity: sha512-CBaNwDQJz20E5WxzQh4thLVfhB3JEEGz72wRA+oJp6fQR37QLAqXZJU0mHC+yqMOQ6oj0GfRPJrz6hjf+zm6zA==}
+
+  '@astrojs/yaml2ts@0.2.2':
+    resolution: {integrity: sha512-GOfvSr5Nqy2z5XiwqTouBBpy5FyI6DEe+/g/Mk5am9SjILN1S5fOEvYK0GuWHg98yS/dobP4m8qyqw/URW35fQ==}
 
   '@babel/code-frame@7.26.2':
     resolution: {integrity: sha512-RJlIHRueQgwWitWgF8OdFYGZX328Ax5BCemNGlqHfplnRT9ESi8JkFlvaVYbS+UubVY6dpv87Fs2u5M29iNFVQ==}
@@ -769,6 +772,9 @@ packages:
   '@volar/language-core@2.4.5':
     resolution: {integrity: sha512-F4tA0DCO5Q1F5mScHmca0umsi2ufKULAnMOVBfMsZdT4myhVl4WdKRwCaKcfOkIEuyrAVvtq1ESBdZ+rSyLVww==}
 
+  '@volar/language-core@2.4.9':
+    resolution: {integrity: sha512-t++GIrUeQnKCieZdY9e+Uar2VmTqOE4Z9KcEcdSHKmKZPuqpbbWow1YKe1i3HpU2s1JqLRVM8y/n87WKXyxJAg==}
+
   '@volar/language-server@2.4.5':
     resolution: {integrity: sha512-l5PswE0JzCtstTlwBUpikeSa3lNUBJhTuWtj9KclZTGi2Uex4RcqGOhTiDsUUtvdv/hEuYCxGq1EdJJPlQsD/g==}
 
@@ -778,8 +784,14 @@ packages:
   '@volar/source-map@2.4.5':
     resolution: {integrity: sha512-varwD7RaKE2J/Z+Zu6j3mNNJbNT394qIxXwdvz/4ao/vxOfyClZpSDtLKkwWmecinkOVos5+PWkWraelfMLfpw==}
 
+  '@volar/source-map@2.4.9':
+    resolution: {integrity: sha512-UGE+WgJwk64OcfBwBOBKIzmF+uNx4dC5GzOvaVsHbTBp/IVqeTVsGiO5CwBAt6l3vVXYbMuddG2DU8FEnBRxTg==}
+
   '@volar/typescript@2.4.5':
     resolution: {integrity: sha512-mcT1mHvLljAEtHviVcBuOyAwwMKz1ibXTi5uYtP/pf4XxoAzpdkQ+Br2IC0NPCvLCbjPZmbf3I0udndkfB1CDg==}
+
+  '@volar/typescript@2.4.9':
+    resolution: {integrity: sha512-Zmh3Bq8CFD6OANKYsi4vs/l7togwfjFH0kgrT12uAsDff2AJQjbEUKTVUnxmHbnbH2B9ja7Lb6Mu/Wj9wBuJlg==}
 
   '@vscode/emmet-helper@2.9.3':
     resolution: {integrity: sha512-rB39LHWWPQYYlYfpv9qCoZOVioPCftKXXqrsyqN1mTWZM6dTnONT63Db+03vgrBbHzJN45IrgS/AGxw9iiqfEw==}
@@ -2734,17 +2746,21 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/ts-plugin@1.10.2':
+  '@astrojs/ts-plugin@1.10.4':
     dependencies:
       '@astrojs/compiler': 2.10.3
-      '@astrojs/yaml2ts': 0.2.1
+      '@astrojs/yaml2ts': 0.2.2
       '@jridgewell/sourcemap-codec': 1.5.0
-      '@volar/language-core': 2.4.5
-      '@volar/typescript': 2.4.5
+      '@volar/language-core': 2.4.9
+      '@volar/typescript': 2.4.9
       semver: 7.6.3
       vscode-languageserver-textdocument: 1.0.11
 
   '@astrojs/yaml2ts@0.2.1':
+    dependencies:
+      yaml: 2.5.0
+
+  '@astrojs/yaml2ts@0.2.2':
     dependencies:
       yaml: 2.5.0
 
@@ -3293,6 +3309,10 @@ snapshots:
     dependencies:
       '@volar/source-map': 2.4.5
 
+  '@volar/language-core@2.4.9':
+    dependencies:
+      '@volar/source-map': 2.4.9
+
   '@volar/language-server@2.4.5':
     dependencies:
       '@volar/language-core': 2.4.5
@@ -3314,9 +3334,17 @@ snapshots:
 
   '@volar/source-map@2.4.5': {}
 
+  '@volar/source-map@2.4.9': {}
+
   '@volar/typescript@2.4.5':
     dependencies:
       '@volar/language-core': 2.4.5
+      path-browserify: 1.0.1
+      vscode-uri: 3.0.8
+
+  '@volar/typescript@2.4.9':
+    dependencies:
+      '@volar/language-core': 2.4.9
       path-browserify: 1.0.1
       vscode-uri: 3.0.8
 
