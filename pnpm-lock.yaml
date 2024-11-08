@@ -58,8 +58,8 @@ importers:
         specifier: ^22.9.0
         version: 22.9.0
       constructs:
-        specifier: ^10.3.0
-        version: 10.3.0
+        specifier: ^10.4.2
+        version: 10.4.2
       husky:
         specifier: ^9.1.6
         version: 9.1.6
@@ -1013,9 +1013,8 @@ packages:
   common-ancestor-path@1.0.1:
     resolution: {integrity: sha512-L3sHRo1pXXEqX8VU28kfgUY+YGsk09hPqZiZmLacNib6XNTCM8ubYeT7ryXQw8asB1sKgcU5lkB7ONug08aB8w==}
 
-  constructs@10.3.0:
-    resolution: {integrity: sha512-vbK8i3rIb/xwZxSpTjz3SagHn1qq9BChLEfy5Hf6fB3/2eFbrwt2n9kHwQcS0CPTRBesreeAcsJfMq2229FnbQ==}
-    engines: {node: '>= 16.14.0'}
+  constructs@10.4.2:
+    resolution: {integrity: sha512-wsNxBlAott2qg8Zv87q3eYZYgheb9lchtBfjHzzLHtXbttwSrHPs1NNQbBrmbb1YZvYg2+Vh0Dor76w4mFxJkA==}
 
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
@@ -3622,7 +3621,7 @@ snapshots:
 
   common-ancestor-path@1.0.1: {}
 
-  constructs@10.3.0: {}
+  constructs@10.4.2: {}
 
   convert-source-map@2.0.0: {}
 
