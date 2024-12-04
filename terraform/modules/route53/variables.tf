@@ -12,3 +12,8 @@ variable "bucket_name" {
   type        = string
 }
 
+variable "cloudfront_domain_name" {
+  type        = string
+  description = "The domain name of the CloudFront distribution"
+}
+

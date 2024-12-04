@@ -20,19 +20,16 @@ resource "aws_s3_bucket_policy" "hack_my_career_policy" {
     Id      = "PolicyForCloudFrontPrivateContent",
     Statement = [
       {
-        Sid       = "AllowCloudFrontServicePrincipal",
-        Effect    = "Allow",
-        Principal = { Service = "cloudfront.amazonaws.com" },
-        Action    = ["s3:GetObject", "s3:ListBucket"],
+        Sid    = "AllowCloudFrontServicePrincipalReadAccess",
+        Effect = "Allow",
+        Principal = {
+          CanonicalUser = var.cloudfront_oai_canonical_user_id
+        },
+        Action = ["s3:GetObject", "s3:ListBucket"],
         Resource = [
           "arn:aws:s3:::${var.bucket_name}",
           "arn:aws:s3:::${var.bucket_name}/*"
         ],
-        Condition = {
-          StringEquals = {
-            "AWS:SourceArn" = var.distribution_arn
-          }
-        }
       },
       {
         Sid       = "AllowPublicReadAccessToCertainStaticFiles",

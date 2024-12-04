@@ -17,13 +17,3 @@ variable "aws_account_id" {
   description = "AWS Account ID for the General Account"
   type        = string
 }
-
-variable "cloudfront_distribution_arn" {
-  description = "ARN of the manually created CloudFront distribution"
-  type        = string
-}
-
-variable "cloudfront_hosted_zone_id" {
-  description = "Hosted zone ID of the manually created CloudFront distribution"
-  type        = string
-}

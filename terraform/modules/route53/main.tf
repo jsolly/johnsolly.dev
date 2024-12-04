@@ -11,7 +11,7 @@ resource "aws_route53_record" "site" {
   type    = "A"
 
   alias {
-    name                   = var.domain_name
+    name                   = var.cloudfront_domain_name
     zone_id                = var.cloudfront_hosted_zone_id
     evaluate_target_health = false
   }
@@ -24,7 +24,7 @@ resource "aws_route53_record" "apex_aaaa" {
   type    = "AAAA"
 
   alias {
-    name                   = var.domain_name
+    name                   = var.cloudfront_domain_name
     zone_id                = var.cloudfront_hosted_zone_id
     evaluate_target_health = false
   }
@@ -37,7 +37,7 @@ resource "aws_route53_record" "www_a" {
   type    = "A"
 
   alias {
-    name                   = var.domain_name
+    name                   = var.cloudfront_domain_name
     zone_id                = var.cloudfront_hosted_zone_id
     evaluate_target_health = false
   }
@@ -49,7 +49,7 @@ resource "aws_route53_record" "www_aaaa" {
   type    = "AAAA"
 
   alias {
-    name                   = var.domain_name
+    name                   = var.cloudfront_domain_name
     zone_id                = var.cloudfront_hosted_zone_id
     evaluate_target_health = false
   }
