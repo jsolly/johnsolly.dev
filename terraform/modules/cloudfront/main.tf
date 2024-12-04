@@ -1,5 +1,5 @@
 resource "aws_cloudfront_origin_access_identity" "oai" {
-  comment = "OAI for hack-my-career CloudFront Distribution"
+  comment = "OAI for CloudFront Distribution"
 }
 
 resource "aws_cloudfront_function" "append_index_to_directories" {
@@ -42,8 +42,7 @@ function handler(event) {
 EOT
 }
 
-resource "aws_cloudfront_distribution" "hack_my_career_distribution" {
-
+resource "aws_cloudfront_distribution" "distribution" {
   origin {
     domain_name = var.bucket_domain_name
     origin_id   = "S3-${var.bucket_id}"
