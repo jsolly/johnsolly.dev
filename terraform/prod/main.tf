@@ -22,12 +22,6 @@ provider "aws" {
   profile = "prod-admin"
 }
 
-provider "aws" {
-  alias   = "us_east_1"
-  region  = "us-east-1"
-  profile = "prod-admin"
-}
-
 module "s3" {
   source           = "../modules/s3"
   distribution_arn = module.cloudfront.distribution_arn
