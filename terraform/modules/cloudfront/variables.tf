@@ -9,6 +9,11 @@ variable "bucket_id" {
 }
 
 variable "certificate_arn" {
+  description = "ARN of the manually created ACM certificate"
   type        = string
-  description = "The ARN of the ACM certificate"
-} 
+}
+
+variable "domain_names" {
+  description = "Domain names for the CloudFront distribution aliases"
+  type        = list(string)
+}

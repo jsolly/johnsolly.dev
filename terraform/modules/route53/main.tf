@@ -1,15 +1,17 @@
-resource "aws_route53_zone" "hack_my_career_zone" {
-  name = "hackmycareer.lol"
+# Use data source to fetch existing zone instead of creating a new one
+data "aws_route53_zone" "zone" {
+  name         = var.domain_name
+  private_zone = false
 }
 
-# A record for apex domain pointing to CloudFront
-resource "aws_route53_record" "apex_a" {
-  zone_id = aws_route53_zone.hack_my_career_zone.zone_id
-  name    = "hackmycareer.lol"
+# Create the A record for CloudFront distribution
+resource "aws_route53_record" "site" {
+  zone_id = data.aws_route53_zone.zone.zone_id
+  name    = var.domain_name
   type    = "A"
 
   alias {
-    name                   = var.cloudfront_domain_name
+    name                   = var.domain_name
     zone_id                = var.cloudfront_hosted_zone_id
     evaluate_target_health = false
   }
@@ -17,71 +19,37 @@ resource "aws_route53_record" "apex_a" {
 
 # AAAA record for apex domain pointing to CloudFront
 resource "aws_route53_record" "apex_aaaa" {
-  zone_id = aws_route53_zone.hack_my_career_zone.zone_id
-  name    = "hackmycareer.lol"
+  zone_id = data.aws_route53_zone.zone.zone_id
+  name    = var.domain_name
   type    = "AAAA"
 
   alias {
-    name                   = var.cloudfront_domain_name
+    name                   = var.domain_name
     zone_id                = var.cloudfront_hosted_zone_id
     evaluate_target_health = false
   }
 }
 
-# NS records
-resource "aws_route53_record" "ns" {
-  zone_id = aws_route53_zone.hack_my_career_zone.zone_id
-  name    = "hackmycareer.lol"
-  type    = "NS"
-  ttl     = 172800
-
-  records = aws_route53_zone.hack_my_career_zone.name_servers
-}
-
-# SOA record
-resource "aws_route53_record" "soa" {
-  zone_id = aws_route53_zone.hack_my_career_zone.zone_id
-  name    = "hackmycareer.lol"
-  type    = "SOA"
-  ttl     = 900
-
-  records = [
-    "${aws_route53_zone.hack_my_career_zone.name_servers[0]}. awsdns-hostmaster.amazon.com. 1 7200 900 1209600 86400"
-  ]
-}
-
-# TXT record for Google site verification
-# resource "aws_route53_record" "txt" {
-#   zone_id = aws_route53_zone.hack_my_career_zone.zone_id
-#   name    = "hackmycareer.lol"
-#   type    = "TXT"
-#   ttl     = 300
-
-#   records = [
-#     "google-site-verification=YOUR_VERIFICATION_CODE" # Replace with your actual verification code
-#   ]
-# }
-
 # WWW records pointing to CloudFront
 resource "aws_route53_record" "www_a" {
-  zone_id = aws_route53_zone.hack_my_career_zone.zone_id
-  name    = "www.hackmycareer.lol"
+  zone_id = data.aws_route53_zone.zone.zone_id
+  name    = "www.${var.domain_name}"
   type    = "A"
 
   alias {
-    name                   = var.cloudfront_domain_name
+    name                   = var.domain_name
     zone_id                = var.cloudfront_hosted_zone_id
     evaluate_target_health = false
   }
 }
 
 resource "aws_route53_record" "www_aaaa" {
-  zone_id = aws_route53_zone.hack_my_career_zone.zone_id
-  name    = "www.hackmycareer.lol"
+  zone_id = data.aws_route53_zone.zone.zone_id
+  name    = "www.${var.domain_name}"
   type    = "AAAA"
 
   alias {
-    name                   = var.cloudfront_domain_name
+    name                   = var.domain_name
     zone_id                = var.cloudfront_hosted_zone_id
     evaluate_target_health = false
   }

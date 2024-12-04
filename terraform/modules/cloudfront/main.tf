@@ -43,6 +43,7 @@ EOT
 }
 
 resource "aws_cloudfront_distribution" "hack_my_career_distribution" {
+
   origin {
     domain_name = var.bucket_domain_name
     origin_id   = "S3-${var.bucket_id}"
@@ -76,9 +77,11 @@ resource "aws_cloudfront_distribution" "hack_my_career_distribution" {
     }
   }
 
+  aliases = var.domain_names
+
   viewer_certificate {
     acm_certificate_arn      = var.certificate_arn
-    ssl_support_method       = "sni-only"
     minimum_protocol_version = "TLSv1.2_2021"
+    ssl_support_method       = "sni-only"
   }
 }
