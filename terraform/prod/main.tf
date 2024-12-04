@@ -6,7 +6,7 @@ terraform {
     dynamodb_table = "terraform-state-locking"
 
     assume_role = {
-      role_arn = "arn:aws:iam::541310242108:role/TerraformStateBucketAccess" # Role in the General Account
+      role_arn = "arn:aws:iam::541310242108:role/TerraformStateBucketAccess"
     }
   }
   required_providers {
@@ -22,23 +22,23 @@ provider "aws" {
   profile = "prod-admin"
 }
 
+# module "cloudfront" {
+#   source             = "../modules/cloudfront"
+#   bucket_domain_name = module.s3.bucket_domain_name
+#   bucket_id          = module.s3.bucket_id
+#   certificate_arn    = var.certificate_arn
+#   domain_names       = [var.domain_name, "www.${var.domain_name}"]
+# }
+
 module "s3" {
   source           = "../modules/s3"
-  distribution_arn = module.cloudfront.distribution_arn
+  distribution_arn = var.cloudfront_distribution_arn
   bucket_name      = var.bucket_name
-}
-
-module "cloudfront" {
-  source             = "../modules/cloudfront"
-  bucket_domain_name = module.s3.bucket_domain_name
-  bucket_id          = module.s3.bucket_id
-  certificate_arn    = var.certificate_arn
-  domain_names       = [var.domain_name, "www.${var.domain_name}"]
 }
 
 module "route53" {
   source                    = "../modules/route53"
   domain_name               = var.domain_name
   bucket_name               = var.bucket_name
-  cloudfront_hosted_zone_id = module.cloudfront.hosted_zone_id
+  cloudfront_hosted_zone_id = var.cloudfront_hosted_zone_id
 }
