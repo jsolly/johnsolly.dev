@@ -10,40 +10,7 @@ resource "aws_cloudfront_function" "append_index_to_directories" {
   name    = "AppendIndexToDirectories"
   runtime = "cloudfront-js-2.0"
   comment = "Appends /index.html to directories"
-
-  code = <<EOT
-function handler(event) {
-    var request = event.request;
-    var uri = request.uri;
-
-    if (uri === '/sitemap.xml') {
-        return {
-            statusCode: 301,
-            statusDescription: 'Moved Permanently',
-            headers: {
-                'location': { value: '/sitemap-index.xml' }
-            }
-        };
-    }
-    if (uri === '/sitemap_index.xml') {
-        return {
-            statusCode: 301,
-            statusDescription: 'Moved Permanently',
-            headers: {
-                'location': { value: '/sitemap-0.xml' }
-            }
-        };
-    }
-
-    if (uri.endsWith('/')) {
-        request.uri += 'index.html';
-    } else if (!uri.includes('.')) {
-        request.uri += '/index.html';
-    }
-
-    return request;
-}
-EOT
+  code    = file("${path.module}/functions/append-index.js")
 }
 
 resource "aws_cloudfront_distribution" "distribution" {
