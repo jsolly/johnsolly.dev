@@ -17,25 +17,29 @@ resource "aws_s3_bucket_policy" "hack_my_career_policy" {
 
   policy = jsonencode({
     Version = "2012-10-17"
-    Id      = "PolicyForCloudFrontPrivateContent",
     Statement = [
       {
-        Sid    = "AllowCloudFrontServicePrincipalReadAccess",
-        Effect = "Allow",
+        Sid    = "AllowCloudFrontServicePrincipalReadAccess"
+        Effect = "Allow"
         Principal = {
-          CanonicalUser = var.cloudfront_oai_canonical_user_id
-        },
-        Action = ["s3:GetObject", "s3:ListBucket"],
+          Service = "cloudfront.amazonaws.com"
+        }
+        Action = ["s3:GetObject", "s3:ListBucket"]
         Resource = [
           "arn:aws:s3:::${var.bucket_name}",
           "arn:aws:s3:::${var.bucket_name}/*"
-        ],
+        ]
+        Condition = {
+          StringEquals = {
+            "AWS:SourceArn" = var.cloudfront_distribution_arn
+          }
+        }
       },
       {
-        Sid       = "AllowPublicReadAccessToCertainStaticFiles",
-        Effect    = "Allow",
-        Principal = "*",
-        Action    = "s3:GetObject",
+        Sid       = "AllowPublicReadAccessToCertainStaticFiles"
+        Effect    = "Allow"
+        Principal = "*"
+        Action    = "s3:GetObject"
         Resource = [
           "arn:aws:s3:::${var.bucket_name}/sitemap-index.xml",
           "arn:aws:s3:::${var.bucket_name}/sitemap-0.xml",

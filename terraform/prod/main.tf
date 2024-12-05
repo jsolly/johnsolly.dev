@@ -31,9 +31,9 @@ module "cloudfront" {
 }
 
 module "s3" {
-  source                           = "../modules/s3"
-  bucket_name                      = var.bucket_name
-  cloudfront_oai_canonical_user_id = module.cloudfront.oai_canonical_user_id
+  source                      = "../modules/s3"
+  bucket_name                 = var.bucket_name
+  cloudfront_distribution_arn = module.cloudfront.distribution_arn
 }
 
 module "route53" {

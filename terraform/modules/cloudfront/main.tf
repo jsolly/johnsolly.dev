@@ -1,5 +1,9 @@
-resource "aws_cloudfront_origin_access_identity" "oai" {
-  comment = "OAI for CloudFront Distribution"
+resource "aws_cloudfront_origin_access_control" "oac" {
+  name                              = "OAC for CloudFront Distribution"
+  description                       = "Origin Access Control for S3"
+  origin_access_control_origin_type = "s3"
+  signing_behavior                  = "always"
+  signing_protocol                  = "sigv4"
 }
 
 resource "aws_cloudfront_function" "append_index_to_directories" {
@@ -44,16 +48,14 @@ EOT
 
 resource "aws_cloudfront_distribution" "distribution" {
   origin {
-    domain_name = var.bucket_domain_name
-    origin_id   = "S3-${var.bucket_id}"
-
-    s3_origin_config {
-      origin_access_identity = aws_cloudfront_origin_access_identity.oai.cloudfront_access_identity_path
-    }
+    domain_name              = var.bucket_domain_name
+    origin_id                = "S3-${var.bucket_id}"
+    origin_access_control_id = aws_cloudfront_origin_access_control.oac.id
   }
 
   enabled             = true
   is_ipv6_enabled     = true
+  http_version        = "http2and3"
   default_root_object = "index.html"
 
   default_cache_behavior {

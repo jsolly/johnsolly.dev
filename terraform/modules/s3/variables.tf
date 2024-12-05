@@ -3,7 +3,7 @@ variable "bucket_name" {
   type        = string
 }
 
-variable "cloudfront_oai_canonical_user_id" {
+variable "cloudfront_distribution_arn" {
+  description = "The ARN of the CloudFront distribution"
   type        = string
-  description = "The canonical user ID of the CloudFront Origin Access Identity"
 }
