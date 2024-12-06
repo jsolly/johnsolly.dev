@@ -4,7 +4,7 @@ variable "certificate_arn" {
 }
 
 variable "domain_name" {
-  description = "Primary domain name (e.g., hackmycareer.lol)"
+  description = "Primary domain name (e.g., example.com)"
   type        = string
 }
 

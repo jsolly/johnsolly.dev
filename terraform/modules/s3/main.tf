@@ -12,7 +12,7 @@ resource "aws_s3_bucket_public_access_block" "website_bucket" {
   restrict_public_buckets = false
 }
 
-resource "aws_s3_bucket_policy" "hack_my_career_policy" {
+resource "aws_s3_bucket_policy" "website_policy" {
   bucket = aws_s3_bucket.website_bucket.id
 
   policy = jsonencode({
