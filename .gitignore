@@ -7,11 +7,6 @@ dist/
 # dependencies
 node_modules/
 
-# Terraform
-.terraform
 
 # macOS-specific files
 .DS_Store
-
-# Terraform variables
-*.tfvars
