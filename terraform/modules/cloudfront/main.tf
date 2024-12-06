@@ -25,6 +25,18 @@ resource "aws_cloudfront_distribution" "distribution" {
   http_version        = "http2and3"
   default_root_object = "index.html"
 
+  custom_error_response {
+    error_code         = 404
+    response_code      = 404
+    response_page_path = "/404.html"
+  }
+
+  custom_error_response {
+    error_code         = 500
+    response_code      = 500
+    response_page_path = "/500.html"
+  }
+
   default_cache_behavior {
     cache_policy_id  = "658327ea-f89d-4fab-a63d-7e88639e58f6" # Managed-CachingOptimized
     target_origin_id = "S3-${var.bucket_id}"
