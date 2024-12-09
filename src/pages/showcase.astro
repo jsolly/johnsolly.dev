@@ -31,7 +31,7 @@ import { fade } from "astro:transitions";
     </div>
 </Layout>
 
-<script>
+<script is:inline>
     document.addEventListener('astro:page-load', () => {
         import('../scripts/accordion.js');
         import('../scripts/carousel.js');

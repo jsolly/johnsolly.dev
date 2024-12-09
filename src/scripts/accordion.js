@@ -1,11 +1,6 @@
-document.addEventListener("astro:page-load", () => {
-	initAccordion();
-});
-
 function initAccordion() {
 	const accordionHeaders = document.querySelectorAll(".accordion-header");
 	if (accordionHeaders.length === 0) {
-		// No accordions on this page
 		return;
 	}
 	for (const header of accordionHeaders) {
@@ -19,13 +14,12 @@ function toggleAccordion(accordionHeader) {
 	const accordionBtn = accordionHeader.querySelector(".accordion-btn");
 	const isExpanded = accordionCollapse.classList.toggle("expanded");
 
-	// Update aria-expanded attribute
 	accordionBtn.setAttribute("aria-expanded", isExpanded);
 
-	// Set the height for the accordion collapse
 	accordionCollapse.style.height = isExpanded
 		? `${accordionCollapse.firstElementChild.scrollHeight}px`
 		: "0";
 }
 
-export { initAccordion };
+// Self-execute
+initAccordion();

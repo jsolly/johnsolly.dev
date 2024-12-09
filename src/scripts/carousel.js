@@ -1,7 +1,3 @@
-document.addEventListener("astro:page-load", () => {
-	carouselInit();
-});
-
 function carouselInit() {
 	const carouselItems = document.querySelectorAll(".carousel-item");
 	if (carouselItems.length === 0) {
@@ -51,4 +47,5 @@ function carouselInit() {
 	}
 }
 
-export { carouselInit };
+// Self-execute
+carouselInit();
