@@ -1,9 +1,4 @@
-document.addEventListener("astro:page-load", () => {
-	if (window.location.pathname.startsWith("/projects/")) {
-		addHeaderLinks();
-	}
-});
-function addHeaderLinks() {
+function initAddHeaderLinks() {
 	const headers = document.querySelectorAll("h2, h3, h4");
 	if (headers.length === 0) {
 		// No headers on this page
@@ -69,3 +64,5 @@ function addHeaderLinks() {
 		});
 	}
 }
+
+export { initAddHeaderLinks };
