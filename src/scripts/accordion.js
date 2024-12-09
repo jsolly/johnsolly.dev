@@ -21,5 +21,4 @@ function toggleAccordion(accordionHeader) {
 		: "0";
 }
 
-// Self-execute
-initAccordion();
+export { initAccordion };

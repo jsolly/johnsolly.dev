@@ -47,5 +47,4 @@ function carouselInit() {
 	}
 }
 
-// Self-execute
-carouselInit();
+export { carouselInit };
