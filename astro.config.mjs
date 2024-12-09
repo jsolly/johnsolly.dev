@@ -6,14 +6,14 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://johnsolly.dev",
+	site: "https://www.johnsolly.dev",
 	markdown: {
 		remarkPlugins: [remarkExternalAnchor, remarkReadingTime],
 	},
 	integrations: [
 		tailwind(),
 		sitemap({
-			customPages: ["https://johnsolly.dev/John-Solly-Resume.pdf"],
+			customPages: ["https://www.johnsolly.dev/John-Solly-Resume.pdf"],
 		}),
 	],
 });
