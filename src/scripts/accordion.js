@@ -27,3 +27,5 @@ function toggleAccordion(accordionHeader) {
 		? `${accordionCollapse.firstElementChild.scrollHeight}px`
 		: "0";
 }
+
+export { initAccordion };

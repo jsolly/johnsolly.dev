@@ -50,3 +50,5 @@ function carouselInit() {
 		});
 	}
 }
+
+export { carouselInit };
