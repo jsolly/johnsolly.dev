@@ -1,11 +1,3 @@
-scripts/pushups.sh
-pushups_status=$?
-
-if [ $pushups_status -ne 0 ]; then
-  echo "Pushups not completed! Commit aborted."
-  exit $pushups_status
-fi
-
 pnpm lint-staged
 lint_status=$?
 
