@@ -1,7 +1,7 @@
 {
 	"extends": "astro/tsconfigs/strict",
-	"include": [".astro/types.d.ts", "**/*"],
-	"exclude": ["dist", "node_modules"],
+	"include": [".astro/types.d.ts", "src/**/*"],
+	"exclude": ["**/node_modules/**", "dist/**"],
 	"compilerOptions": {
 		"plugins": [
 			{
@@ -10,6 +10,7 @@
 		],
 		"strictNullChecks": true,
 		"allowJs": true,
-		"baseUrl": "."
+		"baseUrl": ".",
+		"skipLibCheck": true
 	}
 }
