@@ -19,7 +19,7 @@
 		"@astrojs/sitemap": "^3.2.1",
 		"@astrojs/tailwind": "^5.1.5",
 		"@astrojs/ts-plugin": "^1.10.4",
-		"astro": "^5.1.9",
+		"astro": "^5.2.1",
 		"globby": "^14.0.1",
 		"html-minifier": "^4.0.0",
 		"jsdom": "^24.1.1",
