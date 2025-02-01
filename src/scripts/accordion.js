@@ -1,8 +1,5 @@
-function initAccordion() {
-	const accordionHeaders = document.querySelectorAll(".accordion-header");
-	if (accordionHeaders.length === 0) {
-		return;
-	}
+const accordionHeaders = document.querySelectorAll(".accordion-header");
+if (accordionHeaders.length > 0) {
 	for (const header of accordionHeaders) {
 		header.addEventListener("click", () => toggleAccordion(header));
 	}
@@ -20,5 +17,3 @@ function toggleAccordion(accordionHeader) {
 		? `${accordionCollapse.firstElementChild.scrollHeight}px`
 		: "0";
 }
-
-export { initAccordion };

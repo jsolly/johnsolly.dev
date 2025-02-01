@@ -1,9 +1,5 @@
-function carouselInit() {
-	const carouselItems = document.querySelectorAll(".carousel-item");
-	if (carouselItems.length === 0) {
-		// No carousel on this page
-		return;
-	}
+const carouselItems = document.querySelectorAll(".carousel-item");
+if (carouselItems.length > 0) {
 	let currentCarouselIndex = 0;
 	const indicators = document.querySelectorAll("[data-carousel-index]");
 
@@ -19,7 +15,6 @@ function carouselInit() {
 		});
 	};
 
-	// When clicking on the previous or next buttons, we want to navigate to the previous or next slide
 	const navigateCarousel = (step) => {
 		currentCarouselIndex =
 			(currentCarouselIndex + step + carouselItems.length) %
@@ -27,7 +22,6 @@ function carouselInit() {
 		updateCarousel();
 	};
 
-	// Control event listeners
 	document
 		.querySelector(".carousel-control-prev")
 		.addEventListener("click", () => navigateCarousel(-1));
@@ -35,16 +29,12 @@ function carouselInit() {
 		.querySelector(".carousel-control-next")
 		.addEventListener("click", () => navigateCarousel(1));
 
-	// Indicator event listeners
 	for (const indicator of indicators) {
 		indicator.addEventListener("click", () => {
 			currentCarouselIndex = Number(
 				indicator.getAttribute("data-carousel-index"),
 			);
-			// When clicking on an indicator, we want to navigate to the corresponding slide
 			updateCarousel();
 		});
 	}
 }
-
-export { carouselInit };

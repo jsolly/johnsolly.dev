@@ -1,9 +1,5 @@
-function initAddHeaderLinks() {
-	const headers = document.querySelectorAll("h2, h3, h4");
-	if (headers.length === 0) {
-		// No headers on this page
-		return;
-	}
+const headers = document.querySelectorAll("h2, h3, h4");
+if (headers.length > 0) {
 	for (const header of headers) {
 		if (header.querySelector(".header-link")) {
 			// Skip if the link already exists
@@ -45,7 +41,8 @@ function initAddHeaderLinks() {
 
 		link.addEventListener("click", (event) => {
 			event.preventDefault(); // Prevent the default anchor behavior
-			navigator.clipboard.writeText(link.href).then(
+			const linkUrl = link.href;
+			navigator.clipboard.writeText(linkUrl).then(
 				() => {
 					console.info(`Link URL copied to clipboard: ${linkUrl}`);
 					tooltip.textContent = "Copied!"; // Update tooltip text
@@ -64,5 +61,3 @@ function initAddHeaderLinks() {
 		});
 	}
 }
-
-export { initAddHeaderLinks };

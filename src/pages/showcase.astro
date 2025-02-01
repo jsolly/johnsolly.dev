@@ -30,13 +30,5 @@ import { fade } from "astro:transitions";
     </div>
 </Layout>
 
-<script>
-    document.addEventListener('astro:page-load', async () => {
-        const [accordion, carousel] = await Promise.all([
-            import('../scripts/accordion.js'),
-            import('../scripts/carousel.js')
-        ]);
-        accordion.initAccordion();
-        carousel.carouselInit();
-    });
-</script>
+<script src="/src/scripts/accordion.js"></script>
+<script src="/src/scripts/carousel.js"></script>
