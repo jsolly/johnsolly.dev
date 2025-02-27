@@ -16,7 +16,10 @@ export default defineConfig({
 	integrations: [
 		tailwind(),
 		sitemap({
-			customPages: ["https://www.johnsolly.dev/John-Solly-Resume.pdf"],
+			customPages:
+				process.env.NODE_ENV === "development"
+					? ["http://localhost:4321/John-Solly-Resume.pdf"]
+					: ["https://www.johnsolly.dev/John-Solly-Resume.pdf"],
 		}),
 	],
 });
